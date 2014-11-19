@@ -31,7 +31,7 @@
     if (self) {
         // Initialization code
         //设置图片视图
-        UIButton *imageView = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, WIDTH, height)];
+        UIButton *imageView = [[UIButton alloc]initWithFrame:CGRectMake(xPoint, yPoint, WIDTH, height)];
         //给定网络图片路径
         [imageView setImageWithURL:[NSURL URLWithString:imageName] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"banner_placeholder"]];
 //        [imageView setImageFromUrl:YES withUrl:imageName];

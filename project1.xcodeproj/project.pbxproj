@@ -19,6 +19,7 @@
 		480141761A1B747500311095 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4801415E1A1B747500311095 /* UIKit.framework */; };
 		4801417E1A1B747500311095 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4801417C1A1B747500311095 /* InfoPlist.strings */; };
 		480141801A1B747500311095 /* project1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4801417F1A1B747500311095 /* project1Tests.m */; };
+		488891131A1C45D900BAEDF8 /* ImagePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 488891121A1C45D900BAEDF8 /* ImagePlayerView.m */; };
 		48A28C011A1B799E008B9410 /* AOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A28BFE1A1B799E008B9410 /* AOImageView.m */; };
 		48A28C021A1B799E008B9410 /* AOScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A28C001A1B799E008B9410 /* AOScrollerView.m */; };
 		48A28C061A1B7E7C008B9410 /* SLWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A28C041A1B7E7C008B9410 /* SLWHomeViewController.m */; };
@@ -54,6 +55,9 @@
 		4801417B1A1B747500311095 /* project1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "project1Tests-Info.plist"; sourceTree = "<group>"; };
 		4801417D1A1B747500311095 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4801417F1A1B747500311095 /* project1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = project1Tests.m; sourceTree = "<group>"; };
+		488891101A1C45D900BAEDF8 /* ImagePlayerView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImagePlayerView-Prefix.pch"; sourceTree = "<group>"; };
+		488891111A1C45D900BAEDF8 /* ImagePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePlayerView.h; sourceTree = "<group>"; };
+		488891121A1C45D900BAEDF8 /* ImagePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePlayerView.m; sourceTree = "<group>"; };
 		48A28BFD1A1B799E008B9410 /* AOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOImageView.h; sourceTree = "<group>"; };
 		48A28BFE1A1B799E008B9410 /* AOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOImageView.m; sourceTree = "<group>"; };
 		48A28BFF1A1B799E008B9410 /* AOScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOScrollerView.h; sourceTree = "<group>"; };
@@ -166,6 +170,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4888910F1A1C45D900BAEDF8 /* ImagePlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				488891101A1C45D900BAEDF8 /* ImagePlayerView-Prefix.pch */,
+				488891111A1C45D900BAEDF8 /* ImagePlayerView.h */,
+				488891121A1C45D900BAEDF8 /* ImagePlayerView.m */,
+			);
+			path = ImagePlayerView;
+			sourceTree = "<group>";
+		};
 		48A28BF81A1B797D008B9410 /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +207,7 @@
 		48A28BFB1A1B797D008B9410 /* widget */ = {
 			isa = PBXGroup;
 			children = (
+				4888910F1A1C45D900BAEDF8 /* ImagePlayerView */,
 				48A28BFC1A1B798E008B9410 /* AOImageView */,
 			);
 			path = widget;
@@ -351,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48A28C021A1B799E008B9410 /* AOScrollerView.m in Sources */,
+				488891131A1C45D900BAEDF8 /* ImagePlayerView.m in Sources */,
 				48A28C011A1B799E008B9410 /* AOImageView.m in Sources */,
 				480141671A1B747500311095 /* main.m in Sources */,
 				48A28C061A1B7E7C008B9410 /* SLWHomeViewController.m in Sources */,

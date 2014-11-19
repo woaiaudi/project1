@@ -13,7 +13,7 @@
 //点击scrollView中的图片点击事件协议
 @protocol ValueClickDelegate <NSObject>
 
--(void)buttonClick:(int)vid;
+-(void)buttonClick:(NSInteger)vid;
 
 @end
 
@@ -33,5 +33,5 @@
 //imageArr：图片url数组
 //titleArr：标题数组
 //height：视图高度
--(id)initWithNameArr:(NSMutableArray *)imageArr titleArr:(NSMutableArray *)titleArr height:(float)heightValue;
+-(id)initWithNameArr:(NSMutableArray *)imageArr titleArr:(NSMutableArray *)titleArr frame:(CGRect)superFrame;
 @end

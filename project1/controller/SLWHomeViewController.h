@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AOScrollerView.h"
 
-@interface SLWHomeViewController : UIViewController<UrLImageButtonDelegate>
-@property (weak, nonatomic) IBOutlet UIView *bannerView;
+@interface SLWHomeViewController : UIViewController<ValueClickDelegate>
 
 @end

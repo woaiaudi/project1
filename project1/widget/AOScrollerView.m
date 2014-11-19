@@ -21,8 +21,8 @@
 }
 //自定义实例化方法
 
--(id)initWithNameArr:(NSMutableArray *)imageArr titleArr:(NSMutableArray *)titleArr height:(float)heightValue{
-    self=[super initWithFrame:CGRectMake(0, 0, WIDTH, heightValue)];
+-(id)initWithNameArr:(NSMutableArray *)imageArr titleArr:(NSMutableArray *)titleArr frame:(CGRect)superFrame{
+    self=[super initWithFrame:superFrame];
     if (self) {
         page=0;//设置当前页为1
         
@@ -33,7 +33,7 @@
         //标题总数
         int titleCount =[titleStrArr count];
         //初始化scrollView
-        imageSV = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, heightValue)];
+        imageSV = [[UIScrollView alloc]initWithFrame:superFrame];
         
         //设置sview属性
         
@@ -44,7 +44,7 @@
         imageSV.showsHorizontalScrollIndicator = NO;//不显示水平滚动条
         
         
-        CGSize newSize = CGSizeMake(WIDTH * imageCount,  imageSV.frame.size.height);//设置scrollview的大小
+        CGSize newSize = CGSizeMake(WIDTH * imageCount,  superFrame.size.height);//设置scrollview的大小
         [imageSV setContentSize:newSize];
         [self addSubview:imageSV];
         //*********************************
@@ -107,7 +107,7 @@
 }
 */
 #pragma UBdelegate
--(void)click:(int)vid{
+-(void)click:(NSInteger)vid{
     //调用委托实现方法
     [self.vDelegate buttonClick:vid];
 }

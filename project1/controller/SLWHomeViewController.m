@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self addAOScrollerView:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,22 +31,25 @@
     NSMutableArray *imgArr = [[NSMutableArray alloc] init];
     //设置标题数组
     NSMutableArray *strArr =[[NSMutableArray alloc] init];
-    [imgArr addObject:thisBean.coverpic];
-    [strArr addObject:thisBean.spotName];
+    [imgArr addObject:@"http://www.sinaimg.cn/dy/slidenews/1_img/2014_47/2841_514655_319360.jpg"];
+    [strArr addObject:@"图片1"];
     
-    [imgArr addObject:thisBean.coverpic];
-    [strArr addObject:thisBean.spotName];
+    [imgArr addObject:@"http://www.sinaimg.cn/dy/slidenews/1_img/2014_47/2841_514656_666376.jpg"];
+    [strArr addObject:@"图片2"];
     
-    [imgArr addObject:thisBean.coverpic];
-    [strArr addObject:thisBean.spotName];
+    [imgArr addObject:@"http://www.sinaimg.cn/dy/slidenews/1_img/2014_47/2841_514657_236262.jpg"];
+    [strArr addObject:@"图片3"];
    
     // 初始化自定义ScrollView类对象
-    AOScrollerView *aSV = [[AOScrollerView alloc]initWithNameArr:imgArr titleArr:strArr height:self.bannerView.bounds.size.height];
+    AOScrollerView *aSV = [[AOScrollerView alloc]initWithNameArr:imgArr titleArr:strArr frame:CGRectMake(0, 32, 320, 200)];
     //设置委托
     aSV.vDelegate=self;
     //添加进view
-    [self.bannerView addSubview:aSV];
+    [self.view addSubview:aSV];
 }
-
+-(void)buttonClick:(NSInteger)vid
+{
+    NSLog(@"xxxxxxx");
+}
 
 @end

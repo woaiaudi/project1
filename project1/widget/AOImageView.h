@@ -10,7 +10,7 @@
 //按钮点击协议
 @protocol UrLImageButtonDelegate <NSObject>
 
--(void)click:(int)vid;
+-(void)click:(NSInteger)vid;
 
 @end
 
