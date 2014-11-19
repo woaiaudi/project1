@@ -27,29 +27,45 @@
 #pragma mark - 将焦点图显示在页面上
 -(void)addAOScrollerView:(NSArray *)array
 {
-    //设置图片url数组
-    NSMutableArray *imgArr = [[NSMutableArray alloc] init];
-    //设置标题数组
-    NSMutableArray *strArr =[[NSMutableArray alloc] init];
-    [imgArr addObject:@"http://www.sinaimg.cn/dy/slidenews/1_img/2014_47/2841_514655_319360.jpg"];
-    [strArr addObject:@"图片1"];
+    self.imageURLs = @[[NSURL URLWithString:@"http://www.sinaimg.cn/dy/slidenews/2_img/2014_47/786_1382457_499452.jpg"],
+                       [NSURL URLWithString:@"http://www.sinaimg.cn/dy/slidenews/2_img/2014_47/786_1382463_199708.jpg"],
+                       [NSURL URLWithString:@"http://www.sinaimg.cn/dy/slidenews/2_img/2014_47/786_1382390_215863.jpg"]];
     
-    [imgArr addObject:@"http://www.sinaimg.cn/dy/slidenews/1_img/2014_47/2841_514656_666376.jpg"];
-    [strArr addObject:@"图片2"];
+    self.imagePlayerView.imagePlayerViewDelegate = self;
     
-    [imgArr addObject:@"http://www.sinaimg.cn/dy/slidenews/1_img/2014_47/2841_514657_236262.jpg"];
-    [strArr addObject:@"图片3"];
-   
-    // 初始化自定义ScrollView类对象
-    AOScrollerView *aSV = [[AOScrollerView alloc]initWithNameArr:imgArr titleArr:strArr frame:CGRectMake(0, 32, 320, 200)];
-    //设置委托
-    aSV.vDelegate=self;
-    //添加进view
-    [self.view addSubview:aSV];
+    // set auto scroll interval to x seconds
+    self.imagePlayerView.scrollInterval = 5.0f;
+    
+    // adjust pageControl position
+    self.imagePlayerView.pageControlPosition = ICPageControlPosition_BottomCenter;
+    
+    // hide pageControl or not
+    self.imagePlayerView.hidePageControl = NO;
+    
+    // adjust edgeInset
+    //self.imagePlayerView.edgeInsets = UIEdgeInsetsMake(10, 20, 30, 40);
+    
+    [self.imagePlayerView reloadData];
 }
--(void)buttonClick:(NSInteger)vid
+#pragma mark - ImagePlayerViewDelegate
+- (NSInteger)numberOfItems
 {
-    NSLog(@"xxxxxxx");
+    return self.imageURLs.count;
+}
+
+- (void)imagePlayerView:(ImagePlayerView *)imagePlayerView loadImageForImageView:(UIImageView *)imageView index:(NSInteger)index
+{
+    // recommend to use SDWebImage lib to load web image
+    //    [imageView setImageWithURL:[self.imageURLs objectAtIndex:index] placeholderImage:nil];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[self.imageURLs objectAtIndex:index]]];
+    });
+}
+
+- (void)imagePlayerView:(ImagePlayerView *)imagePlayerView didTapAtIndex:(NSInteger)index
+{
+    NSLog(@"did tap index = %d", (int)index);
 }
 
 @end

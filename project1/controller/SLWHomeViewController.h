@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AOScrollerView.h"
+#import "ImagePlayerView.h"
 
-@interface SLWHomeViewController : UIViewController<ValueClickDelegate>
+@interface SLWHomeViewController : UIViewController<ImagePlayerViewDelegate>
+@property (nonatomic, strong) NSArray *imageURLs;
+@property (weak, nonatomic) IBOutlet ImagePlayerView *imagePlayerView;
 
 @end
