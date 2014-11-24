@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ImagePlayerView.h"
+#import "RKTabView.h"
 
 @interface SLWHomeViewController : UIViewController<ImagePlayerViewDelegate>
 @property (nonatomic, strong) NSArray *imageURLs;
 @property (weak, nonatomic) IBOutlet ImagePlayerView *imagePlayerView;
+@property (weak, nonatomic) IBOutlet RKTabView *menuLine1;
+@property (weak, nonatomic) IBOutlet RKTabView *menuLine2;
 
 @end

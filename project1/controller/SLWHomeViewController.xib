@@ -8,6 +8,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLWHomeViewController">
             <connections>
                 <outlet property="imagePlayerView" destination="u1d-Jj-fag" id="ghN-Z7-jBS"/>
+                <outlet property="menuLine1" destination="Vf2-hO-iCI" id="ce8-VA-aBi"/>
+                <outlet property="menuLine2" destination="cSo-lk-yrF" id="Fgi-i5-xVg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,6 +18,26 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nPM-Uq-t39">
+                    <rect key="frame" x="0.0" y="264" width="320" height="304"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vf2-hO-iCI" userLabel="TabButton1" customClass="RKTabView">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="vdj-g7-Lgs"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSo-lk-yrF" userLabel="TabButton2" customClass="RKTabView">
+                            <rect key="frame" x="0.0" y="154" width="320" height="150"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="3kd-BE-aj0"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.22486135030000001" green="1" blue="0.1409554264" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u1d-Jj-fag" customClass="ImagePlayerView">
                     <rect key="frame" x="0.0" y="64" width="320" height="200"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
