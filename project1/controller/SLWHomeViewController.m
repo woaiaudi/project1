@@ -7,6 +7,8 @@
 //
 
 #import "SLWHomeViewController.h"
+#import "SLWTestViewController.h"
+#import "SLWPage1ViewController.h"
 
 @interface SLWHomeViewController ()
 
@@ -116,6 +118,9 @@
 - (void)tabView:(RKTabView *)tabView tabBecameEnabledAtIndex:(int)index tab:(RKTabItem *)tabItem {
     tabItem.tabState = TabStateDisabled;//设置按钮状态为 可点击按钮 TabStateEnabled/TabStateDisabled
     NSLog(@"Tab № %d became Enabled on tab view", index);
+    SLWPage1ViewController *testPage = [[SLWPage1ViewController alloc]init];
+    [self.navigationController pushViewController:testPage animated:YES];
+    
 }
 
 - (void)tabView:(RKTabView *)tabView tabBecameDisabledAtIndex:(int)index tab:(RKTabItem *)tabItem {

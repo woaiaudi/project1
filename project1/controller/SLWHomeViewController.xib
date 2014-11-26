@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6250"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLWHomeViewController">
@@ -18,32 +18,51 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nPM-Uq-t39">
-                    <rect key="frame" x="0.0" y="264" width="320" height="304"/>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uoR-rW-0jh">
+                    <rect key="frame" x="0.0" y="264" width="320" height="300"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vf2-hO-iCI" userLabel="TabButton1" customClass="RKTabView">
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vf2-hO-iCI" userLabel="TabButton1" customClass="RKTabView">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.76195095694056958" green="1" blue="0.93064691742501149" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="vdj-g7-Lgs"/>
                             </connections>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSo-lk-yrF" userLabel="TabButton2" customClass="RKTabView">
-                            <rect key="frame" x="0.0" y="154" width="320" height="150"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSo-lk-yrF" userLabel="TabButton2" customClass="RKTabView">
+                            <rect key="frame" x="0.0" y="150" width="320" height="150"/>
+                            <color key="backgroundColor" red="0.69566074353103335" green="1" blue="0.63223717081371811" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="3kd-BE-aj0"/>
                             </connections>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.22486135030000001" green="1" blue="0.1409554264" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.20601931006207197" green="0.50361090691675003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="cSo-lk-yrF" secondAttribute="bottom" id="B8e-mf-qCy"/>
+                        <constraint firstItem="Vf2-hO-iCI" firstAttribute="width" secondItem="cSo-lk-yrF" secondAttribute="width" id="Nd7-XQ-AnB"/>
+                        <constraint firstItem="Vf2-hO-iCI" firstAttribute="leading" secondItem="uoR-rW-0jh" secondAttribute="leading" id="QYQ-Aw-jod"/>
+                        <constraint firstItem="Vf2-hO-iCI" firstAttribute="top" secondItem="uoR-rW-0jh" secondAttribute="top" id="RKN-bx-wyA"/>
+                        <constraint firstItem="Vf2-hO-iCI" firstAttribute="height" secondItem="cSo-lk-yrF" secondAttribute="height" id="UTS-SI-lVS"/>
+                        <constraint firstItem="cSo-lk-yrF" firstAttribute="leading" secondItem="uoR-rW-0jh" secondAttribute="leading" id="XRc-xL-HmJ"/>
+                        <constraint firstAttribute="trailing" secondItem="Vf2-hO-iCI" secondAttribute="trailing" id="hAe-eF-xwh"/>
+                        <constraint firstAttribute="trailing" secondItem="cSo-lk-yrF" secondAttribute="trailing" id="shp-Nk-J42"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u1d-Jj-fag" customClass="ImagePlayerView">
-                    <rect key="frame" x="0.0" y="64" width="320" height="200"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1d-Jj-fag" customClass="ImagePlayerView">
+                    <rect key="frame" x="0.0" y="64" width="320" height="204"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.8260708293825817" green="0.72930915193919343" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="u1d-Jj-fag" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5dP-3v-TdM"/>
+                <constraint firstAttribute="trailing" secondItem="u1d-Jj-fag" secondAttribute="trailing" id="VKo-WM-bqO"/>
+                <constraint firstAttribute="bottom" secondItem="uoR-rW-0jh" secondAttribute="bottom" id="abe-A7-3HJ"/>
+                <constraint firstAttribute="bottom" secondItem="u1d-Jj-fag" secondAttribute="bottom" constant="300" id="fVP-9r-b5n"/>
+                <constraint firstAttribute="trailing" secondItem="uoR-rW-0jh" secondAttribute="trailing" id="hbA-77-0fP"/>
+                <constraint firstItem="uoR-rW-0jh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iv7-WL-sLF"/>
+                <constraint firstItem="u1d-Jj-fag" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="lrc-O1-P7g"/>
+            </constraints>
             <point key="canvasLocation" x="338" y="407"/>
         </view>
     </objects>

@@ -15,23 +15,18 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXz-VU-7fs">
-                    <rect key="frame" x="10" y="64" width="140" height="200"/>
-                    <color key="backgroundColor" red="0.39767117049886325" green="0.28538965317803011" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLz-Wq-Dvv">
+                    <rect key="frame" x="0.0" y="64" width="320" height="200"/>
+                    <color key="backgroundColor" red="0.17002417807988257" green="0.99913616543390116" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bin-bl-hR2">
-                    <rect key="frame" x="172" y="64" width="140" height="200"/>
-                    <color key="backgroundColor" red="1" green="0.30621729880693571" blue="0.37758230254350111" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KpG-c2-jXy">
-                    <rect key="frame" x="8" y="272" width="304" height="200"/>
-                    <color key="backgroundColor" red="0.20041444041660716" green="1" blue="0.15171008699711319" alpha="1" colorSpace="calibratedRGB"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Gz-k8-dXz">
+                    <rect key="frame" x="10" y="74" width="320" height="200"/>
+                    <color key="backgroundColor" red="0.17002417810000001" green="0.99913616540000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Bin-bl-hR2" firstAttribute="centerY" secondItem="eXz-VU-7fs" secondAttribute="centerY" id="PTt-mw-7z0"/>
-                <constraint firstItem="Bin-bl-hR2" firstAttribute="width" secondItem="eXz-VU-7fs" secondAttribute="width" id="i4T-MM-9ej"/>
+                <constraint firstItem="qLz-Wq-Dvv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="hYW-1z-idv"/>
             </constraints>
             <point key="canvasLocation" x="338" y="263"/>
         </view>

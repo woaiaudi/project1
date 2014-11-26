@@ -19,6 +19,10 @@
 		480141761A1B747500311095 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4801415E1A1B747500311095 /* UIKit.framework */; };
 		4801417E1A1B747500311095 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4801417C1A1B747500311095 /* InfoPlist.strings */; };
 		480141801A1B747500311095 /* project1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4801417F1A1B747500311095 /* project1Tests.m */; };
+		484846861A25FAB90007D64C /* SLWPage1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484846841A25FAB90007D64C /* SLWPage1ViewController.m */; };
+		484846871A25FAB90007D64C /* SLWPage1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 484846851A25FAB90007D64C /* SLWPage1ViewController.xib */; };
+		4848468A1A25FB910007D64C /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 484846881A25FB910007D64C /* arrow_down.png */; };
+		4848468B1A25FB910007D64C /* gray_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 484846891A25FB910007D64C /* gray_line.png */; };
 		4860E7891A22FAB800BE0ECA /* RKTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4860E7861A22FAB800BE0ECA /* RKTabItem.m */; };
 		4860E78A1A22FAB800BE0ECA /* RKTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4860E7881A22FAB800BE0ECA /* RKTabView.m */; };
 		4860E7941A22FD0A00BE0ECA /* home_tabitem_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4860E78C1A22FD0A00BE0ECA /* home_tabitem_8.png */; };
@@ -66,6 +70,11 @@
 		4801417B1A1B747500311095 /* project1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "project1Tests-Info.plist"; sourceTree = "<group>"; };
 		4801417D1A1B747500311095 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4801417F1A1B747500311095 /* project1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = project1Tests.m; sourceTree = "<group>"; };
+		484846831A25FAB90007D64C /* SLWPage1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWPage1ViewController.h; sourceTree = "<group>"; };
+		484846841A25FAB90007D64C /* SLWPage1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWPage1ViewController.m; sourceTree = "<group>"; };
+		484846851A25FAB90007D64C /* SLWPage1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWPage1ViewController.xib; sourceTree = "<group>"; };
+		484846881A25FB910007D64C /* arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_down.png; sourceTree = "<group>"; };
+		484846891A25FB910007D64C /* gray_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_line.png; sourceTree = "<group>"; };
 		4860E7851A22FAB800BE0ECA /* RKTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabItem.h; sourceTree = "<group>"; };
 		4860E7861A22FAB800BE0ECA /* RKTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTabItem.m; sourceTree = "<group>"; };
 		4860E7871A22FAB800BE0ECA /* RKTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabView.h; sourceTree = "<group>"; };
@@ -195,6 +204,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		484846821A25FA8A0007D64C /* page1 */ = {
+			isa = PBXGroup;
+			children = (
+				484846831A25FAB90007D64C /* SLWPage1ViewController.h */,
+				484846841A25FAB90007D64C /* SLWPage1ViewController.m */,
+				484846851A25FAB90007D64C /* SLWPage1ViewController.xib */,
+			);
+			name = page1;
+			sourceTree = "<group>";
+		};
 		4860E7841A22FAB800BE0ECA /* RKTabView */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +228,8 @@
 		4860E78B1A22FCE800BE0ECA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				484846881A25FB910007D64C /* arrow_down.png */,
+				484846891A25FB910007D64C /* gray_line.png */,
 				4860E78C1A22FD0A00BE0ECA /* home_tabitem_8.png */,
 				4860E78D1A22FD0A00BE0ECA /* home_tabitem_7.png */,
 				4860E78E1A22FD0A00BE0ECA /* home_tabitem_6.png */,
@@ -243,6 +264,7 @@
 		48A28BF81A1B797D008B9410 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				484846821A25FA8A0007D64C /* page1 */,
 				48A28C031A1B7E7C008B9410 /* SLWHomeViewController.h */,
 				48A28C041A1B7E7C008B9410 /* SLWHomeViewController.m */,
 				48A28C051A1B7E7C008B9410 /* SLWHomeViewController.xib */,
@@ -366,14 +388,17 @@
 			files = (
 				4860E7961A22FD0A00BE0ECA /* home_tabitem_6.png in Resources */,
 				4860E79B1A22FD0A00BE0ECA /* home_tabitem_1.png in Resources */,
+				484846871A25FAB90007D64C /* SLWPage1ViewController.xib in Resources */,
 				480141651A1B747500311095 /* InfoPlist.strings in Resources */,
 				4860E7971A22FD0A00BE0ECA /* home_tabitem_5.png in Resources */,
 				4860E7991A22FD0A00BE0ECA /* home_tabitem_3.png in Resources */,
 				4860E79A1A22FD0A00BE0ECA /* home_tabitem_2.png in Resources */,
 				48A28C071A1B7E7C008B9410 /* SLWHomeViewController.xib in Resources */,
 				4860E7941A22FD0A00BE0ECA /* home_tabitem_8.png in Resources */,
+				4848468A1A25FB910007D64C /* arrow_down.png in Resources */,
 				4801416D1A1B747500311095 /* Images.xcassets in Resources */,
 				4860E7981A22FD0A00BE0ECA /* home_tabitem_4.png in Resources */,
+				4848468B1A25FB910007D64C /* gray_line.png in Resources */,
 				4860E7951A22FD0A00BE0ECA /* home_tabitem_7.png in Resources */,
 				4860E7A41A230D6900BE0ECA /* SLWTestViewController.xib in Resources */,
 			);
@@ -427,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484846861A25FAB90007D64C /* SLWPage1ViewController.m in Sources */,
 				4860E79F1A22FDA900BE0ECA /* JSBadgeView.m in Sources */,
 				4860E7891A22FAB800BE0ECA /* RKTabItem.m in Sources */,
 				488891131A1C45D900BAEDF8 /* ImagePlayerView.m in Sources */,
