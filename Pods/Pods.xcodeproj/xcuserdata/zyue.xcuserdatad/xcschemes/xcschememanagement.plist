@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-DLRadioButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08C4E07594962F688C4304EA</key>
+		<key>01DC2293432E00BEE5EDB625</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F7012F7D81D295B7C8B788B</key>
+		<key>07F7469E73CF5D919389B781</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E28441C2C5CF3EF87D077B0</key>
+		<key>27CF8B202D65BF35C9DB7FC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1908057637249A82A92F27E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

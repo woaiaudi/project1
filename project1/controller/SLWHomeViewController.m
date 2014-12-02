@@ -9,6 +9,7 @@
 #import "SLWHomeViewController.h"
 #import "SLWTestViewController.h"
 #import "SLWPage1ViewController.h"
+#import "SLWSignUpViewController.h"
 
 @interface SLWHomeViewController ()
 
@@ -80,22 +81,22 @@
 {
     //图标大小44*44 为合适的
     RKTabItem *HomeTabItem1 = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"home_tabitem_1"]];
-    HomeTabItem1.titleString = @"xxx1";
+    HomeTabItem1.titleString = @"供求管理";
     RKTabItem *HomeTabItem2 = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"home_tabitem_2"]];
-    HomeTabItem2.titleString = @"xxx2";
+    HomeTabItem2.titleString = @"信息咨询";
     RKTabItem *HomeTabItem3 = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"home_tabitem_3"]];
-    HomeTabItem3.titleString = @"xxx3";
+    HomeTabItem3.titleString = @"企业展示";
     RKTabItem *HomeTabItem4 = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"home_tabitem_4"]];
-    HomeTabItem4.titleString = @"xxx4";
+    HomeTabItem4.titleString = @"全部分类";
     
     RKTabItem *HomeTabItem5 = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"home_tabitem_5"]];
-    HomeTabItem5.titleString = @"xxx5";
+    HomeTabItem5.titleString = @"检索";
     RKTabItem *HomeTabItem6 = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"home_tabitem_6"]];
-    HomeTabItem6.titleString = @"xxx6";
+    HomeTabItem6.titleString = @"行业论坛";
     RKTabItem *HomeTabItem7 = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"home_tabitem_7"]];
-    HomeTabItem7.titleString = @"xxx7";
+    HomeTabItem7.titleString = @"用户中心";
     RKTabItem *HomeTabItem8 = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"home_tabitem_8"]];
-    HomeTabItem8.titleString = @"xxx8";
+    HomeTabItem8.titleString = @"关于我们";
     
     
     //mastercardTabItem.tabState = TabStateEnabled;
@@ -118,7 +119,7 @@
 - (void)tabView:(RKTabView *)tabView tabBecameEnabledAtIndex:(int)index tab:(RKTabItem *)tabItem {
     tabItem.tabState = TabStateDisabled;//设置按钮状态为 可点击按钮 TabStateEnabled/TabStateDisabled
     NSLog(@"Tab № %d became Enabled on tab view", index);
-    SLWPage1ViewController *testPage = [[SLWPage1ViewController alloc]init];
+    SLWSignUpViewController *testPage = [[SLWSignUpViewController alloc]init];
     [self.navigationController pushViewController:testPage animated:YES];
     
 }
