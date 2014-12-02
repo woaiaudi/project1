@@ -39,11 +39,11 @@
 		488891131A1C45D900BAEDF8 /* ImagePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 488891121A1C45D900BAEDF8 /* ImagePlayerView.m */; };
 		48A28C061A1B7E7C008B9410 /* SLWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A28C041A1B7E7C008B9410 /* SLWHomeViewController.m */; };
 		48A28C071A1B7E7C008B9410 /* SLWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A28C051A1B7E7C008B9410 /* SLWHomeViewController.xib */; };
+		48BDE6261A2DAB0500342CF4 /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BDE6251A2DAB0500342CF4 /* NIDropDown.m */; };
 		48CFF3A41A2C48E100023DB3 /* MHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3A31A2C48E100023DB3 /* MHTextField.m */; };
 		48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3A61A2C495A00023DB3 /* ValidateTextField.m */; };
 		48CFF3AC1A2C49DA00023DB3 /* SLWSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3AA1A2C49DA00023DB3 /* SLWSignUpViewController.m */; };
 		48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48CFF3AB1A2C49DA00023DB3 /* SLWSignUpViewController.xib */; };
-		48CFF3B11A2C53DE00023DB3 /* MXPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3B01A2C53DE00023DB3 /* MXPullDownMenu.m */; };
 		DDED8E0E2C5E2D1C2A5136BC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E10E87BB6E2A5FE99B42435 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +103,8 @@
 		48A28C031A1B7E7C008B9410 /* SLWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWHomeViewController.h; sourceTree = "<group>"; };
 		48A28C041A1B7E7C008B9410 /* SLWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWHomeViewController.m; sourceTree = "<group>"; };
 		48A28C051A1B7E7C008B9410 /* SLWHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWHomeViewController.xib; sourceTree = "<group>"; };
+		48BDE6241A2DAB0500342CF4 /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDropDown.h; sourceTree = "<group>"; };
+		48BDE6251A2DAB0500342CF4 /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDropDown.m; sourceTree = "<group>"; };
 		48CFF3A21A2C48E100023DB3 /* MHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTextField.h; sourceTree = "<group>"; };
 		48CFF3A31A2C48E100023DB3 /* MHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTextField.m; sourceTree = "<group>"; };
 		48CFF3A51A2C495A00023DB3 /* ValidateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateTextField.h; sourceTree = "<group>"; };
@@ -110,8 +112,6 @@
 		48CFF3A91A2C49DA00023DB3 /* SLWSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSignUpViewController.h; sourceTree = "<group>"; };
 		48CFF3AA1A2C49DA00023DB3 /* SLWSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSignUpViewController.m; sourceTree = "<group>"; };
 		48CFF3AB1A2C49DA00023DB3 /* SLWSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSignUpViewController.xib; sourceTree = "<group>"; };
-		48CFF3AF1A2C53DE00023DB3 /* MXPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPullDownMenu.h; sourceTree = "<group>"; };
-		48CFF3B01A2C53DE00023DB3 /* MXPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPullDownMenu.m; sourceTree = "<group>"; };
 		760B556F7A80855C084BA583 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B3BD128F892ECF0A539A565D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -307,13 +307,22 @@
 		48A28BFB1A1B797D008B9410 /* widget */ = {
 			isa = PBXGroup;
 			children = (
-				48CFF3AE1A2C53DE00023DB3 /* MXPullDownMenu */,
+				48BDE6231A2DAB0500342CF4 /* NIDropDown */,
 				48CFF3A11A2C48E100023DB3 /* textfield */,
 				4860E79C1A22FDA900BE0ECA /* JSBadgeView */,
 				4860E7841A22FAB800BE0ECA /* RKTabView */,
 				4888910F1A1C45D900BAEDF8 /* ImagePlayerView */,
 			);
 			path = widget;
+			sourceTree = "<group>";
+		};
+		48BDE6231A2DAB0500342CF4 /* NIDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				48BDE6241A2DAB0500342CF4 /* NIDropDown.h */,
+				48BDE6251A2DAB0500342CF4 /* NIDropDown.m */,
+			);
+			path = NIDropDown;
 			sourceTree = "<group>";
 		};
 		48CFF3A11A2C48E100023DB3 /* textfield */ = {
@@ -335,15 +344,6 @@
 				48CFF3AB1A2C49DA00023DB3 /* SLWSignUpViewController.xib */,
 			);
 			name = user;
-			sourceTree = "<group>";
-		};
-		48CFF3AE1A2C53DE00023DB3 /* MXPullDownMenu */ = {
-			isa = PBXGroup;
-			children = (
-				48CFF3AF1A2C53DE00023DB3 /* MXPullDownMenu.h */,
-				48CFF3B01A2C53DE00023DB3 /* MXPullDownMenu.m */,
-			);
-			path = MXPullDownMenu;
 			sourceTree = "<group>";
 		};
 		57EBF18DAD41E49DE9B1611F /* Pods */ = {
@@ -503,7 +503,6 @@
 				48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */,
 				484846861A25FAB90007D64C /* SLWPage1ViewController.m in Sources */,
 				4860E79F1A22FDA900BE0ECA /* JSBadgeView.m in Sources */,
-				48CFF3B11A2C53DE00023DB3 /* MXPullDownMenu.m in Sources */,
 				48CFF3AC1A2C49DA00023DB3 /* SLWSignUpViewController.m in Sources */,
 				48CFF3A41A2C48E100023DB3 /* MHTextField.m in Sources */,
 				4860E7891A22FAB800BE0ECA /* RKTabItem.m in Sources */,
@@ -511,6 +510,7 @@
 				480141671A1B747500311095 /* main.m in Sources */,
 				48A28C061A1B7E7C008B9410 /* SLWHomeViewController.m in Sources */,
 				4801416B1A1B747500311095 /* SLWAppDelegate.m in Sources */,
+				48BDE6261A2DAB0500342CF4 /* NIDropDown.m in Sources */,
 				4860E78A1A22FAB800BE0ECA /* RKTabView.m in Sources */,
 				4860E7A31A230D6900BE0ECA /* SLWTestViewController.m in Sources */,
 			);
