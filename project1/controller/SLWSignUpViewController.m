@@ -61,8 +61,9 @@
         dropDown = nil;
     }
 }
-- (void) niDropDownDelegateMethod: (NIDropDown *) sender
+- (void) niDropDownDelegateMethod: (NIDropDown *) sender selectedIndex:(NSIndexPath *)index
 {
     dropDown = nil;
+    NSLog(@"选中了S[%d],R[%d]",index.section,index.row);
 }
 @end

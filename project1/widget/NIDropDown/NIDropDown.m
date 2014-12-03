@@ -145,11 +145,11 @@
     imgView = [[UIImageView alloc] initWithImage:c.imageView.image];
     imgView.frame = CGRectMake(5, 5, 25, 25);
     [btnSender addSubview:imgView];
-    [self myDelegate];
+    [self myDelegatebySelectedIndex:indexPath];
 }
 
-- (void) myDelegate {
-    [self.delegate niDropDownDelegateMethod:self];
+- (void) myDelegatebySelectedIndex:(NSIndexPath *)index{
+    [self.delegate niDropDownDelegateMethod:self selectedIndex:index];
 }
 
 -(void)dealloc {
