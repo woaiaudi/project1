@@ -18,7 +18,15 @@
     [super viewDidLoad];
     self.navigationItem.title = @"用户注册";
     
-    // set up button icons
+    
+    [_userNameTextField setRequired:YES];//登录账户 必填
+    [_pwd1TextField setRequired:YES];//密码必填
+    [_pwd1TextField setRequired:YES];//密码2 判断
+    [_answerTextField setRequired:YES];//问题答案
+    [_realNameTextField setRequired:YES];//真实姓名
+
+    
+    //设置性别选择按钮
     for (DLRadioButton *radioButton in self.sexRadioButton) {
         radioButton.ButtonIcon = [UIImage imageNamed:@"RadioButton"];
         radioButton.ButtonIconSelected = [UIImage imageNamed:@"RadioButtonSelected"];
@@ -41,14 +49,15 @@
     NSString *buttonName = [(DLRadioButton *)radioButtons[0] selectedButton].titleLabel.text;
     [[[UIAlertView alloc] initWithTitle: buttonName ? @"Selected Button" : @"No Button Selected" message:buttonName delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
-
+#pragma mark- 注册按钮 事件
 - (IBAction)userSignupCommitAction:(id)sender {
     [self showSelectedButton:self.sexRadioButton];
 }
 #pragma mark- 密码提示问题
 - (IBAction)clickPwdQuestAction:(id)sender {
     NSArray * arr = [[NSArray alloc] init];
-    arr = [NSArray arrayWithObjects:@"Hello 0", @"Hello 1", @"Hello 2", @"Hello 3", @"Hello 4", @"Hello 5", @"Hello 6", @"Hello 7", @"Hello 8", @"Hello 9",nil];
+    //不能超过11个汉字
+    arr = [NSArray arrayWithObjects:@"好问问很长很长很长很长", @"Hello 1", @"Hello 2", @"Hello 3", @"Hello 4", @"Hello 5", @"Hello 6", @"Hello 7", @"Hello 8", @"Hello 9",nil];
     NSArray * arrImage = [[NSArray alloc] init];
     arrImage = [NSArray arrayWithObjects:[UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], nil];
     if(dropDown == nil) {

@@ -8,12 +8,24 @@
 
 #import <UIKit/UIKit.h>
 #import <DLRadioButton.h>
+#import "ValidateTextField.h"
 #import "NIDropDown.h"
 
 @interface SLWSignUpViewController : UIViewController<NIDropDownDelegate>
 {
     NIDropDown * dropDown;
 }
+@property (strong, nonatomic) IBOutlet ValidateTextField *userNameTextField;
+@property (strong, nonatomic) IBOutlet ValidateTextField *pwd1TextField;
+@property (strong, nonatomic) IBOutlet ValidateTextField *pwd2TextField;
+@property (strong, nonatomic) IBOutlet ValidateTextField *answerTextField;
+@property (strong, nonatomic) IBOutlet ValidateTextField *realNameTextField;
+@property (strong, nonatomic) IBOutlet ValidateTextField *introductionTextField;
+@property (strong, nonatomic) IBOutlet ValidateTextField *companyTextField;
+
+
+
+
 @property (strong, nonatomic) IBOutlet UIButton *selectPwdQuestButton;
 - (IBAction)clickPwdQuestAction:(id)sender;
 

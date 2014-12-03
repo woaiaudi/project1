@@ -7,7 +7,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLWSignUpViewController">
             <connections>
+                <outlet property="answerTextField" destination="p6X-Rs-qOq" id="yha-5t-X3N"/>
+                <outlet property="companyTextField" destination="2Kf-uh-e6x" id="43f-vk-euj"/>
+                <outlet property="introductionTextField" destination="VWk-3j-4e4" id="cgu-pv-55l"/>
+                <outlet property="pwd1TextField" destination="Q1w-4w-R8Z" id="3zm-Xu-ztZ"/>
+                <outlet property="pwd2TextField" destination="WR0-jS-YrG" id="5x2-4l-Poe"/>
+                <outlet property="realNameTextField" destination="ySj-a8-V54" id="Ydo-xm-rdl"/>
                 <outlet property="selectPwdQuestButton" destination="yu5-ex-1Ir" id="6lX-hh-3XM"/>
+                <outlet property="userNameTextField" destination="iex-aZ-ybL" id="WfQ-d2-qLr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="sexRadioButton" destination="7tQ-3l-qr5" id="vOC-hr-3h6"/>
                 <outletCollection property="sexRadioButton" destination="JdQ-iD-VPg" id="Mx6-G8-CAe"/>
