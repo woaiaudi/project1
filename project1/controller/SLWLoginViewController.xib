@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLWLoginViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uvQ-vt-EVU" customClass="ValidateTextField">
+                    <rect key="frame" x="53" y="148" width="208" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="用户名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXz-Wz-C0R">
+                    <rect key="frame" x="53" y="119" width="208" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dai-J9-5r9" customClass="ValidateTextField">
+                    <rect key="frame" x="53" y="238" width="208" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B76-3J-V2O">
+                    <rect key="frame" x="53" y="209" width="208" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf1-gf-CJx">
+                    <rect key="frame" x="53" y="394" width="208" height="30"/>
+                    <color key="backgroundColor" red="0.012909585160000001" green="0.19859566740000001" blue="0.20482165399999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="INz-ga-NdD">
+                    <rect key="frame" x="53" y="287" width="51" height="31"/>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="记住密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kat-TS-wdu">
+                    <rect key="frame" x="110" y="287" width="98" height="31"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="uvQ-vt-EVU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="3wI-Nv-umB"/>
+                <constraint firstItem="Bf1-gf-CJx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="3wI-XY-qgt"/>
+                <constraint firstItem="dai-J9-5r9" firstAttribute="top" secondItem="B76-3J-V2O" secondAttribute="bottom" constant="10" id="8cz-Vx-ZDc"/>
+                <constraint firstAttribute="trailing" secondItem="Bf1-gf-CJx" secondAttribute="trailing" constant="50" id="9IO-Yo-tQj"/>
+                <constraint firstItem="B76-3J-V2O" firstAttribute="top" secondItem="uvQ-vt-EVU" secondAttribute="bottom" constant="31" id="DYm-k0-Js6"/>
+                <constraint firstAttribute="trailing" secondItem="OXz-Wz-C0R" secondAttribute="trailing" constant="50" id="LbD-vk-6fo"/>
+                <constraint firstItem="INz-ga-NdD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="53" id="MXc-6i-lpR"/>
+                <constraint firstAttribute="trailing" secondItem="uvQ-vt-EVU" secondAttribute="trailing" constant="50" id="RuH-dd-rns"/>
+                <constraint firstItem="OXz-Wz-C0R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="130" id="UbW-zz-WQ7"/>
+                <constraint firstItem="OXz-Wz-C0R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="cQ7-hq-LWa"/>
+                <constraint firstItem="B76-3J-V2O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="g7i-Zr-DqO"/>
+                <constraint firstAttribute="trailing" secondItem="dai-J9-5r9" secondAttribute="trailing" constant="50" id="mNP-ME-kWS"/>
+                <constraint firstItem="uvQ-vt-EVU" firstAttribute="top" secondItem="OXz-Wz-C0R" secondAttribute="bottom" constant="10" id="neb-tV-I1O"/>
+                <constraint firstItem="INz-ga-NdD" firstAttribute="top" secondItem="dai-J9-5r9" secondAttribute="bottom" constant="10" id="qGx-dA-Waj"/>
+                <constraint firstAttribute="trailing" secondItem="B76-3J-V2O" secondAttribute="trailing" constant="50" id="qZ6-3o-ZjO"/>
+                <constraint firstAttribute="bottom" secondItem="Bf1-gf-CJx" secondAttribute="bottom" constant="100" id="s0F-sG-2Ov"/>
+                <constraint firstItem="Kat-TS-wdu" firstAttribute="bottom" secondItem="INz-ga-NdD" secondAttribute="bottom" id="t5z-zV-ewK"/>
+                <constraint firstItem="dai-J9-5r9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="zJW-rm-f7O"/>
+            </constraints>
+            <point key="canvasLocation" x="622" y="342"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

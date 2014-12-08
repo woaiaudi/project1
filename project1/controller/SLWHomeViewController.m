@@ -7,11 +7,16 @@
 //
 
 #import "SLWHomeViewController.h"
-#import "SLWTestViewController.h"
+#import "SLWPageIndex.h"
 #import "SLWPage1ViewController.h"
 #import "SLWSignUpViewController.h"
+#import "SLWLoginViewController.h"
+#import "SLWNewsListViewController.h"
 
 @interface SLWHomeViewController ()
+{
+    NSMutableArray * pageIndexArray;
+}
 
 @end
 
@@ -19,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self initAllPageIndexArray];
     [self addAOScrollerView:nil];
     
     [self initRKTabView];
@@ -32,7 +39,21 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - 初始化首页要跳转的页面数组
+-(void)initAllPageIndexArray
+{
+    pageIndexArray = [NSMutableArray array];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"供求管理" controllerClass:[SLWPage1ViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"信息咨询" controllerClass:[SLWNewsListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"企业展示" controllerClass:[SLWPage1ViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"全部分类" controllerClass:[SLWPage1ViewController class]]];
+   
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"检索" controllerClass:[SLWPage1ViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"行业论坛" controllerClass:[SLWPage1ViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"用户中心" controllerClass:[SLWLoginViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"关于我们" controllerClass:[SLWPage1ViewController class]]];
 
+}
 #pragma mark - 将焦点图显示在页面上
 -(void)addAOScrollerView:(NSArray *)array
 {
@@ -118,9 +139,24 @@
 #pragma mark - RKTabViewDelegate
 - (void)tabView:(RKTabView *)tabView tabBecameEnabledAtIndex:(int)index tab:(RKTabItem *)tabItem {
     tabItem.tabState = TabStateDisabled;//设置按钮状态为 可点击按钮 TabStateEnabled/TabStateDisabled
-    NSLog(@"Tab № %d became Enabled on tab view", index);
-    SLWSignUpViewController *testPage = [[SLWSignUpViewController alloc]init];
-    [self.navigationController pushViewController:testPage animated:YES];
+    
+    // 1.取出模型
+    SLWPageIndex *pi =nil;
+    
+    if (tabView.tag == 99901) {
+        //第一排按钮
+        pi = pageIndexArray[index];
+    }
+    if (tabView.tag == 99902) {
+        //第二排按钮
+        pi = pageIndexArray[index+4];
+    }
+    
+    // 2.创建控制器
+    UIViewController *vc = [[pi.controllerClass alloc] init];
+    vc.title = pi.title;
+    // 3.跳转
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 

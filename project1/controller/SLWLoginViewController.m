@@ -1,23 +1,21 @@
 //
-//  SLWTestViewController.m
+//  SLWLoginViewController.m
 //  project1
 //
-//  Created by 张跃 on 14/11/24.
+//  Created by 张跃 on 14/12/8.
 //  Copyright (c) 2014年 esuliao. All rights reserved.
 //
 
-#import "SLWTestViewController.h"
+#import "SLWLoginViewController.h"
 
-@interface SLWTestViewController ()
+@interface SLWLoginViewController ()
 
 @end
 
-@implementation SLWTestViewController
+@implementation SLWLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     // Do any additional setup after loading the view from its nib.
 }
 
