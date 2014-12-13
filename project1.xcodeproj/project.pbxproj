@@ -36,6 +36,9 @@
 		4860E79F1A22FDA900BE0ECA /* JSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4860E79E1A22FDA900BE0ECA /* JSBadgeView.m */; };
 		486E4C981A3C54E80065E21D /* SLWNewsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E4C961A3C54E80065E21D /* SLWNewsListTableViewCell.m */; };
 		486E4C991A3C54E80065E21D /* SLWNewsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486E4C971A3C54E80065E21D /* SLWNewsListTableViewCell.xib */; };
+		486E4CA31A3C74E30065E21D /* SLWHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E4CA11A3C74E30065E21D /* SLWHome.m */; };
+		486E4CA41A3C74E30065E21D /* SLWHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486E4CA21A3C74E30065E21D /* SLWHome.xib */; };
+		486E4CAC1A3C855F0065E21D /* HomeImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E4CAB1A3C855F0065E21D /* HomeImageButton.m */; };
 		487E21571A35BFF800D3168F /* SLWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21551A35BFF800D3168F /* SLWLoginViewController.m */; };
 		487E21581A35BFF800D3168F /* SLWLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 487E21561A35BFF800D3168F /* SLWLoginViewController.xib */; };
 		487E21611A35C9BD00D3168F /* SLWNewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21601A35C9BD00D3168F /* SLWNewsListViewController.m */; };
@@ -109,6 +112,11 @@
 		486E4C951A3C54E80065E21D /* SLWNewsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWNewsListTableViewCell.h; sourceTree = "<group>"; };
 		486E4C961A3C54E80065E21D /* SLWNewsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWNewsListTableViewCell.m; sourceTree = "<group>"; };
 		486E4C971A3C54E80065E21D /* SLWNewsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWNewsListTableViewCell.xib; sourceTree = "<group>"; };
+		486E4CA01A3C74E30065E21D /* SLWHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWHome.h; sourceTree = "<group>"; };
+		486E4CA11A3C74E30065E21D /* SLWHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWHome.m; sourceTree = "<group>"; };
+		486E4CA21A3C74E30065E21D /* SLWHome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWHome.xib; sourceTree = "<group>"; };
+		486E4CAA1A3C855F0065E21D /* HomeImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeImageButton.h; sourceTree = "<group>"; };
+		486E4CAB1A3C855F0065E21D /* HomeImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeImageButton.m; sourceTree = "<group>"; };
 		487E21541A35BFF800D3168F /* SLWLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWLoginViewController.h; sourceTree = "<group>"; };
 		487E21551A35BFF800D3168F /* SLWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWLoginViewController.m; sourceTree = "<group>"; };
 		487E21561A35BFF800D3168F /* SLWLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWLoginViewController.xib; sourceTree = "<group>"; };
@@ -300,6 +308,25 @@
 			path = JSBadgeView;
 			sourceTree = "<group>";
 		};
+		486E4C9F1A3C74B50065E21D /* home */ = {
+			isa = PBXGroup;
+			children = (
+				486E4CA01A3C74E30065E21D /* SLWHome.h */,
+				486E4CA11A3C74E30065E21D /* SLWHome.m */,
+				486E4CA21A3C74E30065E21D /* SLWHome.xib */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		486E4CA51A3C7EFF0065E21D /* HomeImageButton */ = {
+			isa = PBXGroup;
+			children = (
+				486E4CAA1A3C855F0065E21D /* HomeImageButton.h */,
+				486E4CAB1A3C855F0065E21D /* HomeImageButton.m */,
+			);
+			path = HomeImageButton;
+			sourceTree = "<group>";
+		};
 		487E21591A35C5C900D3168F /* news */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +375,7 @@
 		48A28BF81A1B797D008B9410 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				486E4C9F1A3C74B50065E21D /* home */,
 				487E21591A35C5C900D3168F /* news */,
 				48CFF3A81A2C49A900023DB3 /* user */,
 				484846821A25FA8A0007D64C /* page1 */,
@@ -377,6 +405,7 @@
 		48A28BFB1A1B797D008B9410 /* widget */ = {
 			isa = PBXGroup;
 			children = (
+				486E4CA51A3C7EFF0065E21D /* HomeImageButton */,
 				487E21651A35D5EA00D3168F /* MJRefresh */,
 				48BDE6231A2DAB0500342CF4 /* NIDropDown */,
 				48CFF3A11A2C48E100023DB3 /* textfield */,
@@ -521,6 +550,7 @@
 				487E21581A35BFF800D3168F /* SLWLoginViewController.xib in Resources */,
 				4801416D1A1B747500311095 /* Images.xcassets in Resources */,
 				4860E7981A22FD0A00BE0ECA /* home_tabitem_4.png in Resources */,
+				486E4CA41A3C74E30065E21D /* SLWHome.xib in Resources */,
 				4848468B1A25FB910007D64C /* gray_line.png in Resources */,
 				487E21761A35D5EA00D3168F /* MJRefresh.bundle in Resources */,
 				4860E7951A22FD0A00BE0ECA /* home_tabitem_7.png in Resources */,
@@ -576,9 +606,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				486E4CAC1A3C855F0065E21D /* HomeImageButton.m in Sources */,
 				487E217A1A35D5EA00D3168F /* MJRefreshHeaderView.m in Sources */,
 				486E4C981A3C54E80065E21D /* SLWNewsListTableViewCell.m in Sources */,
 				48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */,
+				486E4CA31A3C74E30065E21D /* SLWHome.m in Sources */,
 				484846861A25FAB90007D64C /* SLWPage1ViewController.m in Sources */,
 				4860E79F1A22FDA900BE0ECA /* JSBadgeView.m in Sources */,
 				487E217B1A35D5EA00D3168F /* UIScrollView+MJExtension.m in Sources */,

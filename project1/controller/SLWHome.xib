@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLWHome">
+            <connections>
+                <outlet property="imagePlayerView" destination="CzV-0m-R7J" id="BhX-QQ-WiW"/>
+                <outlet property="leftButton" destination="WlW-om-wzG" id="P1d-Ux-awa"/>
+                <outlet property="right1Button" destination="c6m-Cj-yDQ" id="Eui-Ih-bpe"/>
+                <outlet property="right2Button" destination="92d-8b-6tw" id="HGu-hc-1Ia"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CzV-0m-R7J" customClass="ImagePlayerView">
+                    <rect key="frame" x="0.0" y="64" width="320" height="200"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="WlW-om-wzG" userLabel="left" customClass="HomeImageButton">
+                    <rect key="frame" x="19" y="338" width="111" height="200"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="92d-8b-6tw" userLabel="right2" customClass="HomeImageButton">
+                    <rect key="frame" x="138" y="448" width="165" height="90"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="c6m-Cj-yDQ" userLabel="right1" customClass="HomeImageButton">
+                    <rect key="frame" x="138" y="338" width="165" height="90"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="92d-8b-6tw" firstAttribute="leading" secondItem="WlW-om-wzG" secondAttribute="trailing" constant="5" id="16B-wU-0vM"/>
+                <constraint firstAttribute="trailing" secondItem="c6m-Cj-yDQ" secondAttribute="trailing" constant="10" id="JFn-Oq-YhE"/>
+                <constraint firstItem="c6m-Cj-yDQ" firstAttribute="leading" secondItem="WlW-om-wzG" secondAttribute="trailing" constant="5" id="JlW-dv-fQ4"/>
+                <constraint firstItem="c6m-Cj-yDQ" firstAttribute="top" secondItem="CzV-0m-R7J" secondAttribute="bottom" constant="10" id="MPE-TE-pfD"/>
+                <constraint firstItem="WlW-om-wzG" firstAttribute="top" secondItem="c6m-Cj-yDQ" secondAttribute="top" id="MYF-Ia-qm0"/>
+                <constraint firstAttribute="trailing" secondItem="92d-8b-6tw" secondAttribute="trailing" constant="10" id="Ng4-rY-Qco"/>
+                <constraint firstAttribute="bottom" secondItem="92d-8b-6tw" secondAttribute="bottom" constant="10" id="Xg8-sz-pyz"/>
+                <constraint firstItem="92d-8b-6tw" firstAttribute="top" secondItem="c6m-Cj-yDQ" secondAttribute="bottom" constant="5" id="dcI-If-hia"/>
+                <constraint firstItem="c6m-Cj-yDQ" firstAttribute="height" secondItem="92d-8b-6tw" secondAttribute="height" id="dki-rd-FYU"/>
+                <constraint firstAttribute="bottom" secondItem="WlW-om-wzG" secondAttribute="bottom" constant="10" id="eal-xv-ovg"/>
+                <constraint firstItem="WlW-om-wzG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="frn-Qw-oSi"/>
+                <constraint firstItem="WlW-om-wzG" firstAttribute="bottom" secondItem="92d-8b-6tw" secondAttribute="bottom" id="hzL-Ib-rGM"/>
+                <constraint firstItem="WlW-om-wzG" firstAttribute="top" secondItem="CzV-0m-R7J" secondAttribute="bottom" constant="10" id="idu-GG-Q8B"/>
+                <constraint firstAttribute="trailing" secondItem="CzV-0m-R7J" secondAttribute="trailing" id="kpn-AE-Sih"/>
+                <constraint firstItem="WlW-om-wzG" firstAttribute="width" secondItem="c6m-Cj-yDQ" secondAttribute="width" id="mg6-zl-yw7"/>
+                <constraint firstItem="WlW-om-wzG" firstAttribute="width" secondItem="92d-8b-6tw" secondAttribute="width" id="oDQ-D0-ffK"/>
+                <constraint firstItem="CzV-0m-R7J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="pox-wl-NDh"/>
+                <constraint firstItem="CzV-0m-R7J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vKF-8U-jWE"/>
+            </constraints>
+            <point key="canvasLocation" x="484" y="407"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="1" width="100" height="100"/>
+        <image name="2" width="100" height="100"/>
+        <image name="3" width="100" height="100"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

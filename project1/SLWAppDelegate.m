@@ -7,7 +7,8 @@
 //
 
 #import "SLWAppDelegate.h"
-#import "controller/SLWHomeViewController.h"
+#import "controller/SLWHome.h"
+
 
 @implementation SLWAppDelegate
 
@@ -16,7 +17,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    SLWHomeViewController * homepage = [[SLWHomeViewController alloc]init];
+    SLWHome * homepage = [[SLWHome alloc]init];
     UINavigationController * rootNav = [[UINavigationController alloc]initWithRootViewController:homepage];
     self.window.rootViewController = rootNav;
     [self.window makeKeyAndVisible];

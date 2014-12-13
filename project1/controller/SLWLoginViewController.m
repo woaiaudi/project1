@@ -7,6 +7,7 @@
 //
 
 #import "SLWLoginViewController.h"
+#import "SLWHome.h"
 
 @interface SLWLoginViewController ()
 
@@ -34,4 +35,8 @@
 }
 */
 
+- (IBAction)loginAction:(id)sender {
+    SLWHome * xx = [[SLWHome alloc]init];
+    [self.navigationController pushViewController:xx animated:YES];
+}
 @end
