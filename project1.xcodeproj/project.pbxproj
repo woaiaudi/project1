@@ -34,6 +34,8 @@
 		4860E79A1A22FD0A00BE0ECA /* home_tabitem_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4860E7921A22FD0A00BE0ECA /* home_tabitem_2.png */; };
 		4860E79B1A22FD0A00BE0ECA /* home_tabitem_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4860E7931A22FD0A00BE0ECA /* home_tabitem_1.png */; };
 		4860E79F1A22FDA900BE0ECA /* JSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4860E79E1A22FDA900BE0ECA /* JSBadgeView.m */; };
+		486E4C981A3C54E80065E21D /* SLWNewsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E4C961A3C54E80065E21D /* SLWNewsListTableViewCell.m */; };
+		486E4C991A3C54E80065E21D /* SLWNewsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486E4C971A3C54E80065E21D /* SLWNewsListTableViewCell.xib */; };
 		487E21571A35BFF800D3168F /* SLWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21551A35BFF800D3168F /* SLWLoginViewController.m */; };
 		487E21581A35BFF800D3168F /* SLWLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 487E21561A35BFF800D3168F /* SLWLoginViewController.xib */; };
 		487E21611A35C9BD00D3168F /* SLWNewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21601A35C9BD00D3168F /* SLWNewsListViewController.m */; };
@@ -104,6 +106,9 @@
 		4860E7931A22FD0A00BE0ECA /* home_tabitem_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_tabitem_1.png; sourceTree = "<group>"; };
 		4860E79D1A22FDA900BE0ECA /* JSBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBadgeView.h; sourceTree = "<group>"; };
 		4860E79E1A22FDA900BE0ECA /* JSBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBadgeView.m; sourceTree = "<group>"; };
+		486E4C951A3C54E80065E21D /* SLWNewsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWNewsListTableViewCell.h; sourceTree = "<group>"; };
+		486E4C961A3C54E80065E21D /* SLWNewsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWNewsListTableViewCell.m; sourceTree = "<group>"; };
+		486E4C971A3C54E80065E21D /* SLWNewsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWNewsListTableViewCell.xib; sourceTree = "<group>"; };
 		487E21541A35BFF800D3168F /* SLWLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWLoginViewController.h; sourceTree = "<group>"; };
 		487E21551A35BFF800D3168F /* SLWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWLoginViewController.m; sourceTree = "<group>"; };
 		487E21561A35BFF800D3168F /* SLWLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWLoginViewController.xib; sourceTree = "<group>"; };
@@ -300,6 +305,9 @@
 			children = (
 				487E215F1A35C9BD00D3168F /* SLWNewsListViewController.h */,
 				487E21601A35C9BD00D3168F /* SLWNewsListViewController.m */,
+				486E4C951A3C54E80065E21D /* SLWNewsListTableViewCell.h */,
+				486E4C961A3C54E80065E21D /* SLWNewsListTableViewCell.m */,
+				486E4C971A3C54E80065E21D /* SLWNewsListTableViewCell.xib */,
 			);
 			name = news;
 			sourceTree = "<group>";
@@ -516,6 +524,7 @@
 				4848468B1A25FB910007D64C /* gray_line.png in Resources */,
 				487E21761A35D5EA00D3168F /* MJRefresh.bundle in Resources */,
 				4860E7951A22FD0A00BE0ECA /* home_tabitem_7.png in Resources */,
+				486E4C991A3C54E80065E21D /* SLWNewsListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				487E217A1A35D5EA00D3168F /* MJRefreshHeaderView.m in Sources */,
+				486E4C981A3C54E80065E21D /* SLWNewsListTableViewCell.m in Sources */,
 				48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */,
 				484846861A25FAB90007D64C /* SLWPage1ViewController.m in Sources */,
 				4860E79F1A22FDA900BE0ECA /* JSBadgeView.m in Sources */,

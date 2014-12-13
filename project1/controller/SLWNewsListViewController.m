@@ -8,8 +8,7 @@
 
 #import "SLWNewsListViewController.h"
 #import "MJRefresh.h"
-
-NSString *const SLWNewsListCellIdentifier = @"SLWNewsListCellIdentifier";
+#import "SLWNewsListTableViewCell.h"
 
 /**
  *  随机数据
@@ -29,7 +28,7 @@ NSString *const SLWNewsListCellIdentifier = @"SLWNewsListCellIdentifier";
     _newsList = [NSMutableArray array];
     
     // 1.注册cell
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:SLWNewsListCellIdentifier];
+    [SLWNewsListTableViewCell registerNibToTableView:self.tableView];
     
     // 2.集成刷新控件
     [self setupRefresh];
@@ -68,6 +67,8 @@ NSString *const SLWNewsListCellIdentifier = @"SLWNewsListCellIdentifier";
 - (void)headerRereshing
 {
     // 1.网列表数组  在表头添加最新数据
+    //先清空
+    [self.newsList removeAllObjects];
     for (int i = 0; i<5; i++) {
         [self.newsList insertObject:MJRandomData atIndex:0];
     }
@@ -98,7 +99,11 @@ NSString *const SLWNewsListCellIdentifier = @"SLWNewsListCellIdentifier";
         [self.tableView footerEndRefreshing];
     });
 }
-
+#pragma mark - Table view UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [SLWNewsListTableViewCell heightForRow];
+}
 #pragma mark - Table view data source
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 //{
@@ -110,11 +115,10 @@ NSString *const SLWNewsListCellIdentifier = @"SLWNewsListCellIdentifier";
     return self.newsList.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (SLWNewsListTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SLWNewsListCellIdentifier forIndexPath:indexPath];
-    
-    cell.textLabel.text = self.newsList[indexPath.row];
+    SLWNewsListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[SLWNewsListTableViewCell className] forIndexPath:indexPath];
+    cell.newsTitleLabel.text = self.newsList[indexPath.row];
     return cell;
 }
 
