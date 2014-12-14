@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="diquButton" destination="Y7y-9m-9hL" id="OIW-EG-gA2"/>
                 <outlet property="guigeButton" destination="RTj-b9-uFN" id="pJo-dy-tC6"/>
+                <outlet property="supplyTableview" destination="8Bo-wV-64N" id="kmS-8n-qYd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="yongtuButton" destination="dqb-G2-hxT" id="agI-0R-oLK"/>
             </connections>
@@ -48,6 +49,14 @@
                         <action selector="diquButtonAction:" destination="-1" eventType="touchUpInside" id="atW-P4-UQa"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8Bo-wV-64N">
+                    <rect key="frame" x="0.0" y="95" width="320" height="473"/>
+                    <color key="backgroundColor" red="0.81977982949999995" green="0.81977982949999995" blue="0.81977982949999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="jU9-qz-dQD"/>
+                        <outlet property="delegate" destination="-1" id="f5n-5T-fbN"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="357" y="287"/>

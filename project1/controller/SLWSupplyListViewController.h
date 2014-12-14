@@ -18,5 +18,6 @@
 - (IBAction)diquButtonAction:(id)sender;
 - (IBAction)guigeButtonAction:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UITableView *supplyTableview;
 
 @end
