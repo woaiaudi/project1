@@ -10,7 +10,7 @@
 
 @class NIDropDown;
 @protocol NIDropDownDelegate
-- (void) niDropDownDelegateMethod: (NIDropDown *) sender selectedIndex:(NSIndexPath *)index;
+- (void) niDropDownDelegateMethod:(NIDropDown *)sender  byClickedButton:(UIButton *)button selectedIndex:(NSIndexPath *)index;
 @end
 
 @interface NIDropDown : UIView <UITableViewDelegate, UITableViewDataSource>

@@ -11,6 +11,7 @@
 #import "SLWSignUpViewController.h"
 #import "SLWLoginViewController.h"
 #import "SLWNewsListViewController.h"
+#import "SLWSupplyListViewController.h"
 
 @interface SLWHome ()
 {
@@ -44,7 +45,7 @@
     pageIndexArray = [NSMutableArray array];
     
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"信息咨询" controllerClass:[SLWNewsListViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"用户登录" controllerClass:[SLWLoginViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"供应管理" controllerClass:[SLWSupplyListViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"用户注册" controllerClass:[SLWSignUpViewController class]]];
     
 }

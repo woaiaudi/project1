@@ -134,11 +134,20 @@
     [self hideDropDown:btnSender];
     
     UITableViewCell *c = [tableView cellForRowAtIndexPath:indexPath];
+     
+    [btnSender setBackgroundImage:[UIImage imageNamed:@"arrow_down.png"] forState:UIControlStateNormal];
     [btnSender setTitle:c.textLabel.text forState:UIControlStateNormal];
     
+    //下拉菜单支持图标，如果有图标的画，先删除图标，然后加载选择项的图标
+    //但是，如果button有背景图片的画，这里也将会删除背景图片
     for (UIView *subview in btnSender.subviews) {
         if ([subview isKindOfClass:[UIImageView class]]) {
-            [subview removeFromSuperview];
+            //修复：重置按钮时，会删除设置的背景图片
+            UIImageView * thisImageView = (UIImageView *)subview;
+            if (![thisImageView.image isEqual:[btnSender backgroundImageForState:UIControlStateNormal]]) {
+                [subview removeFromSuperview];
+            }
+            
         }
     }
     imgView.image = c.imageView.image;
@@ -149,7 +158,8 @@
 }
 
 - (void) myDelegatebySelectedIndex:(NSIndexPath *)index{
-    [self.delegate niDropDownDelegateMethod:self selectedIndex:index];
+    
+    [self.delegate niDropDownDelegateMethod:self byClickedButton:btnSender selectedIndex:index];
 }
 
 -(void)dealloc {

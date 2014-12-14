@@ -52,6 +52,8 @@
 		487E217C1A35D5EA00D3168F /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21731A35D5EA00D3168F /* UIScrollView+MJRefresh.m */; };
 		487E217D1A35D5EA00D3168F /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21751A35D5EA00D3168F /* UIView+MJExtension.m */; };
 		488891131A1C45D900BAEDF8 /* ImagePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 488891121A1C45D900BAEDF8 /* ImagePlayerView.m */; };
+		489EF2BB1A3D528A00BDC580 /* SLWSupplyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 489EF2B91A3D528A00BDC580 /* SLWSupplyListViewController.m */; };
+		489EF2BC1A3D528A00BDC580 /* SLWSupplyListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489EF2BA1A3D528A00BDC580 /* SLWSupplyListViewController.xib */; };
 		48A28C061A1B7E7C008B9410 /* SLWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A28C041A1B7E7C008B9410 /* SLWHomeViewController.m */; };
 		48A28C071A1B7E7C008B9410 /* SLWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A28C051A1B7E7C008B9410 /* SLWHomeViewController.xib */; };
 		48BDE6261A2DAB0500342CF4 /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BDE6251A2DAB0500342CF4 /* NIDropDown.m */; };
@@ -143,6 +145,9 @@
 		488891101A1C45D900BAEDF8 /* ImagePlayerView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImagePlayerView-Prefix.pch"; sourceTree = "<group>"; };
 		488891111A1C45D900BAEDF8 /* ImagePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePlayerView.h; sourceTree = "<group>"; };
 		488891121A1C45D900BAEDF8 /* ImagePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePlayerView.m; sourceTree = "<group>"; };
+		489EF2B81A3D528A00BDC580 /* SLWSupplyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSupplyListViewController.h; sourceTree = "<group>"; };
+		489EF2B91A3D528A00BDC580 /* SLWSupplyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSupplyListViewController.m; sourceTree = "<group>"; };
+		489EF2BA1A3D528A00BDC580 /* SLWSupplyListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSupplyListViewController.xib; sourceTree = "<group>"; };
 		48A28C031A1B7E7C008B9410 /* SLWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWHomeViewController.h; sourceTree = "<group>"; };
 		48A28C041A1B7E7C008B9410 /* SLWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWHomeViewController.m; sourceTree = "<group>"; };
 		48A28C051A1B7E7C008B9410 /* SLWHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWHomeViewController.xib; sourceTree = "<group>"; };
@@ -372,9 +377,28 @@
 			path = ImagePlayerView;
 			sourceTree = "<group>";
 		};
+		489EF2B61A3D523000BDC580 /* supply */ = {
+			isa = PBXGroup;
+			children = (
+				489EF2B81A3D528A00BDC580 /* SLWSupplyListViewController.h */,
+				489EF2B91A3D528A00BDC580 /* SLWSupplyListViewController.m */,
+				489EF2BA1A3D528A00BDC580 /* SLWSupplyListViewController.xib */,
+			);
+			name = supply;
+			sourceTree = "<group>";
+		};
+		489EF2B71A3D523A00BDC580 /* requirement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = requirement;
+			sourceTree = "<group>";
+		};
 		48A28BF81A1B797D008B9410 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				489EF2B71A3D523A00BDC580 /* requirement */,
+				489EF2B61A3D523000BDC580 /* supply */,
 				486E4C9F1A3C74B50065E21D /* home */,
 				487E21591A35C5C900D3168F /* news */,
 				48CFF3A81A2C49A900023DB3 /* user */,
@@ -538,6 +562,7 @@
 			files = (
 				4860E7961A22FD0A00BE0ECA /* home_tabitem_6.png in Resources */,
 				4860E79B1A22FD0A00BE0ECA /* home_tabitem_1.png in Resources */,
+				489EF2BC1A3D528A00BDC580 /* SLWSupplyListViewController.xib in Resources */,
 				484846871A25FAB90007D64C /* SLWPage1ViewController.xib in Resources */,
 				480141651A1B747500311095 /* InfoPlist.strings in Resources */,
 				4860E7971A22FD0A00BE0ECA /* home_tabitem_5.png in Resources */,
@@ -616,6 +641,7 @@
 				487E217B1A35D5EA00D3168F /* UIScrollView+MJExtension.m in Sources */,
 				48CFF3AC1A2C49DA00023DB3 /* SLWSignUpViewController.m in Sources */,
 				487E21781A35D5EA00D3168F /* MJRefreshConst.m in Sources */,
+				489EF2BB1A3D528A00BDC580 /* SLWSupplyListViewController.m in Sources */,
 				487E21641A35D0DE00D3168F /* SLWPageIndex.m in Sources */,
 				48CFF3A41A2C48E100023DB3 /* MHTextField.m in Sources */,
 				487E217D1A35D5EA00D3168F /* UIView+MJExtension.m in Sources */,
