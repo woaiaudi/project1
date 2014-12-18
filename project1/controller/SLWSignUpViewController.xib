@@ -201,7 +201,7 @@
         </view>
     </objects>
     <resources>
-        <image name="arrow_down.png" width="160" height="44"/>
+        <image name="arrow_down.png" width="106" height="29"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

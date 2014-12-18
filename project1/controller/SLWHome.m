@@ -12,6 +12,7 @@
 #import "SLWLoginViewController.h"
 #import "SLWNewsListViewController.h"
 #import "SLWSupplyListViewController.h"
+#import "SLWCompanyListViewController.h"
 
 @interface SLWHome ()
 {
@@ -45,8 +46,8 @@
     pageIndexArray = [NSMutableArray array];
     
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"信息咨询" controllerClass:[SLWNewsListViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"供应管理" controllerClass:[SLWSupplyListViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"用户注册" controllerClass:[SLWSignUpViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"供应管理" controllerClass:[SLWCompanyListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"用户注册" controllerClass:[SLWSupplyListViewController class]]];
     
 }
 #pragma mark - 将焦点图显示在页面上
