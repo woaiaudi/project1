@@ -14,48 +14,45 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="qUX-7H-FcW">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="example.png" translatesAutoresizingMaskIntoConstraints="NO" id="qUX-7H-FcW">
                         <rect key="frame" x="5" y="10" width="70" height="70"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="优质PPR管道材料" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JR-sY-miS">
-                        <rect key="frame" x="90" y="5" width="180" height="21"/>
-                        <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="17"/>
-                        <color key="textColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="德国巴斯夫 1185A50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JR-sY-miS">
+                        <rect key="frame" x="80" y="10" width="180" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="面议" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7j-bz-JCR">
-                        <rect key="frame" x="90" y="46" width="159" height="21"/>
+                        <rect key="frame" x="254" y="15" width="66" height="21"/>
                         <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="17"/>
-                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="销售各种ppr材料" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkX-Yy-4xz">
-                        <rect key="frame" x="104" y="23" width="166" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="广东珠海市" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkX-Yy-4xz">
+                        <rect key="frame" x="80" y="27" width="166" height="21"/>
                         <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                         <color key="textColor" red="0.47818023989898994" green="0.47818023989898994" blue="0.47818023989898994" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="晋江市福晋塑料制品有限公司" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9P-7X-L5F">
-                        <rect key="frame" x="90" y="64" width="169" height="21"/>
+                        <rect key="frame" x="80" y="59" width="169" height="21"/>
                         <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAH-J0-LQq">
-                        <rect key="frame" x="278" y="23" width="30" height="30"/>
-                        <state key="normal" backgroundImage="phone.png"/>
+                        <rect key="frame" x="272" y="44" width="30" height="30"/>
+                        <state key="normal" backgroundImage="phone32.png"/>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.76195095690000003" green="1" blue="0.93064691740000005" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="nameLabel" destination="6JR-sY-miS" id="l15-VS-Sad"/>
             </connections>
-            <point key="canvasLocation" x="357" y="423"/>
+            <point key="canvasLocation" x="357" y="421"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="3" width="100" height="100"/>
-        <image name="phone.png" width="48" height="48"/>
+        <image name="example.png" width="48" height="48"/>
+        <image name="phone32.png" width="31" height="31"/>
     </resources>
 </document>

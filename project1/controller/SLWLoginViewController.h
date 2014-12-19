@@ -10,5 +10,6 @@
 
 @interface SLWLoginViewController : UIViewController
 - (IBAction)loginAction:(id)sender;
+- (IBAction)goSignupPageAction:(id)sender;
 
 @end

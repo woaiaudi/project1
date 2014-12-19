@@ -14,22 +14,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="5SU-4h-Od0">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="example.png" translatesAutoresizingMaskIntoConstraints="NO" id="5SU-4h-Od0">
                         <rect key="frame" x="8" y="5" width="80" height="80"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="河南富耐克超硬材料股份有限公司" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFN-kO-InN">
-                        <rect key="frame" x="91" y="5" width="182" height="39"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="viplogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="D8O-0E-u2K">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="corwnicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="D8O-0E-u2K">
                         <rect key="frame" x="272" y="0.0" width="48" height="48"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CBN磨料(CBN单晶、CBN微粉),CBN刀具,PCBN刀" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mp-oY-kMy">
-                        <rect key="frame" x="91" y="45" width="221" height="47"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="广州珠海市" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mp-oY-kMy">
+                        <rect key="frame" x="96" y="55" width="173" height="28"/>
                         <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                         <color key="textColor" red="0.47818023990000003" green="0.47818023990000003" blue="0.47818023990000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="河南富耐克超硬材料股份有限公司" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFN-kO-InN">
+                        <rect key="frame" x="96" y="7" width="173" height="39"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -37,12 +37,12 @@
             <connections>
                 <outlet property="nameLabel" destination="VFN-kO-InN" id="m7A-62-m3K"/>
             </connections>
-            <point key="canvasLocation" x="511" y="416"/>
+            <point key="canvasLocation" x="511" y="413"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="2" width="100" height="100"/>
-        <image name="viplogo.png" width="48" height="48"/>
+        <image name="corwnicon.png" width="48" height="48"/>
+        <image name="example.png" width="48" height="48"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

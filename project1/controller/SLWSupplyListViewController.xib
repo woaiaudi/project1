@@ -22,7 +22,7 @@
                 <button opaque="NO" tag="98523" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTj-b9-uFN">
                     <rect key="frame" x="214" y="64" width="106" height="30"/>
                     <state key="normal" title="规格" backgroundImage="arrow_down.png">
-                        <color key="titleColor" red="0.25110649870000001" green="1" blue="0.1440738184" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -32,7 +32,7 @@
                 <button opaque="NO" tag="98522" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7y-9m-9hL">
                     <rect key="frame" x="107" y="64" width="106" height="30"/>
                     <state key="normal" title="地区" backgroundImage="arrow_down.png">
-                        <color key="titleColor" red="0.25110649870000001" green="1" blue="0.1440738184" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -41,7 +41,6 @@
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8Bo-wV-64N">
                     <rect key="frame" x="0.0" y="95" width="320" height="473"/>
-                    <color key="backgroundColor" red="0.81977982949999995" green="0.81977982949999995" blue="0.81977982949999995" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="jU9-qz-dQD"/>
                         <outlet property="delegate" destination="-1" id="f5n-5T-fbN"/>
@@ -50,7 +49,7 @@
                 <button opaque="NO" tag="98521" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqb-G2-hxT">
                     <rect key="frame" x="0.0" y="64" width="106" height="30"/>
                     <state key="normal" title="用途" backgroundImage="arrow_down.png">
-                        <color key="titleColor" red="0.25110649870000001" green="1" blue="0.1440738184" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>

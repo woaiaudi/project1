@@ -36,7 +36,8 @@
 */
 
 - (IBAction)loginAction:(id)sender {
-    SLWHome * xx = [[SLWHome alloc]init];
-    [self.navigationController pushViewController:xx animated:YES];
+}
+
+- (IBAction)goSignupPageAction:(id)sender {
 }
 @end

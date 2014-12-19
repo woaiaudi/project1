@@ -28,10 +28,7 @@
 		485F971D1A42F1E9003972CD /* SLWCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F971C1A42F1E9003972CD /* SLWCompanyListViewController.m */; };
 		485F97221A42F61E003972CD /* SLWSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F97201A42F61E003972CD /* SLWSearchViewController.m */; };
 		485F97231A42F61E003972CD /* SLWSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485F97211A42F61E003972CD /* SLWSearchViewController.xib */; };
-		485F97251A42FD07003972CD /* viplogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 485F97241A42FD07003972CD /* viplogo.png */; };
 		485F97291A430237003972CD /* UINavigationItem+CustomBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F97281A430237003972CD /* UINavigationItem+CustomBackButton.m */; };
-		485F972B1A430414003972CD /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 485F972A1A430414003972CD /* phone.png */; };
-		485F972F1A43075F003972CD /* interface.strings in Resources */ = {isa = PBXBuildFile; fileRef = 485F972E1A43075F003972CD /* interface.strings */; };
 		4860E7891A22FAB800BE0ECA /* RKTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4860E7861A22FAB800BE0ECA /* RKTabItem.m */; };
 		4860E78A1A22FAB800BE0ECA /* RKTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4860E7881A22FAB800BE0ECA /* RKTabView.m */; };
 		4860E7941A22FD0A00BE0ECA /* home_tabitem_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4860E78C1A22FD0A00BE0ECA /* home_tabitem_8.png */; };
@@ -72,7 +69,14 @@
 		489EF2C11A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489EF2BF1A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.xib */; };
 		48A28C061A1B7E7C008B9410 /* SLWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A28C041A1B7E7C008B9410 /* SLWHomeViewController.m */; };
 		48A28C071A1B7E7C008B9410 /* SLWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A28C051A1B7E7C008B9410 /* SLWHomeViewController.xib */; };
+		48B6D2531A4455B300032B14 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D2521A4455B300032B14 /* example.png */; };
+		48B6D2551A4456BF00032B14 /* phone32.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D2541A4456BF00032B14 /* phone32.png */; };
+		48B6D2571A4458A100032B14 /* corwnicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D2561A4458A100032B14 /* corwnicon.png */; };
 		48BCF8821A44427100EBB2F0 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8811A44427100EBB2F0 /* user.png */; };
+		48BCF8891A444A8F00EBB2F0 /* pwdicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8871A444A8F00EBB2F0 /* pwdicon.png */; };
+		48BCF88A1A444A8F00EBB2F0 /* usericon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8881A444A8F00EBB2F0 /* usericon.png */; };
+		48BCF88C1A444C7200EBB2F0 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF88B1A444C7200EBB2F0 /* bg.png */; };
+		48BCF8921A44535C00EBB2F0 /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BCF8911A44535C00EBB2F0 /* UIHelper.m */; };
 		48BDE6261A2DAB0500342CF4 /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BDE6251A2DAB0500342CF4 /* NIDropDown.m */; };
 		48CFF3A41A2C48E100023DB3 /* MHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3A31A2C48E100023DB3 /* MHTextField.m */; };
 		48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3A61A2C495A00023DB3 /* ValidateTextField.m */; };
@@ -122,11 +126,8 @@
 		485F971F1A42F61E003972CD /* SLWSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSearchViewController.h; sourceTree = "<group>"; };
 		485F97201A42F61E003972CD /* SLWSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSearchViewController.m; sourceTree = "<group>"; };
 		485F97211A42F61E003972CD /* SLWSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSearchViewController.xib; sourceTree = "<group>"; };
-		485F97241A42FD07003972CD /* viplogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viplogo.png; sourceTree = "<group>"; };
 		485F97271A430237003972CD /* UINavigationItem+CustomBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+CustomBackButton.h"; sourceTree = "<group>"; };
 		485F97281A430237003972CD /* UINavigationItem+CustomBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+CustomBackButton.m"; sourceTree = "<group>"; };
-		485F972A1A430414003972CD /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
-		485F972E1A43075F003972CD /* interface.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = interface.strings; path = ../../../../../Documents/interface.strings; sourceTree = "<group>"; };
 		4860E7851A22FAB800BE0ECA /* RKTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabItem.h; sourceTree = "<group>"; };
 		4860E7861A22FAB800BE0ECA /* RKTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTabItem.m; sourceTree = "<group>"; };
 		4860E7871A22FAB800BE0ECA /* RKTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabView.h; sourceTree = "<group>"; };
@@ -190,7 +191,15 @@
 		48A28C031A1B7E7C008B9410 /* SLWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWHomeViewController.h; sourceTree = "<group>"; };
 		48A28C041A1B7E7C008B9410 /* SLWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWHomeViewController.m; sourceTree = "<group>"; };
 		48A28C051A1B7E7C008B9410 /* SLWHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWHomeViewController.xib; sourceTree = "<group>"; };
+		48B6D2521A4455B300032B14 /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
+		48B6D2541A4456BF00032B14 /* phone32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone32.png; sourceTree = "<group>"; };
+		48B6D2561A4458A100032B14 /* corwnicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corwnicon.png; sourceTree = "<group>"; };
 		48BCF8811A44427100EBB2F0 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		48BCF8871A444A8F00EBB2F0 /* pwdicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwdicon.png; sourceTree = "<group>"; };
+		48BCF8881A444A8F00EBB2F0 /* usericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usericon.png; sourceTree = "<group>"; };
+		48BCF88B1A444C7200EBB2F0 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		48BCF8901A44535C00EBB2F0 /* UIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHelper.h; sourceTree = SOURCE_ROOT; };
+		48BCF8911A44535C00EBB2F0 /* UIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHelper.m; sourceTree = SOURCE_ROOT; };
 		48BDE6241A2DAB0500342CF4 /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDropDown.h; sourceTree = "<group>"; };
 		48BDE6251A2DAB0500342CF4 /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDropDown.m; sourceTree = "<group>"; };
 		48CFF3A21A2C48E100023DB3 /* MHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTextField.h; sourceTree = "<group>"; };
@@ -361,12 +370,16 @@
 		4860E78B1A22FCE800BE0ECA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				48B6D2561A4458A100032B14 /* corwnicon.png */,
+				48B6D2541A4456BF00032B14 /* phone32.png */,
+				48B6D2521A4455B300032B14 /* example.png */,
+				48BCF88B1A444C7200EBB2F0 /* bg.png */,
 				487284CC1A4435DE00EC2B3D /* news.png */,
+				48BCF8871A444A8F00EBB2F0 /* pwdicon.png */,
+				48BCF8881A444A8F00EBB2F0 /* usericon.png */,
 				48BCF8811A44427100EBB2F0 /* user.png */,
 				487284CD1A4435DE00EC2B3D /* companys.png */,
 				487284CE1A4435DE00EC2B3D /* gq.png */,
-				485F972A1A430414003972CD /* phone.png */,
-				485F97241A42FD07003972CD /* viplogo.png */,
 				484846881A25FB910007D64C /* arrow_down.png */,
 				484846891A25FB910007D64C /* gray_line.png */,
 				4860E78C1A22FD0A00BE0ECA /* home_tabitem_8.png */,
@@ -507,7 +520,8 @@
 		48A28BFA1A1B797D008B9410 /* service */ = {
 			isa = PBXGroup;
 			children = (
-				485F972E1A43075F003972CD /* interface.strings */,
+				48BCF8901A44535C00EBB2F0 /* UIHelper.h */,
+				48BCF8911A44535C00EBB2F0 /* UIHelper.m */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -651,13 +665,13 @@
 				4860E79B1A22FD0A00BE0ECA /* home_tabitem_1.png in Resources */,
 				487284D01A4435DE00EC2B3D /* companys.png in Resources */,
 				489EF2BC1A3D528A00BDC580 /* SLWSupplyListViewController.xib in Resources */,
+				48BCF88C1A444C7200EBB2F0 /* bg.png in Resources */,
+				48BCF88A1A444A8F00EBB2F0 /* usericon.png in Resources */,
 				484846871A25FAB90007D64C /* SLWPage1ViewController.xib in Resources */,
+				48B6D2551A4456BF00032B14 /* phone32.png in Resources */,
 				480141651A1B747500311095 /* InfoPlist.strings in Resources */,
 				4860E7971A22FD0A00BE0ECA /* home_tabitem_5.png in Resources */,
-				485F972B1A430414003972CD /* phone.png in Resources */,
 				4860E7991A22FD0A00BE0ECA /* home_tabitem_3.png in Resources */,
-				485F972F1A43075F003972CD /* interface.strings in Resources */,
-				485F97251A42FD07003972CD /* viplogo.png in Resources */,
 				485F97231A42F61E003972CD /* SLWSearchViewController.xib in Resources */,
 				4860E79A1A22FD0A00BE0ECA /* home_tabitem_2.png in Resources */,
 				489EF2C11A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.xib in Resources */,
@@ -665,12 +679,15 @@
 				487284D11A4435DE00EC2B3D /* gq.png in Resources */,
 				48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */,
 				48A28C071A1B7E7C008B9410 /* SLWHomeViewController.xib in Resources */,
+				48BCF8891A444A8F00EBB2F0 /* pwdicon.png in Resources */,
 				4860E7941A22FD0A00BE0ECA /* home_tabitem_8.png in Resources */,
 				4848468A1A25FB910007D64C /* arrow_down.png in Resources */,
 				487E21581A35BFF800D3168F /* SLWLoginViewController.xib in Resources */,
 				4801416D1A1B747500311095 /* Images.xcassets in Resources */,
 				4860E7981A22FD0A00BE0ECA /* home_tabitem_4.png in Resources */,
 				486E4CA41A3C74E30065E21D /* SLWHome.xib in Resources */,
+				48B6D2531A4455B300032B14 /* example.png in Resources */,
+				48B6D2571A4458A100032B14 /* corwnicon.png in Resources */,
 				48BCF8821A44427100EBB2F0 /* user.png in Resources */,
 				4848468B1A25FB910007D64C /* gray_line.png in Resources */,
 				487E21761A35D5EA00D3168F /* MJRefresh.bundle in Resources */,
@@ -758,6 +775,7 @@
 				48A28C061A1B7E7C008B9410 /* SLWHomeViewController.m in Sources */,
 				4801416B1A1B747500311095 /* SLWAppDelegate.m in Sources */,
 				48BDE6261A2DAB0500342CF4 /* NIDropDown.m in Sources */,
+				48BCF8921A44535C00EBB2F0 /* UIHelper.m in Sources */,
 				4860E78A1A22FAB800BE0ECA /* RKTabView.m in Sources */,
 				485F97291A430237003972CD /* UINavigationItem+CustomBackButton.m in Sources */,
 				487E21571A35BFF800D3168F /* SLWLoginViewController.m in Sources */,

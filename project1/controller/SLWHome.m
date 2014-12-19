@@ -14,6 +14,7 @@
 #import "SLWSupplyListViewController.h"
 #import "SLWCompanyListViewController.h"
 #import "SLWSearchViewController.h"
+#import "UIHelper.h"
 
 @interface SLWHome ()
 {
@@ -155,22 +156,10 @@
 #pragma mark - 打开搜索
 -(void)showSearchPage
 {
-    // 1.取模型
-    SLWPageIndex *pi =[SLWPageIndex pageIndexWithTitle:@"搜索" controllerClass:[SLWSearchViewController class]];
-    // 2.创建控制器
-    UIViewController *vc = [[pi.controllerClass alloc] init];
-    vc.title = pi.title;
-    // 3.跳转
-    [self.navigationController pushViewController:vc animated:YES];
+    [UIHelper pushViewController:[SLWSearchViewController class] andTitle:@"搜索" byFromViewController:self];
 }
 #pragma mark - 打开登录页面
 -(void)openLoginPage{
-    // 1.取模型
-    SLWPageIndex *pi =[SLWPageIndex pageIndexWithTitle:@"用户登录" controllerClass:[SLWLoginViewController class]];
-    // 2.创建控制器
-    UIViewController *vc = [[pi.controllerClass alloc] init];
-    vc.title = pi.title;
-    // 3.跳转
-    [self.navigationController pushViewController:vc animated:YES];
+    [UIHelper pushViewController:[SLWLoginViewController class] andTitle:@"用户登录" byFromViewController:self];
 }
 @end
