@@ -72,6 +72,7 @@
 		489EF2C11A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489EF2BF1A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.xib */; };
 		48A28C061A1B7E7C008B9410 /* SLWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A28C041A1B7E7C008B9410 /* SLWHomeViewController.m */; };
 		48A28C071A1B7E7C008B9410 /* SLWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A28C051A1B7E7C008B9410 /* SLWHomeViewController.xib */; };
+		48BCF8821A44427100EBB2F0 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8811A44427100EBB2F0 /* user.png */; };
 		48BDE6261A2DAB0500342CF4 /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BDE6251A2DAB0500342CF4 /* NIDropDown.m */; };
 		48CFF3A41A2C48E100023DB3 /* MHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3A31A2C48E100023DB3 /* MHTextField.m */; };
 		48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3A61A2C495A00023DB3 /* ValidateTextField.m */; };
@@ -189,6 +190,7 @@
 		48A28C031A1B7E7C008B9410 /* SLWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWHomeViewController.h; sourceTree = "<group>"; };
 		48A28C041A1B7E7C008B9410 /* SLWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWHomeViewController.m; sourceTree = "<group>"; };
 		48A28C051A1B7E7C008B9410 /* SLWHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWHomeViewController.xib; sourceTree = "<group>"; };
+		48BCF8811A44427100EBB2F0 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		48BDE6241A2DAB0500342CF4 /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDropDown.h; sourceTree = "<group>"; };
 		48BDE6251A2DAB0500342CF4 /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDropDown.m; sourceTree = "<group>"; };
 		48CFF3A21A2C48E100023DB3 /* MHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTextField.h; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				487284CC1A4435DE00EC2B3D /* news.png */,
+				48BCF8811A44427100EBB2F0 /* user.png */,
 				487284CD1A4435DE00EC2B3D /* companys.png */,
 				487284CE1A4435DE00EC2B3D /* gq.png */,
 				485F972A1A430414003972CD /* phone.png */,
@@ -668,6 +671,7 @@
 				4801416D1A1B747500311095 /* Images.xcassets in Resources */,
 				4860E7981A22FD0A00BE0ECA /* home_tabitem_4.png in Resources */,
 				486E4CA41A3C74E30065E21D /* SLWHome.xib in Resources */,
+				48BCF8821A44427100EBB2F0 /* user.png in Resources */,
 				4848468B1A25FB910007D64C /* gray_line.png in Resources */,
 				487E21761A35D5EA00D3168F /* MJRefresh.bundle in Resources */,
 				48739B5D1A4065380026BC0D /* SLWSupplyDetailViewController.xib in Resources */,

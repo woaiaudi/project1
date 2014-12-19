@@ -9,6 +9,9 @@
 #import "SLWSearchViewController.h"
 
 @interface SLWSearchViewController ()
+{
+    NIDropDown * dropDown;
+}
 
 @end
 
@@ -34,4 +37,25 @@
 }
 */
 
+- (IBAction)searchTypeButtonAction:(id)sender {
+    NSArray * arr = [[NSArray alloc] init];
+    //不能超过11个汉字
+    arr = [NSArray arrayWithObjects:@"产品", @"企业", @"资讯",nil];
+    if(dropDown == nil) {
+        CGFloat f = 200;
+        dropDown = [[NIDropDown alloc]showDropDown:sender :&f :arr :nil :@"down"];
+        dropDown.delegate = self;
+    }
+    else {
+        [dropDown hideDropDown:sender];
+        dropDown = nil;
+    }
+}
+#pragma mark - 下拉点击回调事件
+- (void) niDropDownDelegateMethod: (NIDropDown *) sender byClickedButton:(UIButton *)button selectedIndex:(NSIndexPath *)index
+{
+    
+    dropDown = nil;
+    NSLog(@"点击了按钮【%d】后，选中了S[%d],R[%d]",button.tag,index.section,index.row);
+}
 @end

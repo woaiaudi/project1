@@ -134,8 +134,7 @@
     [self hideDropDown:btnSender];
     
     UITableViewCell *c = [tableView cellForRowAtIndexPath:indexPath];
-     
-    [btnSender setBackgroundImage:[UIImage imageNamed:@"arrow_down.png"] forState:UIControlStateNormal];
+    
     [btnSender setTitle:c.textLabel.text forState:UIControlStateNormal];
     
     //下拉菜单支持图标，如果有图标的画，先删除图标，然后加载选择项的图标

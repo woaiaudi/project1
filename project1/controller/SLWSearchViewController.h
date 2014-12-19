@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NIDropDown.h"
+@interface SLWSearchViewController : UIViewController<NIDropDownDelegate>
+@property (strong, nonatomic) IBOutlet UIButton *searchTypeButton;
 
-@interface SLWSearchViewController : UIViewController
-
+- (IBAction)searchTypeButtonAction:(id)sender;
 @end

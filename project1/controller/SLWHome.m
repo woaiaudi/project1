@@ -31,6 +31,17 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"中国工程塑料";
+    
+    //右上角搜索按钮
+    //左侧滑按钮
+    UIBarButtonItem *rightButton1 =[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showSearchPage)];
+    
+    
+    UIBarButtonItem *leftButton1 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"user.png"] style:UIBarButtonItemStyleDone target:self action:@selector(openLoginPage)];
+    
+    self.navigationItem.rightBarButtonItem = rightButton1;
+    self.navigationItem.leftBarButtonItem = leftButton1;
+    
     [self initAllPageIndexArray];
     [self addAOScrollerView:nil];
     [self initHomeImageButtons];
@@ -140,5 +151,26 @@
     }];
     
     
+}
+#pragma mark - 打开搜索
+-(void)showSearchPage
+{
+    // 1.取模型
+    SLWPageIndex *pi =[SLWPageIndex pageIndexWithTitle:@"搜索" controllerClass:[SLWSearchViewController class]];
+    // 2.创建控制器
+    UIViewController *vc = [[pi.controllerClass alloc] init];
+    vc.title = pi.title;
+    // 3.跳转
+    [self.navigationController pushViewController:vc animated:YES];
+}
+#pragma mark - 打开登录页面
+-(void)openLoginPage{
+    // 1.取模型
+    SLWPageIndex *pi =[SLWPageIndex pageIndexWithTitle:@"用户登录" controllerClass:[SLWLoginViewController class]];
+    // 2.创建控制器
+    UIViewController *vc = [[pi.controllerClass alloc] init];
+    vc.title = pi.title;
+    // 3.跳转
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end
