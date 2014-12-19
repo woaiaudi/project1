@@ -7,7 +7,8 @@
 //
 
 #import "SLWLoginViewController.h"
-#import "SLWHome.h"
+#import "UIHelper.h"
+#import "SLWSignUpViewController.h"
 
 @interface SLWLoginViewController ()
 
@@ -17,7 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [_usernameTextView setRequired:YES];//必填
+    [_passwordtextView setRequired:YES];//必填
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,19 +27,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)loginAction:(id)sender {
 }
 
 - (IBAction)goSignupPageAction:(id)sender {
+    [UIHelper pushViewController:[SLWSignUpViewController class] andTitle:@"注册新用户" byFromViewController:self];
 }
 @end

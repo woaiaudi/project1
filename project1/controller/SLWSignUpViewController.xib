@@ -25,6 +25,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="33e-Ay-J30">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="会员账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iex-aZ-ybL" customClass="ValidateTextField">
                     <rect key="frame" x="88" y="74" width="212" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -62,8 +65,9 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5l8-qh-is6">
                     <rect key="frame" x="20" y="530" width="280" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" title="确认注册">
-                        <color key="titleColor" red="0.012909585162042974" green="0.19859566738121193" blue="0.20482165404040409" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.20601931009999999" green="0.50361090689999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="userSignupCommitAction:" destination="-1" eventType="touchUpInside" id="u2J-Nb-wxU"/>
@@ -142,7 +146,6 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="4Fw-Nh-UmF" firstAttribute="bottom" secondItem="ySj-a8-V54" secondAttribute="bottom" id="5Ye-j9-VTa"/>
                 <constraint firstItem="2Kf-uh-e6x" firstAttribute="top" secondItem="cTS-JE-HTr" secondAttribute="bottom" constant="5" id="6NA-fT-KcV"/>
@@ -202,6 +205,7 @@
     </objects>
     <resources>
         <image name="arrow_down.png" width="106" height="29"/>
+        <image name="bg.png" width="106" height="123"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

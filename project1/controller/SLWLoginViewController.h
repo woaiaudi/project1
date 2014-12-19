@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MHTextField.h"
 
 @interface SLWLoginViewController : UIViewController
+@property (strong, nonatomic) IBOutlet MHTextField *usernameTextView;
+@property (strong, nonatomic) IBOutlet MHTextField *passwordtextView;
+
+
 - (IBAction)loginAction:(id)sender;
 - (IBAction)goSignupPageAction:(id)sender;
 
