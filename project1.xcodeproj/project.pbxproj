@@ -26,6 +26,12 @@
 		485F97191A42EAAE003972CD /* SLWCompanyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F97171A42EAAE003972CD /* SLWCompanyListTableViewCell.m */; };
 		485F971A1A42EAAE003972CD /* SLWCompanyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */; };
 		485F971D1A42F1E9003972CD /* SLWCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F971C1A42F1E9003972CD /* SLWCompanyListViewController.m */; };
+		485F97221A42F61E003972CD /* SLWSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F97201A42F61E003972CD /* SLWSearchViewController.m */; };
+		485F97231A42F61E003972CD /* SLWSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485F97211A42F61E003972CD /* SLWSearchViewController.xib */; };
+		485F97251A42FD07003972CD /* viplogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 485F97241A42FD07003972CD /* viplogo.png */; };
+		485F97291A430237003972CD /* UINavigationItem+CustomBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F97281A430237003972CD /* UINavigationItem+CustomBackButton.m */; };
+		485F972B1A430414003972CD /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 485F972A1A430414003972CD /* phone.png */; };
+		485F972F1A43075F003972CD /* interface.strings in Resources */ = {isa = PBXBuildFile; fileRef = 485F972E1A43075F003972CD /* interface.strings */; };
 		4860E7891A22FAB800BE0ECA /* RKTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4860E7861A22FAB800BE0ECA /* RKTabItem.m */; };
 		4860E78A1A22FAB800BE0ECA /* RKTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4860E7881A22FAB800BE0ECA /* RKTabView.m */; };
 		4860E7941A22FD0A00BE0ECA /* home_tabitem_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4860E78C1A22FD0A00BE0ECA /* home_tabitem_8.png */; };
@@ -42,6 +48,9 @@
 		486E4CA31A3C74E30065E21D /* SLWHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E4CA11A3C74E30065E21D /* SLWHome.m */; };
 		486E4CA41A3C74E30065E21D /* SLWHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486E4CA21A3C74E30065E21D /* SLWHome.xib */; };
 		486E4CAC1A3C855F0065E21D /* HomeImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E4CAB1A3C855F0065E21D /* HomeImageButton.m */; };
+		487284CF1A4435DE00EC2B3D /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 487284CC1A4435DE00EC2B3D /* news.png */; };
+		487284D01A4435DE00EC2B3D /* companys.png in Resources */ = {isa = PBXBuildFile; fileRef = 487284CD1A4435DE00EC2B3D /* companys.png */; };
+		487284D11A4435DE00EC2B3D /* gq.png in Resources */ = {isa = PBXBuildFile; fileRef = 487284CE1A4435DE00EC2B3D /* gq.png */; };
 		48739B5C1A4065380026BC0D /* SLWSupplyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48739B5A1A4065380026BC0D /* SLWSupplyDetailViewController.m */; };
 		48739B5D1A4065380026BC0D /* SLWSupplyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48739B5B1A4065380026BC0D /* SLWSupplyDetailViewController.xib */; };
 		487E21571A35BFF800D3168F /* SLWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21551A35BFF800D3168F /* SLWLoginViewController.m */; };
@@ -109,6 +118,14 @@
 		485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWCompanyListTableViewCell.xib; sourceTree = "<group>"; };
 		485F971B1A42F1E9003972CD /* SLWCompanyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWCompanyListViewController.h; sourceTree = "<group>"; };
 		485F971C1A42F1E9003972CD /* SLWCompanyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWCompanyListViewController.m; sourceTree = "<group>"; };
+		485F971F1A42F61E003972CD /* SLWSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSearchViewController.h; sourceTree = "<group>"; };
+		485F97201A42F61E003972CD /* SLWSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSearchViewController.m; sourceTree = "<group>"; };
+		485F97211A42F61E003972CD /* SLWSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSearchViewController.xib; sourceTree = "<group>"; };
+		485F97241A42FD07003972CD /* viplogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viplogo.png; sourceTree = "<group>"; };
+		485F97271A430237003972CD /* UINavigationItem+CustomBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+CustomBackButton.h"; sourceTree = "<group>"; };
+		485F97281A430237003972CD /* UINavigationItem+CustomBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+CustomBackButton.m"; sourceTree = "<group>"; };
+		485F972A1A430414003972CD /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
+		485F972E1A43075F003972CD /* interface.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = interface.strings; path = ../../../../../Documents/interface.strings; sourceTree = "<group>"; };
 		4860E7851A22FAB800BE0ECA /* RKTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabItem.h; sourceTree = "<group>"; };
 		4860E7861A22FAB800BE0ECA /* RKTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTabItem.m; sourceTree = "<group>"; };
 		4860E7871A22FAB800BE0ECA /* RKTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabView.h; sourceTree = "<group>"; };
@@ -131,6 +148,9 @@
 		486E4CA21A3C74E30065E21D /* SLWHome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWHome.xib; sourceTree = "<group>"; };
 		486E4CAA1A3C855F0065E21D /* HomeImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeImageButton.h; sourceTree = "<group>"; };
 		486E4CAB1A3C855F0065E21D /* HomeImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeImageButton.m; sourceTree = "<group>"; };
+		487284CC1A4435DE00EC2B3D /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
+		487284CD1A4435DE00EC2B3D /* companys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = companys.png; sourceTree = "<group>"; };
+		487284CE1A4435DE00EC2B3D /* gq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gq.png; sourceTree = "<group>"; };
 		48739B591A4065380026BC0D /* SLWSupplyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSupplyDetailViewController.h; sourceTree = "<group>"; };
 		48739B5A1A4065380026BC0D /* SLWSupplyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSupplyDetailViewController.m; sourceTree = "<group>"; };
 		48739B5B1A4065380026BC0D /* SLWSupplyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSupplyDetailViewController.xib; sourceTree = "<group>"; };
@@ -306,6 +326,25 @@
 			name = company;
 			sourceTree = "<group>";
 		};
+		485F971E1A42F604003972CD /* search */ = {
+			isa = PBXGroup;
+			children = (
+				485F971F1A42F61E003972CD /* SLWSearchViewController.h */,
+				485F97201A42F61E003972CD /* SLWSearchViewController.m */,
+				485F97211A42F61E003972CD /* SLWSearchViewController.xib */,
+			);
+			name = search;
+			sourceTree = "<group>";
+		};
+		485F97261A4301D0003972CD /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				485F97271A430237003972CD /* UINavigationItem+CustomBackButton.h */,
+				485F97281A430237003972CD /* UINavigationItem+CustomBackButton.m */,
+			);
+			name = navigation;
+			sourceTree = "<group>";
+		};
 		4860E7841A22FAB800BE0ECA /* RKTabView */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +359,11 @@
 		4860E78B1A22FCE800BE0ECA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				487284CC1A4435DE00EC2B3D /* news.png */,
+				487284CD1A4435DE00EC2B3D /* companys.png */,
+				487284CE1A4435DE00EC2B3D /* gq.png */,
+				485F972A1A430414003972CD /* phone.png */,
+				485F97241A42FD07003972CD /* viplogo.png */,
 				484846881A25FB910007D64C /* arrow_down.png */,
 				484846891A25FB910007D64C /* gray_line.png */,
 				4860E78C1A22FD0A00BE0ECA /* home_tabitem_8.png */,
@@ -433,6 +477,7 @@
 		48A28BF81A1B797D008B9410 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				485F971E1A42F604003972CD /* search */,
 				485F97101A42E899003972CD /* company */,
 				489EF2B71A3D523A00BDC580 /* requirement */,
 				489EF2B61A3D523000BDC580 /* supply */,
@@ -459,6 +504,7 @@
 		48A28BFA1A1B797D008B9410 /* service */ = {
 			isa = PBXGroup;
 			children = (
+				485F972E1A43075F003972CD /* interface.strings */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -466,6 +512,7 @@
 		48A28BFB1A1B797D008B9410 /* widget */ = {
 			isa = PBXGroup;
 			children = (
+				485F97261A4301D0003972CD /* navigation */,
 				486E4CA51A3C7EFF0065E21D /* HomeImageButton */,
 				487E21651A35D5EA00D3168F /* MJRefresh */,
 				48BDE6231A2DAB0500342CF4 /* NIDropDown */,
@@ -599,13 +646,20 @@
 			files = (
 				4860E7961A22FD0A00BE0ECA /* home_tabitem_6.png in Resources */,
 				4860E79B1A22FD0A00BE0ECA /* home_tabitem_1.png in Resources */,
+				487284D01A4435DE00EC2B3D /* companys.png in Resources */,
 				489EF2BC1A3D528A00BDC580 /* SLWSupplyListViewController.xib in Resources */,
 				484846871A25FAB90007D64C /* SLWPage1ViewController.xib in Resources */,
 				480141651A1B747500311095 /* InfoPlist.strings in Resources */,
 				4860E7971A22FD0A00BE0ECA /* home_tabitem_5.png in Resources */,
+				485F972B1A430414003972CD /* phone.png in Resources */,
 				4860E7991A22FD0A00BE0ECA /* home_tabitem_3.png in Resources */,
+				485F972F1A43075F003972CD /* interface.strings in Resources */,
+				485F97251A42FD07003972CD /* viplogo.png in Resources */,
+				485F97231A42F61E003972CD /* SLWSearchViewController.xib in Resources */,
 				4860E79A1A22FD0A00BE0ECA /* home_tabitem_2.png in Resources */,
 				489EF2C11A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.xib in Resources */,
+				487284CF1A4435DE00EC2B3D /* news.png in Resources */,
+				487284D11A4435DE00EC2B3D /* gq.png in Resources */,
 				48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */,
 				48A28C071A1B7E7C008B9410 /* SLWHomeViewController.xib in Resources */,
 				4860E7941A22FD0A00BE0ECA /* home_tabitem_8.png in Resources */,
@@ -695,11 +749,13 @@
 				485F971D1A42F1E9003972CD /* SLWCompanyListViewController.m in Sources */,
 				480141671A1B747500311095 /* main.m in Sources */,
 				487E21771A35D5EA00D3168F /* MJRefreshBaseView.m in Sources */,
+				485F97221A42F61E003972CD /* SLWSearchViewController.m in Sources */,
 				487E21791A35D5EA00D3168F /* MJRefreshFooterView.m in Sources */,
 				48A28C061A1B7E7C008B9410 /* SLWHomeViewController.m in Sources */,
 				4801416B1A1B747500311095 /* SLWAppDelegate.m in Sources */,
 				48BDE6261A2DAB0500342CF4 /* NIDropDown.m in Sources */,
 				4860E78A1A22FAB800BE0ECA /* RKTabView.m in Sources */,
+				485F97291A430237003972CD /* UINavigationItem+CustomBackButton.m in Sources */,
 				487E21571A35BFF800D3168F /* SLWLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

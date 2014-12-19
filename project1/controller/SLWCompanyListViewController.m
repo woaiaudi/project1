@@ -8,10 +8,11 @@
 
 #import "SLWCompanyListViewController.h"
 #import "MJRefresh.h"
+#import "UINavigationItem+CustomBackButton.h"
 /**
  *  随机数据
  */
-#define MJRandomData [NSString stringWithFormat:@"随机产品---%d", arc4random_uniform(1000000)]
+#define MJRandomData [NSString stringWithFormat:@"河南富耐克超硬材料股份有限公司%d", arc4random_uniform(1000000)]
 @interface SLWCompanyListViewController ()
 /**
  *  存放列表数据

@@ -13,6 +13,7 @@
 #import "SLWNewsListViewController.h"
 #import "SLWSupplyListViewController.h"
 #import "SLWCompanyListViewController.h"
+#import "SLWSearchViewController.h"
 
 @interface SLWHome ()
 {
@@ -29,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"中国工程塑料";
     [self initAllPageIndexArray];
     [self addAOScrollerView:nil];
     [self initHomeImageButtons];
@@ -46,8 +48,8 @@
     pageIndexArray = [NSMutableArray array];
     
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"信息咨询" controllerClass:[SLWNewsListViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"供应管理" controllerClass:[SLWCompanyListViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"用户注册" controllerClass:[SLWSupplyListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"企业展示" controllerClass:[SLWCompanyListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品供应" controllerClass:[SLWSupplyListViewController class]]];
     
 }
 #pragma mark - 将焦点图显示在页面上
