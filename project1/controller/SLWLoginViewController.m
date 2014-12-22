@@ -10,6 +10,7 @@
 #import "UIHelper.h"
 #import "SLWSignUpViewController.h"
 #import "UserService.h"
+#import <TSMessage.h>
 
 @interface SLWLoginViewController ()
 {
@@ -39,7 +40,9 @@
         //登录成功到首页，更新首页数据
         [UIHelper popToRootViewControllerAnimated:self];
     } onfailure:^(NSError *error) {
-        NSLog(@"%@",[error localizedDescription]);
+        [TSMessage showNotificationWithTitle:@"登录失败"
+                                    subtitle:[error localizedDescription]
+                                        type:TSMessageNotificationTypeError];
     }];
 }
 
