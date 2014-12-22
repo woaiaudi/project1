@@ -24,6 +24,8 @@
 		482785721A48431F0005A16C /* UserBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 482785711A48431F0005A16C /* UserBean.m */; };
 		482785781A4845F00005A16C /* Jastor.m in Sources */ = {isa = PBXBuildFile; fileRef = 482785751A4845F00005A16C /* Jastor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		482785791A4845F00005A16C /* JastorRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 482785771A4845F00005A16C /* JastorRuntimeHelper.m */; };
+		483D13821A48560000EE85FC /* HttpErrorBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 483D13811A48560000EE85FC /* HttpErrorBean.m */; };
+		483D13851A4858ED00EE85FC /* ResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 483D13841A4858ED00EE85FC /* ResponseHandler.m */; };
 		484846861A25FAB90007D64C /* SLWPage1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484846841A25FAB90007D64C /* SLWPage1ViewController.m */; };
 		484846871A25FAB90007D64C /* SLWPage1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 484846851A25FAB90007D64C /* SLWPage1ViewController.xib */; };
 		4848468A1A25FB910007D64C /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 484846881A25FB910007D64C /* arrow_down.png */; };
@@ -130,6 +132,10 @@
 		482785751A4845F00005A16C /* Jastor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jastor.m; sourceTree = "<group>"; };
 		482785761A4845F00005A16C /* JastorRuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JastorRuntimeHelper.h; sourceTree = "<group>"; };
 		482785771A4845F00005A16C /* JastorRuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JastorRuntimeHelper.m; sourceTree = "<group>"; };
+		483D13801A48560000EE85FC /* HttpErrorBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpErrorBean.h; sourceTree = "<group>"; };
+		483D13811A48560000EE85FC /* HttpErrorBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpErrorBean.m; sourceTree = "<group>"; };
+		483D13831A4858ED00EE85FC /* ResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseHandler.h; sourceTree = SOURCE_ROOT; };
+		483D13841A4858ED00EE85FC /* ResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseHandler.m; sourceTree = SOURCE_ROOT; };
 		484846831A25FAB90007D64C /* SLWPage1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWPage1ViewController.h; sourceTree = "<group>"; };
 		484846841A25FAB90007D64C /* SLWPage1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWPage1ViewController.m; sourceTree = "<group>"; };
 		484846851A25FAB90007D64C /* SLWPage1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWPage1ViewController.xib; sourceTree = "<group>"; };
@@ -544,6 +550,8 @@
 				487E21631A35D0DE00D3168F /* SLWPageIndex.m */,
 				482785701A48431F0005A16C /* UserBean.h */,
 				482785711A48431F0005A16C /* UserBean.m */,
+				483D13801A48560000EE85FC /* HttpErrorBean.h */,
+				483D13811A48560000EE85FC /* HttpErrorBean.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -555,6 +563,8 @@
 				48BCF8911A44535C00EBB2F0 /* UIHelper.m */,
 				482785621A4838260005A16C /* UserService.h */,
 				482785631A4838260005A16C /* UserService.m */,
+				483D13831A4858ED00EE85FC /* ResponseHandler.h */,
+				483D13841A4858ED00EE85FC /* ResponseHandler.m */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -784,6 +794,7 @@
 			files = (
 				486E4CAC1A3C855F0065E21D /* HomeImageButton.m in Sources */,
 				487E217A1A35D5EA00D3168F /* MJRefreshHeaderView.m in Sources */,
+				483D13821A48560000EE85FC /* HttpErrorBean.m in Sources */,
 				482785781A4845F00005A16C /* Jastor.m in Sources */,
 				486E4C981A3C54E80065E21D /* SLWNewsListTableViewCell.m in Sources */,
 				48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */,
@@ -794,6 +805,7 @@
 				487E217B1A35D5EA00D3168F /* UIScrollView+MJExtension.m in Sources */,
 				48CFF3AC1A2C49DA00023DB3 /* SLWSignUpViewController.m in Sources */,
 				487E21781A35D5EA00D3168F /* MJRefreshConst.m in Sources */,
+				483D13851A4858ED00EE85FC /* ResponseHandler.m in Sources */,
 				489EF2BB1A3D528A00BDC580 /* SLWSupplyListViewController.m in Sources */,
 				487E21641A35D0DE00D3168F /* SLWPageIndex.m in Sources */,
 				48CFF3A41A2C48E100023DB3 /* MHTextField.m in Sources */,

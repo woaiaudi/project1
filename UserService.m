@@ -29,8 +29,19 @@
         
         if ([responseObject isKindOfClass:[NSDictionary class]])
         {
-            UserBean * returnBean = [[UserBean alloc]initWithDictionary:responseObject];
-            successedBlock(returnBean);
+            NSDictionary * dic = (NSDictionary *)responseObject;
+            
+            if ((int)[dic objectForKey:@"status"] == 1) {
+                UserBean * returnBean = [[UserBean alloc]initWithDictionary:responseObject];
+                successedBlock(returnBean);
+            }
+            else
+            {
+                HttpErrorBean * httpErrorBean = [[HttpErrorBean alloc]initWithDictionary:dic];
+                NSError *aError = [NSError errorWithDomain:MyErrorDomain code:XLoginFailed userInfo:[NSDictionary dictionaryWithObject:httpErrorBean.msg                                                                      forKey:NSLocalizedDescriptionKey]];
+                failedBlock(aError);
+            }
+            
         }
         else
         {

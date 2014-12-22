@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UserBean.h"
+#import "HttpErrorBean.h"
 
 @interface UserService : NSObject
 

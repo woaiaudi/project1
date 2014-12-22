@@ -39,7 +39,7 @@
         //登录成功到首页，更新首页数据
         [UIHelper popToRootViewControllerAnimated:self];
     } onfailure:^(NSError *error) {
-        NSLog(@"%@",error);
+        NSLog(@"%@",[error localizedDescription]);
     }];
 }
 
