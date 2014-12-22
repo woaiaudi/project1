@@ -18,11 +18,14 @@
          onfailure:(void (^)(NSError *error))failedBlock;
 
 
-- (void)registerUser:(NSString *)URLString
-            usertype:(NSInteger)pUserType
-            username:(NSString *)pUserName
-                 pwd:(NSString *)pPwd
-            realname:(NSString *)pRealName
-           onsuccess:(void (^)(NSMutableArray * pBlockList))successedBlock
-           onfailure:(void (^)(NSError *error))failedBlock;
+- (void)registerByUsername:(NSString *)pUsername
+                  password:(NSString *)pPassword
+                      pwdq:(NSString *)pPwdq
+                      pwda:(NSString *)pPwda
+                  realname:(NSString *)pRealname
+                       sex:(NSString *)pSex
+                   company:(NSString *)pCompany
+                  usertype:(NSString *)pUsertype
+                 onsuccess:(void (^)(UserBean * pBlockBean))successedBlock
+                 onfailure:(void (^)(NSError *error))failedBlock;
 @end

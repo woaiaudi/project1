@@ -7,8 +7,13 @@
 //
 
 #import "SLWSignUpViewController.h"
-
+#import "UIHelper.h"
+#import "UserService.h"
+#import <TSMessage.h>
 @interface SLWSignUpViewController ()
+{
+    UserService *userService;
+}
 
 @end
 
@@ -16,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"用户注册";
+    userService = [[UserService alloc]init];
     
     
     [_userNameTextField setRequired:YES];//登录账户 必填
@@ -52,6 +57,16 @@
 #pragma mark- 注册按钮 事件
 - (IBAction)userSignupCommitAction:(id)sender {
     [self showSelectedButton:self.sexRadioButton];
+    [userService registerByUsername:@"abc111" password:@"123" pwdq:@"qqq" pwda:@"aaa" realname:@"rrrname" sex:@"男" company:@"公司中文名称" usertype:@"q企业" onsuccess:^(UserBean *pBlockBean) {
+        NSLog(@"%@",pBlockBean);
+        [UIHelper popToRootViewControllerAnimated:self];
+    } onfailure:^(NSError *error) {
+        [TSMessage showNotificationWithTitle:@"注册失败"
+                                    subtitle:[error localizedDescription]
+                                        type:TSMessageNotificationTypeError];
+    }];
+    
+    
 }
 #pragma mark- 密码提示问题
 - (IBAction)clickPwdQuestAction:(id)sender {

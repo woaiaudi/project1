@@ -6,16 +6,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "project1/controller/SLWLoginViewController.m"
-            timestampString = "440950600.894793"
+            filePath = "UserService.m"
+            timestampString = "440953310.349517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-loginAction:"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-registerByUsername:password:pwdq:pwda:realname:sex:company:usertype:onsuccess:onfailure:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserService.m"
+            timestampString = "440953605.59465"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-registerByUsername:password:pwdq:pwda:realname:sex:company:usertype:onsuccess:onfailure:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -56,14 +56,48 @@
 }
 
 
-- (void)registerUser:(NSString *)URLString
-            usertype:(NSInteger)pUserType
-            username:(NSString *)pUserName
-                 pwd:(NSString *)pPwd
-            realname:(NSString *)pRealName
-           onsuccess:(void (^)(NSMutableArray * pBlockList))successedBlock
-           onfailure:(void (^)(NSError *error))failedBlock
+- (void)registerByUsername:(NSString *)pUsername
+                  password:(NSString *)pPassword
+                      pwdq:(NSString *)pPwdq
+                      pwda:(NSString *)pPwda
+                  realname:(NSString *)pRealname
+                       sex:(NSString *)pSex
+                   company:(NSString *)pCompany
+                  usertype:(NSString *)pUsertype
+                 onsuccess:(void (^)(UserBean * pBlockBean))successedBlock
+                 onfailure:(void (^)(NSError *error))failedBlock
 {
-    
+    NSString * urlStr =[NSString stringWithFormat:@"%@?type=user_register&username=%@&password=%@&pwdq=%@&pwda=%@&realname=%@&sex=%@&company=%@&usertype=%@",NSLocalizedString(@"BASEURL", ""),pUsername,pPassword,pPwdq,pPwda,pRealname,pSex,pCompany,pUsertype];
+    //带中文参数的 GET请求 要转码
+    urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+    [manager POST:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        if ([responseObject isKindOfClass:[NSDictionary class]])
+        {
+            NSDictionary * dic = (NSDictionary *)responseObject;
+            
+            if ((int)[dic objectForKey:@"status"] == 1) {
+                UserBean * returnBean = [[UserBean alloc]initWithDictionary:responseObject];
+                successedBlock(returnBean);
+            }
+            else
+            {
+                HttpErrorBean * httpErrorBean = [[HttpErrorBean alloc]initWithDictionary:dic];
+                NSError *aError = [NSError errorWithDomain:MyErrorDomain code:XRegisterFailed userInfo:[NSDictionary dictionaryWithObject:httpErrorBean.msg                                                                      forKey:NSLocalizedDescriptionKey]];
+                failedBlock(aError);
+            }
+            
+        }
+        else
+        {
+            NSError *aError = [NSError errorWithDomain:MyErrorDomain code:XLoginFailed userInfo:[NSDictionary dictionaryWithObject:@"登录失败"                                                                      forKey:NSLocalizedDescriptionKey]];
+            failedBlock(aError);
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failedBlock(error);
+    }];
 }
 @end
