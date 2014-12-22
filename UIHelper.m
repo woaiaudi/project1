@@ -18,5 +18,14 @@
     vc.title = pi.title;
     // 3.跳转
     [from.navigationController pushViewController:vc animated:YES];
+   
+}
++(void)popViewControllerAnimated:(UIViewController *)from
+{
+    [from.navigationController popViewControllerAnimated:YES];
+}
++(void)popToRootViewControllerAnimated:(UIViewController *)from
+{
+    [from.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

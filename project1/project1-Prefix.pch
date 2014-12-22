@@ -14,3 +14,12 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+#define MyErrorDomain @"com.zz.error"
+typedef enum {
+    XDefultFailed = -1000,
+    XLoginFailed,
+    XRegisterFailed,
+    XConnectFailed,
+    XNotBindedFailed
+    
+}CustomErrorFailed;

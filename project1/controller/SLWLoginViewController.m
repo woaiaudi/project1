@@ -9,8 +9,12 @@
 #import "SLWLoginViewController.h"
 #import "UIHelper.h"
 #import "SLWSignUpViewController.h"
+#import "UserService.h"
 
 @interface SLWLoginViewController ()
+{
+    UserService *userService;
+}
 
 @end
 
@@ -18,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    userService = [[UserService alloc]init];
     [_usernameTextView setRequired:YES];//必填
     [_passwordtextView setRequired:YES];//必填
 }
@@ -29,6 +34,13 @@
 
 
 - (IBAction)loginAction:(id)sender {
+
+    [userService loginByName:_usernameTextView.text pwd:_passwordtextView.text onsuccess:^(UserBean *pBlockBean) {
+        //登录成功到首页，更新首页数据
+        [UIHelper popToRootViewControllerAnimated:self];
+    } onfailure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 - (IBAction)goSignupPageAction:(id)sender {

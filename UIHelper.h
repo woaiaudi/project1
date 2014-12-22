@@ -10,4 +10,7 @@
 #import "SLWPageIndex.h"
 @interface UIHelper : NSObject
 +(void)pushViewController:(Class)controllerClass andTitle:(NSString *)title byFromViewController:(UIViewController *)from;
+
++(void)popViewControllerAnimated:(UIViewController *)from;
++(void)popToRootViewControllerAnimated:(UIViewController *)from;
 @end

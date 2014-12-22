@@ -19,6 +19,11 @@
 		480141761A1B747500311095 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4801415E1A1B747500311095 /* UIKit.framework */; };
 		4801417E1A1B747500311095 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4801417C1A1B747500311095 /* InfoPlist.strings */; };
 		480141801A1B747500311095 /* project1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4801417F1A1B747500311095 /* project1Tests.m */; };
+		482785641A4838260005A16C /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 482785631A4838260005A16C /* UserService.m */; };
+		4827856A1A483C890005A16C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4827856C1A483C890005A16C /* Localizable.strings */; };
+		482785721A48431F0005A16C /* UserBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 482785711A48431F0005A16C /* UserBean.m */; };
+		482785781A4845F00005A16C /* Jastor.m in Sources */ = {isa = PBXBuildFile; fileRef = 482785751A4845F00005A16C /* Jastor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		482785791A4845F00005A16C /* JastorRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 482785771A4845F00005A16C /* JastorRuntimeHelper.m */; };
 		484846861A25FAB90007D64C /* SLWPage1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484846841A25FAB90007D64C /* SLWPage1ViewController.m */; };
 		484846871A25FAB90007D64C /* SLWPage1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 484846851A25FAB90007D64C /* SLWPage1ViewController.xib */; };
 		4848468A1A25FB910007D64C /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 484846881A25FB910007D64C /* arrow_down.png */; };
@@ -97,7 +102,7 @@
 
 /* Begin PBXFileReference section */
 		1E10E87BB6E2A5FE99B42435 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		480141571A1B747500311095 /* project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		480141571A1B747500311095 /* 中国工程塑料.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "中国工程塑料.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4801415A1A1B747500311095 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4801415C1A1B747500311095 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4801415E1A1B747500311095 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -113,6 +118,18 @@
 		4801417B1A1B747500311095 /* project1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "project1Tests-Info.plist"; sourceTree = "<group>"; };
 		4801417D1A1B747500311095 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4801417F1A1B747500311095 /* project1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = project1Tests.m; sourceTree = "<group>"; };
+		482785621A4838260005A16C /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = SOURCE_ROOT; };
+		482785631A4838260005A16C /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = SOURCE_ROOT; };
+		4827856B1A483C890005A16C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4827856D1A483D730005A16C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4827856E1A483D730005A16C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		4827856F1A483D730005A16C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		482785701A48431F0005A16C /* UserBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserBean.h; sourceTree = "<group>"; };
+		482785711A48431F0005A16C /* UserBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserBean.m; sourceTree = "<group>"; };
+		482785741A4845F00005A16C /* Jastor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jastor.h; sourceTree = "<group>"; };
+		482785751A4845F00005A16C /* Jastor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jastor.m; sourceTree = "<group>"; };
+		482785761A4845F00005A16C /* JastorRuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JastorRuntimeHelper.h; sourceTree = "<group>"; };
+		482785771A4845F00005A16C /* JastorRuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JastorRuntimeHelper.m; sourceTree = "<group>"; };
 		484846831A25FAB90007D64C /* SLWPage1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWPage1ViewController.h; sourceTree = "<group>"; };
 		484846841A25FAB90007D64C /* SLWPage1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWPage1ViewController.m; sourceTree = "<group>"; };
 		484846851A25FAB90007D64C /* SLWPage1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWPage1ViewController.xib; sourceTree = "<group>"; };
@@ -241,6 +258,7 @@
 		4801414E1A1B747500311095 = {
 			isa = PBXGroup;
 			children = (
+				4827856C1A483C890005A16C /* Localizable.strings */,
 				480141601A1B747500311095 /* project1 */,
 				480141791A1B747500311095 /* project1Tests */,
 				480141591A1B747500311095 /* Frameworks */,
@@ -252,7 +270,7 @@
 		480141581A1B747500311095 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				480141571A1B747500311095 /* project1.app */,
+				480141571A1B747500311095 /* 中国工程塑料.app */,
 				480141721A1B747500311095 /* project1Tests.xctest */,
 			);
 			name = Products;
@@ -313,6 +331,17 @@
 				4801417C1A1B747500311095 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		482785731A4845F00005A16C /* Jastor */ = {
+			isa = PBXGroup;
+			children = (
+				482785741A4845F00005A16C /* Jastor.h */,
+				482785751A4845F00005A16C /* Jastor.m */,
+				482785761A4845F00005A16C /* JastorRuntimeHelper.h */,
+				482785771A4845F00005A16C /* JastorRuntimeHelper.m */,
+			);
+			path = Jastor;
 			sourceTree = "<group>";
 		};
 		484846821A25FA8A0007D64C /* page1 */ = {
@@ -513,6 +542,8 @@
 			children = (
 				487E21621A35D0DE00D3168F /* SLWPageIndex.h */,
 				487E21631A35D0DE00D3168F /* SLWPageIndex.m */,
+				482785701A48431F0005A16C /* UserBean.h */,
+				482785711A48431F0005A16C /* UserBean.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -522,6 +553,8 @@
 			children = (
 				48BCF8901A44535C00EBB2F0 /* UIHelper.h */,
 				48BCF8911A44535C00EBB2F0 /* UIHelper.m */,
+				482785621A4838260005A16C /* UserService.h */,
+				482785631A4838260005A16C /* UserService.m */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -529,6 +562,7 @@
 		48A28BFB1A1B797D008B9410 /* widget */ = {
 			isa = PBXGroup;
 			children = (
+				482785731A4845F00005A16C /* Jastor */,
 				485F97261A4301D0003972CD /* navigation */,
 				486E4CA51A3C7EFF0065E21D /* HomeImageButton */,
 				487E21651A35D5EA00D3168F /* MJRefresh */,
@@ -602,7 +636,7 @@
 			);
 			name = project1;
 			productName = project1;
-			productReference = 480141571A1B747500311095 /* project1.app */;
+			productReference = 480141571A1B747500311095 /* 中国工程塑料.app */;
 			productType = "com.apple.product-type.application";
 		};
 		480141711A1B747500311095 /* project1Tests */ = {
@@ -644,6 +678,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = 4801414E1A1B747500311095;
 			productRefGroup = 480141581A1B747500311095 /* Products */;
@@ -671,6 +706,7 @@
 				48B6D2551A4456BF00032B14 /* phone32.png in Resources */,
 				480141651A1B747500311095 /* InfoPlist.strings in Resources */,
 				4860E7971A22FD0A00BE0ECA /* home_tabitem_5.png in Resources */,
+				4827856A1A483C890005A16C /* Localizable.strings in Resources */,
 				4860E7991A22FD0A00BE0ECA /* home_tabitem_3.png in Resources */,
 				485F97231A42F61E003972CD /* SLWSearchViewController.xib in Resources */,
 				4860E79A1A22FD0A00BE0ECA /* home_tabitem_2.png in Resources */,
@@ -748,6 +784,7 @@
 			files = (
 				486E4CAC1A3C855F0065E21D /* HomeImageButton.m in Sources */,
 				487E217A1A35D5EA00D3168F /* MJRefreshHeaderView.m in Sources */,
+				482785781A4845F00005A16C /* Jastor.m in Sources */,
 				486E4C981A3C54E80065E21D /* SLWNewsListTableViewCell.m in Sources */,
 				48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */,
 				486E4CA31A3C74E30065E21D /* SLWHome.m in Sources */,
@@ -764,6 +801,7 @@
 				48739B5C1A4065380026BC0D /* SLWSupplyDetailViewController.m in Sources */,
 				487E21611A35C9BD00D3168F /* SLWNewsListViewController.m in Sources */,
 				485F97191A42EAAE003972CD /* SLWCompanyListTableViewCell.m in Sources */,
+				482785721A48431F0005A16C /* UserBean.m in Sources */,
 				4860E7891A22FAB800BE0ECA /* RKTabItem.m in Sources */,
 				487E217C1A35D5EA00D3168F /* UIScrollView+MJRefresh.m in Sources */,
 				488891131A1C45D900BAEDF8 /* ImagePlayerView.m in Sources */,
@@ -772,10 +810,12 @@
 				487E21771A35D5EA00D3168F /* MJRefreshBaseView.m in Sources */,
 				485F97221A42F61E003972CD /* SLWSearchViewController.m in Sources */,
 				487E21791A35D5EA00D3168F /* MJRefreshFooterView.m in Sources */,
+				482785791A4845F00005A16C /* JastorRuntimeHelper.m in Sources */,
 				48A28C061A1B7E7C008B9410 /* SLWHomeViewController.m in Sources */,
 				4801416B1A1B747500311095 /* SLWAppDelegate.m in Sources */,
 				48BDE6261A2DAB0500342CF4 /* NIDropDown.m in Sources */,
 				48BCF8921A44535C00EBB2F0 /* UIHelper.m in Sources */,
+				482785641A4838260005A16C /* UserService.m in Sources */,
 				4860E78A1A22FAB800BE0ECA /* RKTabView.m in Sources */,
 				485F97291A430237003972CD /* UINavigationItem+CustomBackButton.m in Sources */,
 				487E21571A35BFF800D3168F /* SLWLoginViewController.m in Sources */,
@@ -805,6 +845,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				480141641A1B747500311095 /* en */,
+				4827856E1A483D730005A16C /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -813,8 +854,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				4801417D1A1B747500311095 /* en */,
+				4827856F1A483D730005A16C /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4827856C1A483C890005A16C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4827856B1A483C890005A16C /* en */,
+				4827856D1A483D730005A16C /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -900,7 +951,7 @@
 				GCC_PREFIX_HEADER = "project1/project1-Prefix.pch";
 				INFOPLIST_FILE = "project1/project1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "中国工程塑料";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -915,7 +966,7 @@
 				GCC_PREFIX_HEADER = "project1/project1-Prefix.pch";
 				INFOPLIST_FILE = "project1/project1-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "中国工程塑料";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
