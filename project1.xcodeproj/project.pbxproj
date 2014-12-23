@@ -30,6 +30,8 @@
 		484846871A25FAB90007D64C /* SLWPage1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 484846851A25FAB90007D64C /* SLWPage1ViewController.xib */; };
 		4848468A1A25FB910007D64C /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 484846881A25FB910007D64C /* arrow_down.png */; };
 		4848468B1A25FB910007D64C /* gray_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 484846891A25FB910007D64C /* gray_line.png */; };
+		48504E671A499B440076E0C5 /* GoodsBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 48504E661A499B440076E0C5 /* GoodsBean.m */; };
+		48504E6A1A499CA70076E0C5 /* GoodsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 48504E691A499CA70076E0C5 /* GoodsService.m */; };
 		485F97191A42EAAE003972CD /* SLWCompanyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F97171A42EAAE003972CD /* SLWCompanyListTableViewCell.m */; };
 		485F971A1A42EAAE003972CD /* SLWCompanyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */; };
 		485F971D1A42F1E9003972CD /* SLWCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F971C1A42F1E9003972CD /* SLWCompanyListViewController.m */; };
@@ -141,6 +143,10 @@
 		484846851A25FAB90007D64C /* SLWPage1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWPage1ViewController.xib; sourceTree = "<group>"; };
 		484846881A25FB910007D64C /* arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_down.png; sourceTree = "<group>"; };
 		484846891A25FB910007D64C /* gray_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_line.png; sourceTree = "<group>"; };
+		48504E651A499B440076E0C5 /* GoodsBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsBean.h; sourceTree = "<group>"; };
+		48504E661A499B440076E0C5 /* GoodsBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsBean.m; sourceTree = "<group>"; };
+		48504E681A499CA70076E0C5 /* GoodsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsService.h; sourceTree = SOURCE_ROOT; };
+		48504E691A499CA70076E0C5 /* GoodsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsService.m; sourceTree = SOURCE_ROOT; };
 		485F97161A42EAAE003972CD /* SLWCompanyListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWCompanyListTableViewCell.h; sourceTree = "<group>"; };
 		485F97171A42EAAE003972CD /* SLWCompanyListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWCompanyListTableViewCell.m; sourceTree = "<group>"; };
 		485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWCompanyListTableViewCell.xib; sourceTree = "<group>"; };
@@ -552,6 +558,8 @@
 				482785711A48431F0005A16C /* UserBean.m */,
 				483D13801A48560000EE85FC /* HttpErrorBean.h */,
 				483D13811A48560000EE85FC /* HttpErrorBean.m */,
+				48504E651A499B440076E0C5 /* GoodsBean.h */,
+				48504E661A499B440076E0C5 /* GoodsBean.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -565,6 +573,8 @@
 				482785631A4838260005A16C /* UserService.m */,
 				483D13831A4858ED00EE85FC /* ResponseHandler.h */,
 				483D13841A4858ED00EE85FC /* ResponseHandler.m */,
+				48504E681A499CA70076E0C5 /* GoodsService.h */,
+				48504E691A499CA70076E0C5 /* GoodsService.m */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -820,10 +830,12 @@
 				485F971D1A42F1E9003972CD /* SLWCompanyListViewController.m in Sources */,
 				480141671A1B747500311095 /* main.m in Sources */,
 				487E21771A35D5EA00D3168F /* MJRefreshBaseView.m in Sources */,
+				48504E6A1A499CA70076E0C5 /* GoodsService.m in Sources */,
 				485F97221A42F61E003972CD /* SLWSearchViewController.m in Sources */,
 				487E21791A35D5EA00D3168F /* MJRefreshFooterView.m in Sources */,
 				482785791A4845F00005A16C /* JastorRuntimeHelper.m in Sources */,
 				48A28C061A1B7E7C008B9410 /* SLWHomeViewController.m in Sources */,
+				48504E671A499B440076E0C5 /* GoodsBean.m in Sources */,
 				4801416B1A1B747500311095 /* SLWAppDelegate.m in Sources */,
 				48BDE6261A2DAB0500342CF4 /* NIDropDown.m in Sources */,
 				48BCF8921A44535C00EBB2F0 /* UIHelper.m in Sources */,

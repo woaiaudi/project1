@@ -23,3 +23,5 @@ typedef enum {
     XNotBindedFailed
     
 }CustomErrorFailed;
+
+#define DefultFailedMessage @"获取数据失败！"
