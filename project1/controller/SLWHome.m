@@ -40,7 +40,7 @@
     
     UIBarButtonItem *leftButton1 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"user.png"] style:UIBarButtonItemStyleDone target:self action:@selector(openLoginPage)];
     
-    self.navigationItem.rightBarButtonItem = rightButton1;
+// self.navigationItem.rightBarButtonItem = rightButton1;//////////////////搜索功能暂时不使用
     self.navigationItem.leftBarButtonItem = leftButton1;
     
     [self initAllPageIndexArray];

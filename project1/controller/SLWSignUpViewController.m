@@ -26,7 +26,7 @@
     
     [_userNameTextField setRequired:YES];//登录账户 必填
     [_pwd1TextField setRequired:YES];//密码必填
-    [_pwd1TextField setRequired:YES];//密码2 判断
+    [_pwd2TextField setRequired:YES];//密码2 判断
     [_answerTextField setRequired:YES];//问题答案
     [_realNameTextField setRequired:YES];//真实姓名
 

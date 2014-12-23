@@ -35,15 +35,23 @@
 
 
 - (IBAction)loginAction:(id)sender {
-
-    [userService loginByName:_usernameTextView.text pwd:_passwordtextView.text onsuccess:^(UserBean *pBlockBean) {
-        //登录成功到首页，更新首页数据
-        [UIHelper popToRootViewControllerAnimated:self];
-    } onfailure:^(NSError *error) {
-        [TSMessage showNotificationWithTitle:@"登录失败"
-                                    subtitle:[error localizedDescription]
+    if ([_usernameTextView text] != nil && [[_usernameTextView text] length]!= 0 &&[_passwordtextView text] != nil && [[_passwordtextView text] length]!= 0 ) {
+        
+        [userService loginByName:_usernameTextView.text pwd:_passwordtextView.text onsuccess:^(UserBean *pBlockBean) {
+            //登录成功到首页，更新首页数据
+            [UIHelper popToRootViewControllerAnimated:self];
+        } onfailure:^(NSError *error) {
+            [TSMessage showNotificationWithTitle:@"登录失败"
+                                        subtitle:[error localizedDescription]
+                                            type:TSMessageNotificationTypeError];
+        }];
+    }
+    else
+    {
+        [TSMessage showNotificationWithTitle:@"不能为空"
+                                    subtitle:@"请输入用户名或密码"
                                         type:TSMessageNotificationTypeError];
-    }];
+    }
 }
 
 - (IBAction)goSignupPageAction:(id)sender {
