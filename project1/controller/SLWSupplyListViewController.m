@@ -9,13 +9,13 @@
 #import "SLWSupplyListViewController.h"
 #import "MJRefresh.h"
 #import "SLWSupplyListTableViewCell.h"
-/**
- *  随机数据
- */
-#define MJRandomData [NSString stringWithFormat:@"随机产品---%d", arc4random_uniform(1000000)]
+#import "GoodsBean.h"
+#import "GoodsService.h"
+#import <UIImageView+WebCache.h>
+
 @interface SLWSupplyListViewController ()
 {
-    NIDropDown * dropDown;
+    GoodsService * goodsService;
 }
 /**
  *  存放列表数据
@@ -28,56 +28,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _supplyList = [NSMutableArray array];
+    goodsService = [[GoodsService alloc]init];
     // 1.注册cell
     [SLWSupplyListTableViewCell registerNibToTableView:self.supplyTableview];
     
     // 2.集成刷新控件
     [self setupRefresh];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)yongtuButtonAction:(id)sender {
-    NSArray * arr = [[NSArray alloc] init];
-    //不能超过11个汉字
-    arr = [NSArray arrayWithObjects:@"好问问很长很长很长很长", @"Hello 1", @"Hello 2", @"Hello 3", @"Hello 4", @"Hello 5", @"Hello 6", @"Hello 7", @"Hello 8", @"Hello 9",nil];
-    if(dropDown == nil) {
-        CGFloat f = 200;
-        dropDown = [[NIDropDown alloc]showDropDown:sender :&f :arr :nil :@"down"];
-        dropDown.delegate = self;
-    }
-    else {
-        [dropDown hideDropDown:sender];
-        dropDown = nil;
-    }
-}
-
-- (IBAction)diquButtonAction:(id)sender {
-    UIButton * btnSender = (UIButton *)sender;
-    //[btnSender setBackgroundImage:[UIImage imageNamed:@"arrow_down.png"] forState:UIControlStateNormal];
-    [btnSender setTitle:@"xxsd" forState:UIControlStateNormal];
-}
-
-- (IBAction)guigeButtonAction:(id)sender {
-}
-- (void) niDropDownDelegateMethod: (NIDropDown *) sender byClickedButton:(UIButton *)button selectedIndex:(NSIndexPath *)index
-{
-
-    dropDown = nil;
-    NSLog(@"点击了按钮【%d】后，选中了S[%d],R[%d]",button.tag,index.section,index.row);
 }
 
 
@@ -109,38 +72,40 @@
 #pragma mark 开始进入刷新状态
 - (void)headerRereshing
 {
-    // 1.网列表数组  在表头添加最新数据
-    //先清空
-    [self.supplyList removeAllObjects];
-    for (int i = 0; i<5; i++) {
-        [self.supplyList insertObject:MJRandomData atIndex:0];
-    }
-    
-    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //获取最新数据
+    [goodsService supplyList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
+        //先清空
+        [self.supplyList removeAllObjects];
+        [self.supplyList addObjectsFromArray:pBlockList];
         // 刷新表格
         [self.supplyTableview reloadData];
         
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.supplyTableview headerEndRefreshing];
-    });
+    } onfailure:^(NSError *error) {
+        NSLog(@"%@",[error localizedDescription]);
+        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+        [self.supplyTableview headerEndRefreshing];
+    }];
+    
 }
 
 - (void)footerRereshing
 {
-    // 1.网列表数组  在表尾添加最新数据
-    for (int i = 0; i<5; i++) {
-        [self.supplyList addObject:MJRandomData];
-    }
-    
-    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //加载更多数据
+    [goodsService supplyList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
+        [self.supplyList addObjectsFromArray:pBlockList];
         // 刷新表格
         [self.supplyTableview reloadData];
         
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.supplyTableview footerEndRefreshing];
-    });
+    } onfailure:^(NSError *error) {
+        NSLog(@"%@",[error localizedDescription]);
+        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+        [self.supplyTableview footerEndRefreshing];
+    }];
+    
 }
 #pragma mark - Table view UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -161,7 +126,16 @@
 - (SLWSupplyListTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SLWSupplyListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[SLWSupplyListTableViewCell className] forIndexPath:indexPath];
-    cell.nameLabel.text = self.supplyList[indexPath.row];
+    
+    GoodsBean *thisBean = (GoodsBean *)[self.supplyList objectAtIndex:indexPath.row];
+    
+    cell.nameLabel.text = thisBean.title;
+    cell.area.text = thisBean.area;
+    cell.jiage.text = thisBean.jiage;
+    cell.fenglei.text=thisBean.fenglei;
+    
+    [cell.img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"HOST", ""),thisBean.imgurl]] placeholderImage:[UIImage imageNamed:@"noimg"]];
+    
     return cell;
 }
 

@@ -29,5 +29,6 @@
 @property (nonatomic, copy) NSString *wantprice;
 @property (nonatomic, copy) NSString *wanttype;
 @property (nonatomic, copy) NSString *addid;
+@property (nonatomic, copy) NSString *imgurl;
 
 @end

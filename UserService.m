@@ -31,7 +31,7 @@
         {
             NSDictionary * dic = (NSDictionary *)responseObject;
             
-            if ((int)[dic objectForKey:@"status"] == 1) {
+            if ([@"1" isEqualToString:[dic objectForKey:@"status"]]) {
                 UserBean * returnBean = [[UserBean alloc]initWithDictionary:responseObject];
                 successedBlock(returnBean);
             }
@@ -78,7 +78,7 @@
         {
             NSDictionary * dic = (NSDictionary *)responseObject;
             
-            if ((int)[dic objectForKey:@"status"] == 1) {
+            if ([@"1" isEqualToString:[dic objectForKey:@"status"]]) {
                 UserBean * returnBean = [[UserBean alloc]initWithDictionary:responseObject];
                 successedBlock(returnBean);
             }

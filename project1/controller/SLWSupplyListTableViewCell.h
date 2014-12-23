@@ -14,6 +14,10 @@
 + (void)registerNibToTableView:(UITableView *)tableView;
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *img;
+@property (strong, nonatomic) IBOutlet UILabel *jiage;
+@property (strong, nonatomic) IBOutlet UILabel *area;
+@property (strong, nonatomic) IBOutlet UILabel *fenglei;
 
 
 @end

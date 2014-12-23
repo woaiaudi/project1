@@ -28,4 +28,5 @@
 @synthesize wantprice;
 @synthesize wanttype;
 @synthesize addid;
+@synthesize imgurl;
 @end
