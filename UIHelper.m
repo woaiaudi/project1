@@ -7,6 +7,7 @@
 //
 
 #import "UIHelper.h"
+#import "HACLPage.h"
 
 @implementation UIHelper
 +(void)pushViewController:(Class)controllerClass andTitle:(NSString *)title byFromViewController:(UIViewController *)from
@@ -28,4 +29,31 @@
 {
     [from.navigationController popToRootViewControllerAnimated:YES];
 }
+
+
++(void)showDetailBySupply:(GoodsBean *)supplyBean andFrom:(UIViewController *)from
+{
+    //文章段落
+    NSMutableArray * items = [[NSMutableArray alloc] init];
+    //插图
+    NSMutableIndexSet *clipIndex = [[NSMutableIndexSet alloc]init];
+    
+    
+    
+    //\n\n\t\t 可识别
+    [items addObject:supplyBean.id];
+    [items addObject:supplyBean.title];
+    [items addObject:supplyBean.pingpai];
+    [items addObject:supplyBean.xinghao];
+    [items addObject:supplyBean.email];
+    [items addObject:supplyBean.imgurl];
+    
+    NSString *bannerImageUrl =[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"HOST", ""),supplyBean.imgurl];
+    HACLTableViewPage * page1 = [[HACLTableViewPage alloc]initWithTitle:supplyBean.title head:bannerImageUrl topView:nil footTabbarItems:nil];
+    
+    [page1 setItems:items];
+    [page1 setClipIndexSet:clipIndex];
+    
+    [from.navigationController pushViewController:page1 animated:YES];}
+
 @end

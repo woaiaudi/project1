@@ -17,4 +17,6 @@
 
 - (NSDictionary *)map;
 
+
+- (NSMutableDictionary *)convertFromObject:(id)object;
 @end

@@ -157,5 +157,13 @@ Class nsArrayClass;
 	
 	return [self.objectId isEqualToString:model.objectId];
 }
-
+//自己添加的
+- (NSMutableDictionary *)convertFromObject:(id)object{
+    NSMutableDictionary *returnDic = [[NSMutableDictionary alloc] init];
+    NSArray *array =[JastorRuntimeHelper propertyNames:[object class]];//获取所有的属性名称
+    for (NSString *key in array) {
+        [returnDic setValue:[object valueForKey:key] forKey:key];//从类里面取值然后赋给每个值，取得字典
+    }
+    return  returnDic ;
+}
 @end

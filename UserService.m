@@ -8,7 +8,6 @@
 
 #import "UserService.h"
 #import <AFNetworking.h>
-#import "JastorRuntimeHelper.h"
 @implementation UserService
 
 #define SLW_ACCESSED_USER @"slw_accessed_user"
@@ -106,7 +105,7 @@
 
 -(void)saveAccessedUserBean:(UserBean *)userBean
 {
-    NSDictionary *userDic = [self convertFromObject:userBean];
+    NSDictionary *userDic = [[UserBean alloc] convertFromObject:userBean];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:userDic forKey:SLW_ACCESSED_USER];
     [defaults synchronize];//同步到 记录中
@@ -133,13 +132,5 @@
     [defaults removeObjectForKey:SLW_ACCESSED_USER];
     [defaults synchronize];//同步到 记录中
 }
-//自己添加的
-- (NSMutableDictionary *)convertFromObject:(id)object{
-    NSMutableDictionary *returnDic = [[NSMutableDictionary alloc] init];
-    NSArray *array =[JastorRuntimeHelper propertyNames:[object class]];//获取所有的属性名称
-    for (NSString *key in array) {
-        [returnDic setValue:[object valueForKey:key] forKey:key];//从类里面取值然后赋给每个值，取得字典
-    }
-    return  returnDic ;
-}
+
 @end

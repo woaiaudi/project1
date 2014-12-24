@@ -12,7 +12,7 @@
 #import "GoodsBean.h"
 #import "GoodsService.h"
 #import <UIImageView+WebCache.h>
-#import "HACLPage.h"
+#import "UIHelper.h"
 
 @interface SLWSupplyListViewController ()
 {
@@ -146,55 +146,6 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     GoodsBean *thisBean = (GoodsBean *)[self.supplyList objectAtIndex:indexPath.row];
-    [self goDetail:thisBean];
-}
-
-#pragma mark-打开详细页面
--(void)goDetail:(GoodsBean *)b
-{
-    //文章段落
-    NSMutableArray * items = [[NSMutableArray alloc] init];
-    //插图
-    NSMutableIndexSet *clipIndex = [[NSMutableIndexSet alloc]init];
-    
-    
-    
-    //\n\n\t\t 可识别
-    [items addObject:b.id];
-    [items addObject:b.title];
-    [items addObject:b.pingpai];
-    [items addObject:b.xinghao];
-    [items addObject:b.email];
-    [items addObject:b.imgurl];
-
-    NSString *bannerImageUrl =[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"HOST", ""),b.imgurl];
-    HACLTableViewPage * page1 = [[HACLTableViewPage alloc]initWithTitle:b.title head:bannerImageUrl topView:nil footTabbarItems:nil];
-    
-    [page1 setItems:items];
-    [page1 setClipIndexSet:clipIndex];
-    
-    [self.navigationController pushViewController:page1 animated:YES];
-    
-    
-    /*
-    for (HATHaFamousPersonBean *bean in pBlockHaFamousPersonList) {
-        //\n\n\t\t 可识别
-        [items addObject:bean.content];//文字段落
-        HATPageCellBean * clipBean = [[HATPageCellBean alloc]init];
-        clipBean.thumbImg = bean.coverpic;//大兔小图用同一张
-        clipBean.bigImg = bean.coverpic;
-        clipBean.imgDesc = bean.personname;
-        [clipIndex addIndex:items.count];//标记clip图的位置  这里代码顺序不能乱
-        [items addObject:clipBean];
-    }
-    
-    //[UIImage imageNamed:@"ha3_banner.jpg"]
-    HACLTableViewPage * page1 = [[HACLTableViewPage alloc]initWithTitle:@"人文淮安" head:[UIImage imageNamed:@"huaian2.jpg"] topView:nil footTabbarItems:nil];
-    
-    [page1 setItems:items];
-    [page1 setClipIndexSet:clipIndex];
-    
-    [self.navigationController pushViewController:page1 animated:YES];
-     */
+    [UIHelper showDetailBySupply:thisBean andFrom:self];
 }
 @end

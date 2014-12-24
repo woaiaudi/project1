@@ -166,9 +166,20 @@
     UserBean *loginUser = [us getAccessedUserBean];
     if (loginUser!=nil) {
         //已经登录
-        [TSMessage showNotificationWithTitle:@"提醒"
-                                    subtitle:[NSString stringWithFormat:@"用户【%@】已经登录",loginUser.username]
-                                        type:TSMessageNotificationTypeSuccess];
+        [TSMessage showNotificationInViewController:self
+                                              title:@"提醒"
+                                           subtitle:[NSString stringWithFormat:@"用户【%@】已经登录.",loginUser.username]
+                                              image:nil
+                                               type:TSMessageNotificationTypeMessage
+                                           duration:TSMessageNotificationDurationAutomatic
+                                           callback:nil
+                                        buttonTitle:@"注销"
+                                     buttonCallback:^{
+                                         [us deleteAccessedUserBean];
+                                     }
+                                         atPosition:TSMessageNotificationPositionTop
+                               canBeDismissedByUser:YES];
+
     }
     else
     [UIHelper pushViewController:[SLWLoginViewController class] andTitle:@"用户登录" byFromViewController:self];

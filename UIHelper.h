@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "SLWPageIndex.h"
+#import "GoodsBean.h"
 @interface UIHelper : NSObject
 +(void)pushViewController:(Class)controllerClass andTitle:(NSString *)title byFromViewController:(UIViewController *)from;
 
 +(void)popViewControllerAnimated:(UIViewController *)from;
 +(void)popToRootViewControllerAnimated:(UIViewController *)from;
+
+
++(void)showDetailBySupply:(GoodsBean *)supplyBean andFrom:(UIViewController *)from;
 @end
