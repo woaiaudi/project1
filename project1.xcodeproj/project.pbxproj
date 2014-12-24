@@ -43,6 +43,10 @@
 		48547E531A4AF017005EB5B0 /* cellbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 48547E521A4AF017005EB5B0 /* cellbg.png */; };
 		48547E591A4AF42A005EB5B0 /* AOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48547E561A4AF42A005EB5B0 /* AOImageView.m */; };
 		48547E5A1A4AF42A005EB5B0 /* AOScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48547E581A4AF42A005EB5B0 /* AOScrollerView.m */; };
+		48547E5D1A4B09D4005EB5B0 /* NewsBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 48547E5C1A4B09D4005EB5B0 /* NewsBean.m */; };
+		48547E601A4B0ADF005EB5B0 /* NewsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 48547E5F1A4B0ADF005EB5B0 /* NewsService.m */; };
+		48547E7B1A4B153D005EB5B0 /* SLWNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48547E791A4B153D005EB5B0 /* SLWNewsDetailViewController.m */; };
+		48547E7C1A4B153D005EB5B0 /* SLWNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48547E7A1A4B153D005EB5B0 /* SLWNewsDetailViewController.xib */; };
 		485F97191A42EAAE003972CD /* SLWCompanyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F97171A42EAAE003972CD /* SLWCompanyListTableViewCell.m */; };
 		485F971A1A42EAAE003972CD /* SLWCompanyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */; };
 		485F971D1A42F1E9003972CD /* SLWCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F971C1A42F1E9003972CD /* SLWCompanyListViewController.m */; };
@@ -176,6 +180,13 @@
 		48547E561A4AF42A005EB5B0 /* AOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOImageView.m; sourceTree = "<group>"; };
 		48547E571A4AF42A005EB5B0 /* AOScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOScrollerView.h; sourceTree = "<group>"; };
 		48547E581A4AF42A005EB5B0 /* AOScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOScrollerView.m; sourceTree = "<group>"; };
+		48547E5B1A4B09D4005EB5B0 /* NewsBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsBean.h; sourceTree = "<group>"; };
+		48547E5C1A4B09D4005EB5B0 /* NewsBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsBean.m; sourceTree = "<group>"; };
+		48547E5E1A4B0ADF005EB5B0 /* NewsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsService.h; sourceTree = SOURCE_ROOT; };
+		48547E5F1A4B0ADF005EB5B0 /* NewsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsService.m; sourceTree = SOURCE_ROOT; };
+		48547E781A4B153D005EB5B0 /* SLWNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWNewsDetailViewController.h; sourceTree = "<group>"; };
+		48547E791A4B153D005EB5B0 /* SLWNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWNewsDetailViewController.m; sourceTree = "<group>"; };
+		48547E7A1A4B153D005EB5B0 /* SLWNewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWNewsDetailViewController.xib; sourceTree = "<group>"; };
 		485F97161A42EAAE003972CD /* SLWCompanyListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWCompanyListTableViewCell.h; sourceTree = "<group>"; };
 		485F97171A42EAAE003972CD /* SLWCompanyListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWCompanyListTableViewCell.m; sourceTree = "<group>"; };
 		485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWCompanyListTableViewCell.xib; sourceTree = "<group>"; };
@@ -538,6 +549,9 @@
 				486E4C951A3C54E80065E21D /* SLWNewsListTableViewCell.h */,
 				486E4C961A3C54E80065E21D /* SLWNewsListTableViewCell.m */,
 				486E4C971A3C54E80065E21D /* SLWNewsListTableViewCell.xib */,
+				48547E781A4B153D005EB5B0 /* SLWNewsDetailViewController.h */,
+				48547E791A4B153D005EB5B0 /* SLWNewsDetailViewController.m */,
+				48547E7A1A4B153D005EB5B0 /* SLWNewsDetailViewController.xib */,
 			);
 			name = news;
 			sourceTree = "<group>";
@@ -617,6 +631,8 @@
 				483D13811A48560000EE85FC /* HttpErrorBean.m */,
 				48504E651A499B440076E0C5 /* GoodsBean.h */,
 				48504E661A499B440076E0C5 /* GoodsBean.m */,
+				48547E5B1A4B09D4005EB5B0 /* NewsBean.h */,
+				48547E5C1A4B09D4005EB5B0 /* NewsBean.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -632,6 +648,8 @@
 				483D13841A4858ED00EE85FC /* ResponseHandler.m */,
 				48504E681A499CA70076E0C5 /* GoodsService.h */,
 				48504E691A499CA70076E0C5 /* GoodsService.m */,
+				48547E5E1A4B0ADF005EB5B0 /* NewsService.h */,
+				48547E5F1A4B0ADF005EB5B0 /* NewsService.m */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -757,6 +775,12 @@
 			knownRegions = (
 				en,
 				"zh-Hans",
+				de,
+				es,
+				ja,
+				ko,
+				pl,
+				"zh-Hant",
 			);
 			mainGroup = 4801414E1A1B747500311095;
 			productRefGroup = 480141581A1B747500311095 /* Products */;
@@ -794,6 +818,7 @@
 				48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */,
 				48504E6C1A49A8980076E0C5 /* noimg.png in Resources */,
 				48547E531A4AF017005EB5B0 /* cellbg.png in Resources */,
+				48547E7C1A4B153D005EB5B0 /* SLWNewsDetailViewController.xib in Resources */,
 				48A28C071A1B7E7C008B9410 /* SLWHomeViewController.xib in Resources */,
 				48BCF8891A444A8F00EBB2F0 /* pwdicon.png in Resources */,
 				4860E7941A22FD0A00BE0ECA /* home_tabitem_8.png in Resources */,
@@ -885,9 +910,12 @@
 				487E217D1A35D5EA00D3168F /* UIView+MJExtension.m in Sources */,
 				48504E821A49AE900076E0C5 /* UIScrollView+TwitterCover.m in Sources */,
 				48739B5C1A4065380026BC0D /* SLWSupplyDetailViewController.m in Sources */,
+				48547E7B1A4B153D005EB5B0 /* SLWNewsDetailViewController.m in Sources */,
 				487E21611A35C9BD00D3168F /* SLWNewsListViewController.m in Sources */,
+				48547E601A4B0ADF005EB5B0 /* NewsService.m in Sources */,
 				485F97191A42EAAE003972CD /* SLWCompanyListTableViewCell.m in Sources */,
 				48547E591A4AF42A005EB5B0 /* AOImageView.m in Sources */,
+				48547E5D1A4B09D4005EB5B0 /* NewsBean.m in Sources */,
 				482785721A48431F0005A16C /* UserBean.m in Sources */,
 				4860E7891A22FAB800BE0ECA /* RKTabItem.m in Sources */,
 				487E217C1A35D5EA00D3168F /* UIScrollView+MJRefresh.m in Sources */,

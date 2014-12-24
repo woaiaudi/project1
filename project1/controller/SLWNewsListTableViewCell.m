@@ -19,7 +19,7 @@
 }
 +(CGFloat)heightForRow
 {
-    return 60;
+    return 90;
 }
 + (void)registerNibToTableView:(UITableView *)tableView
 {

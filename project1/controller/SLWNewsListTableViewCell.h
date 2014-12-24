@@ -14,4 +14,9 @@
 +(CGFloat)heightForRow;
 + (void)registerNibToTableView:(UITableView *)tableView;
 @property (strong, nonatomic) IBOutlet UILabel *newsTitleLabel;
+
+@property (strong, nonatomic) IBOutlet UIImageView *newsImageView;
+
+@property (strong, nonatomic) IBOutlet UILabel *newsTimeLabel;
+
 @end

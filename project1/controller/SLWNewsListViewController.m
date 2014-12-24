@@ -9,12 +9,15 @@
 #import "SLWNewsListViewController.h"
 #import "MJRefresh.h"
 #import "SLWNewsListTableViewCell.h"
+#import "NewsService.h"
+#import <UIImageView+WebCache.h>
+#import "SLWNewsDetailViewController.h"
+#import "UIHelper.h"
 
-/**
- *  随机数据
- */
-#define MJRandomData [NSString stringWithFormat:@"随机数据---%d", arc4random_uniform(1000000)]
 @interface SLWNewsListViewController ()
+{
+    NewsService *newsService;
+}
 /**
  *  存放列表数据
  */
@@ -25,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    newsService = [[NewsService alloc]init];
     _newsList = [NSMutableArray array];
     
     // 1.注册cell
@@ -32,6 +36,8 @@
     
     // 2.集成刷新控件
     [self setupRefresh];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [self.tableView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,38 +72,39 @@
 #pragma mark 开始进入刷新状态
 - (void)headerRereshing
 {
-    // 1.网列表数组  在表头添加最新数据
-    //先清空
-    [self.newsList removeAllObjects];
-    for (int i = 0; i<5; i++) {
-        [self.newsList insertObject:MJRandomData atIndex:0];
-    }
-    
-    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //获取最新数据
+    [newsService getNewsList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
+        //先清空
+        [self.newsList removeAllObjects];
+        [self.newsList addObjectsFromArray:pBlockList];
         // 刷新表格
         [self.tableView reloadData];
         
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.tableView headerEndRefreshing];
-    });
+    } onfailure:^(NSError *error) {
+        NSLog(@"远程服务器错误：%@",[error localizedDescription]);
+        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+        [self.tableView headerEndRefreshing];
+    }];
+    
 }
 
 - (void)footerRereshing
 {
-    // 1.网列表数组  在表尾添加最新数据
-    for (int i = 0; i<5; i++) {
-        [self.newsList addObject:MJRandomData];
-    }
-    
-    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //加载更多数据
+    [newsService getNewsList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
+        [self.newsList addObjectsFromArray:pBlockList];
         // 刷新表格
         [self.tableView reloadData];
         
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.tableView footerEndRefreshing];
-    });
+    } onfailure:^(NSError *error) {
+        NSLog(@"%@",[error localizedDescription]);
+        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+        [self.tableView footerEndRefreshing];
+    }];
 }
 #pragma mark - Table view UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -118,13 +125,20 @@
 - (SLWNewsListTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SLWNewsListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[SLWNewsListTableViewCell className] forIndexPath:indexPath];
-    cell.newsTitleLabel.text = self.newsList[indexPath.row];
+    NewsBean *thisCellBean = [self.newsList objectAtIndex:indexPath.row];
+    cell.newsTitleLabel.text = thisCellBean.title;
+    cell.newsTimeLabel.text = thisCellBean.add_time;
+    [cell.newsImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"HOST", ""),thisCellBean.img_url]] placeholderImage:[UIImage imageNamed:@"noimg"]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+     NewsBean *thisCellBean = [self.newsList objectAtIndex:indexPath.row];
+    SLWNewsDetailViewController * detailPage = [[SLWNewsDetailViewController alloc]init];
+    [detailPage setTitle:thisCellBean.title];
+    [detailPage setNewsId:thisCellBean.id];
+    [self.navigationController pushViewController:detailPage animated:YES];
 }
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
