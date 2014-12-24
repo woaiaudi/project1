@@ -11,8 +11,12 @@
 #import "AOScrollerView.h"
 @interface SLWHome : UIViewController<ValueClickDelegate>
 @property (strong, nonatomic) IBOutlet UIView *bannerView;
+@property (strong, nonatomic) IBOutlet HomeImageButton *newsButton;
+@property (strong, nonatomic) IBOutlet HomeImageButton *supplyButton;
+@property (strong, nonatomic) IBOutlet HomeImageButton *requirementButton;
+@property (strong, nonatomic) IBOutlet HomeImageButton *companyButton;
+@property (strong, nonatomic) IBOutlet HomeImageButton *bbsButton;
+@property (strong, nonatomic) IBOutlet HomeImageButton *aboutusButton;
 
-@property (strong, nonatomic) IBOutlet HomeImageButton *leftButton;
-@property (strong, nonatomic) IBOutlet HomeImageButton *right1Button;
-@property (strong, nonatomic) IBOutlet HomeImageButton *right2Button;
+
 @end

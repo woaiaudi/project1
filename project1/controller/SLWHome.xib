@@ -7,10 +7,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLWHome">
             <connections>
+                <outlet property="aboutusButton" destination="mg4-2M-Pqz" id="8r9-l8-c0E"/>
                 <outlet property="bannerView" destination="CzV-0m-R7J" id="EWV-Yq-QPi"/>
-                <outlet property="leftButton" destination="WlW-om-wzG" id="P1d-Ux-awa"/>
-                <outlet property="right1Button" destination="c6m-Cj-yDQ" id="Eui-Ih-bpe"/>
-                <outlet property="right2Button" destination="92d-8b-6tw" id="HGu-hc-1Ia"/>
+                <outlet property="bbsButton" destination="zZb-Ag-Jdu" id="hVv-N8-udx"/>
+                <outlet property="companyButton" destination="b2a-qb-iHF" id="uer-B3-pfJ"/>
+                <outlet property="newsButton" destination="WlW-om-wzG" id="fzD-ce-ZRl"/>
+                <outlet property="requirementButton" destination="92d-8b-6tw" id="bQ5-11-dga"/>
+                <outlet property="supplyButton" destination="xDK-uG-ruy" id="0Vn-aU-KEO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,16 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="news.png" translatesAutoresizingMaskIntoConstraints="NO" id="WlW-om-wzG" userLabel="left" customClass="HomeImageButton">
-                    <rect key="frame" x="19" y="338" width="111" height="200"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gq.png" translatesAutoresizingMaskIntoConstraints="NO" id="92d-8b-6tw" userLabel="right2" customClass="HomeImageButton">
-                    <rect key="frame" x="138" y="448" width="165" height="90"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="companys.png" translatesAutoresizingMaskIntoConstraints="NO" id="c6m-Cj-yDQ" userLabel="right1" customClass="HomeImageButton">
-                    <rect key="frame" x="138" y="338" width="165" height="90"/>
-                </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzV-0m-R7J">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CzV-0m-R7J">
                     <rect key="frame" x="0.0" y="64" width="320" height="200"/>
                     <color key="backgroundColor" red="0.76195095690000003" green="1" blue="0.93064691740000005" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -36,27 +30,25 @@
                         <constraint firstAttribute="height" constant="200" id="gYg-oF-ngt"/>
                     </constraints>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="news.png" translatesAutoresizingMaskIntoConstraints="NO" id="WlW-om-wzG" userLabel="信息咨询" customClass="HomeImageButton">
+                    <rect key="frame" x="19" y="275" width="131" height="190"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gq.png" translatesAutoresizingMaskIntoConstraints="NO" id="xDK-uG-ruy" userLabel="供应管理" customClass="HomeImageButton">
+                    <rect key="frame" x="158" y="275" width="145" height="90"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gq.png" translatesAutoresizingMaskIntoConstraints="NO" id="92d-8b-6tw" userLabel="需求管理" customClass="HomeImageButton">
+                    <rect key="frame" x="158" y="375" width="145" height="90"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="companys.png" translatesAutoresizingMaskIntoConstraints="NO" id="b2a-qb-iHF" userLabel="企业展示" customClass="HomeImageButton">
+                    <rect key="frame" x="19" y="473" width="85" height="80"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gq.png" translatesAutoresizingMaskIntoConstraints="NO" id="mg4-2M-Pqz" userLabel="关于我们" customClass="HomeImageButton">
+                    <rect key="frame" x="210" y="473" width="93" height="80"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="companys.png" translatesAutoresizingMaskIntoConstraints="NO" id="zZb-Ag-Jdu" userLabel="行业论坛" customClass="HomeImageButton">
+                    <rect key="frame" x="112" y="473" width="90" height="80"/>
+                </imageView>
             </subviews>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="WlW-om-wzG" secondAttribute="bottom" constant="10" id="5M4-kX-Qfl"/>
-                <constraint firstAttribute="trailing" secondItem="92d-8b-6tw" secondAttribute="trailing" constant="10" id="5kd-iW-qwu"/>
-                <constraint firstItem="CzV-0m-R7J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Ctn-DT-4tQ"/>
-                <constraint firstItem="c6m-Cj-yDQ" firstAttribute="top" secondItem="WlW-om-wzG" secondAttribute="top" id="K5b-o3-obS"/>
-                <constraint firstItem="92d-8b-6tw" firstAttribute="top" secondItem="c6m-Cj-yDQ" secondAttribute="bottom" constant="10" id="L2v-pi-Axp"/>
-                <constraint firstItem="WlW-om-wzG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="L2y-qW-8PP"/>
-                <constraint firstItem="92d-8b-6tw" firstAttribute="width" secondItem="c6m-Cj-yDQ" secondAttribute="width" id="Mog-g7-seK"/>
-                <constraint firstAttribute="trailing" secondItem="CzV-0m-R7J" secondAttribute="trailing" id="VSw-Nu-oRR"/>
-                <constraint firstItem="c6m-Cj-yDQ" firstAttribute="top" secondItem="CzV-0m-R7J" secondAttribute="bottom" constant="10" id="WrE-3t-z66"/>
-                <constraint firstItem="c6m-Cj-yDQ" firstAttribute="width" secondItem="92d-8b-6tw" secondAttribute="width" id="YH7-Tv-Aye"/>
-                <constraint firstItem="c6m-Cj-yDQ" firstAttribute="leading" secondItem="WlW-om-wzG" secondAttribute="trailing" constant="10" id="ZvD-sm-MJ3"/>
-                <constraint firstItem="WlW-om-wzG" firstAttribute="top" secondItem="CzV-0m-R7J" secondAttribute="bottom" constant="10" id="hc7-DC-gI8"/>
-                <constraint firstItem="92d-8b-6tw" firstAttribute="width" secondItem="WlW-om-wzG" secondAttribute="width" id="jdQ-o7-ZDu"/>
-                <constraint firstAttribute="trailing" secondItem="c6m-Cj-yDQ" secondAttribute="trailing" constant="10" id="jha-HV-8Pl"/>
-                <constraint firstAttribute="bottom" secondItem="92d-8b-6tw" secondAttribute="bottom" constant="10" id="oET-oP-qcx"/>
-                <constraint firstItem="CzV-0m-R7J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="og1-I7-518"/>
-                <constraint firstItem="c6m-Cj-yDQ" firstAttribute="height" secondItem="92d-8b-6tw" secondAttribute="height" id="xV7-EV-pWy"/>
-                <constraint firstItem="92d-8b-6tw" firstAttribute="bottom" secondItem="WlW-om-wzG" secondAttribute="bottom" id="zbk-da-5ba"/>
-            </constraints>
             <point key="canvasLocation" x="484" y="407"/>
         </view>
     </objects>

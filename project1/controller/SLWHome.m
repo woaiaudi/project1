@@ -37,13 +37,13 @@
     
     //右上角搜索按钮
     //左侧滑按钮
-    UIBarButtonItem *rightButton1 =[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showSearchPage)];
+    UIBarButtonItem *searchButton1 =[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showSearchPage)];
     
     
-    UIBarButtonItem *leftButton1 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"user.png"] style:UIBarButtonItemStyleDone target:self action:@selector(openLoginPage)];
+    UIBarButtonItem *userButton1 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"user.png"] style:UIBarButtonItemStyleDone target:self action:@selector(openLoginPage)];
     
-// self.navigationItem.rightBarButtonItem = rightButton1;//////////////////搜索功能暂时不使用
-    self.navigationItem.leftBarButtonItem = leftButton1;
+   self.navigationItem.rightBarButtonItem = userButton1;
+//self.navigationItem.leftBarButtonItem = searchButton1;//////////////////搜索功能暂时不使用
     
     [self initAllPageIndexArray];
     [self addAOScrollerView:nil];
@@ -61,8 +61,11 @@
     pageIndexArray = [NSMutableArray array];
     
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"信息咨询" controllerClass:[SLWNewsListViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"企业展示" controllerClass:[SLWCompanyListViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品供应" controllerClass:[SLWSupplyListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品需求" controllerClass:[SLWSupplyListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"企业展示" controllerClass:[SLWCompanyListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"行业论坛" controllerClass:[SLWCompanyListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"关于我们" controllerClass:[SLWCompanyListViewController class]]];
     
 }
 #pragma mark- AOScrollViewDelegate ValueClickDelegate 首页banner 点击事件
@@ -93,40 +96,29 @@
     __weak UIViewController *controller = self;
     __weak NSMutableArray *weakPageIndexArray =pageIndexArray;
     
-    //   1
-    [_leftButton setOnImageClickListener:^(UIImageView *clickedImage) {
-        NSLog(@"_leftButton is clicked");
-        // 1.取模型
+    [_newsButton setOnImageClickListener:^(UIImageView *clickedImage) {
         SLWPageIndex *pi =weakPageIndexArray[0];
-        // 2.创建控制器
-        UIViewController *vc = [[pi.controllerClass alloc] init];
-        vc.title = pi.title;
-        // 3.跳转
-        [controller.navigationController pushViewController:vc animated:YES];
+        [UIHelper pushViewController:pi.controllerClass andTitle:pi.title byFromViewController:controller];
     }];
-    
-    //   2
-    [_right1Button setOnImageClickListener:^(UIImageView *clickedImage) {
-        NSLog(@"_leftButton is clicked");
-        // 1.取模型
+    [_supplyButton setOnImageClickListener:^(UIImageView *clickedImage) {
         SLWPageIndex *pi =weakPageIndexArray[1];
-        // 2.创建控制器
-        UIViewController *vc = [[pi.controllerClass alloc] init];
-        vc.title = pi.title;
-        // 3.跳转
-        [controller.navigationController pushViewController:vc animated:YES];
+        [UIHelper pushViewController:pi.controllerClass andTitle:pi.title byFromViewController:controller];
     }];
-    
-    //   3
-    [_right2Button setOnImageClickListener:^(UIImageView *clickedImage) {
-        NSLog(@"_leftButton is clicked");
-        // 1.取模型
+    [_requirementButton setOnImageClickListener:^(UIImageView *clickedImage) {
         SLWPageIndex *pi =weakPageIndexArray[2];
-        // 2.创建控制器
-        UIViewController *vc = [[pi.controllerClass alloc] init];
-        vc.title = pi.title;
-        // 3.跳转
-        [controller.navigationController pushViewController:vc animated:YES];
+        [UIHelper pushViewController:pi.controllerClass andTitle:pi.title byFromViewController:controller];
+    }];
+    [_companyButton setOnImageClickListener:^(UIImageView *clickedImage) {
+        SLWPageIndex *pi =weakPageIndexArray[3];
+        [UIHelper pushViewController:pi.controllerClass andTitle:pi.title byFromViewController:controller];
+    }];
+    [_bbsButton setOnImageClickListener:^(UIImageView *clickedImage) {
+        SLWPageIndex *pi =weakPageIndexArray[4];
+        [UIHelper pushViewController:pi.controllerClass andTitle:pi.title byFromViewController:controller];
+    }];
+    [_aboutusButton setOnImageClickListener:^(UIImageView *clickedImage) {
+        SLWPageIndex *pi =weakPageIndexArray[5];
+        [UIHelper pushViewController:pi.controllerClass andTitle:pi.title byFromViewController:controller];
     }];
     
     
