@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLWHomeViewController">
             <connections>
-                <outlet property="imagePlayerView" destination="u1d-Jj-fag" id="ghN-Z7-jBS"/>
+                <outlet property="bannerView" destination="u1d-Jj-fag" id="eT1-Lu-Mph"/>
                 <outlet property="menuLine1" destination="Vf2-hO-iCI" id="ce8-VA-aBi"/>
                 <outlet property="menuLine2" destination="cSo-lk-yrF" id="Fgi-i5-xVg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -32,7 +32,7 @@
                         <outlet property="delegate" destination="-1" id="3kd-BE-aj0"/>
                     </connections>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u1d-Jj-fag" customClass="ImagePlayerView">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u1d-Jj-fag">
                     <rect key="frame" x="0.0" y="64" width="320" height="204"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>

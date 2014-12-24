@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ImagePlayerView.h"
 #import "RKTabView.h"
+#import "AOScrollerView.h"
+@interface SLWHomeViewController : UIViewController<ValueClickDelegate>
 
-@interface SLWHomeViewController : UIViewController<ImagePlayerViewDelegate>
+@property (strong, nonatomic) IBOutlet UIView *bannerView;
+
+
 @property (nonatomic, strong) NSArray *imageURLs;
-@property (weak, nonatomic) IBOutlet ImagePlayerView *imagePlayerView;
 @property (weak, nonatomic) IBOutlet RKTabView *menuLine1;
 @property (weak, nonatomic) IBOutlet RKTabView *menuLine2;
 

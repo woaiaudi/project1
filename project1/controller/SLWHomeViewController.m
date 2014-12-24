@@ -39,6 +39,28 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark- AOScrollViewDelegate ValueClickDelegate 首页banner 点击事件
+-(void)buttonClick:(int)vid{
+    
+}
+#pragma mark - 将焦点图显示在页面上
+-(void)addAOScrollerView:(NSArray *)array
+{
+    //设置图片url数组
+    NSMutableArray *imgArr = [[NSMutableArray alloc] init];
+    //设置标题数组
+    NSMutableArray *strArr =[[NSMutableArray alloc] init];
+    [imgArr addObject:@"http://gcsl.gotoip4.com/upload/201412/10/201412102202117160.jpg"];
+    [strArr addObject:@"产品新闻标题111111"];
+    [imgArr addObject:@"http://gcsl.gotoip4.com/upload/201412/10/201412102244016426.jpg"];
+    [strArr addObject:@"产品新闻标题222222"];
+    // 初始化自定义ScrollView类对象
+    AOScrollerView *aSV = [[AOScrollerView alloc]initWithNameArr:imgArr titleArr:strArr height:self.bannerView.bounds.size.height];
+    //设置委托
+    aSV.vDelegate=self;
+    //添加进view
+    [self.bannerView addSubview:aSV];
+}
 #pragma mark - 初始化首页要跳转的页面数组
 -(void)initAllPageIndexArray
 {
@@ -54,49 +76,7 @@
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"关于我们" controllerClass:[SLWPage1ViewController class]]];
 
 }
-#pragma mark - 将焦点图显示在页面上
--(void)addAOScrollerView:(NSArray *)array
-{
-    self.imageURLs = @[[NSURL URLWithString:@"http://h.hiphotos.baidu.com/baike/pic/item/cdbf6c81800a19d8b3d02b5930fa828ba71e469e.jpg"],
-                       [NSURL URLWithString:@"http://d.hiphotos.baidu.com/baike/pic/item/a71ea8d3fd1f4134f4437e23261f95cad1c85e72.jpg"],
-                       [NSURL URLWithString:@"http://c.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26%3Bt%3Dgif/sign=e9614d120923dd54357eaf3ab060d8bb/7af40ad162d9f2d3755e1599a9ec8a136327cc7c.jpg"]];
-    
-    self.imagePlayerView.imagePlayerViewDelegate = self;
-    
-    // set auto scroll interval to x seconds
-    self.imagePlayerView.scrollInterval = 5.0f;
-    
-    // adjust pageControl position
-    self.imagePlayerView.pageControlPosition = ICPageControlPosition_BottomCenter;
-    
-    // hide pageControl or not
-    self.imagePlayerView.hidePageControl = NO;
-    
-    // adjust edgeInset
-    //self.imagePlayerView.edgeInsets = UIEdgeInsetsMake(10, 20, 30, 40);
-    
-    [self.imagePlayerView reloadData];
-}
-#pragma mark - ImagePlayerViewDelegate
-- (NSInteger)numberOfItems
-{
-    return self.imageURLs.count;
-}
 
-- (void)imagePlayerView:(ImagePlayerView *)imagePlayerView loadImageForImageView:(UIImageView *)imageView index:(NSInteger)index
-{
-    // recommend to use SDWebImage lib to load web image
-    //    [imageView setImageWithURL:[self.imageURLs objectAtIndex:index] placeholderImage:nil];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[self.imageURLs objectAtIndex:index]]];
-    });
-}
-
-- (void)imagePlayerView:(ImagePlayerView *)imagePlayerView didTapAtIndex:(NSInteger)index
-{
-    NSLog(@"did tap index = %d", (int)index);
-}
 #pragma mark- 初始化tabbar
 -(void)initRKTabView
 {

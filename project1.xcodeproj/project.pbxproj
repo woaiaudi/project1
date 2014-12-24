@@ -41,6 +41,8 @@
 		48504E811A49AE900076E0C5 /* HATPageCellBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 48504E781A49AE900076E0C5 /* HATPageCellBean.m */; };
 		48504E821A49AE900076E0C5 /* UIScrollView+TwitterCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 48504E7B1A49AE900076E0C5 /* UIScrollView+TwitterCover.m */; };
 		48547E531A4AF017005EB5B0 /* cellbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 48547E521A4AF017005EB5B0 /* cellbg.png */; };
+		48547E591A4AF42A005EB5B0 /* AOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48547E561A4AF42A005EB5B0 /* AOImageView.m */; };
+		48547E5A1A4AF42A005EB5B0 /* AOScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48547E581A4AF42A005EB5B0 /* AOScrollerView.m */; };
 		485F97191A42EAAE003972CD /* SLWCompanyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F97171A42EAAE003972CD /* SLWCompanyListTableViewCell.m */; };
 		485F971A1A42EAAE003972CD /* SLWCompanyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */; };
 		485F971D1A42F1E9003972CD /* SLWCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F971C1A42F1E9003972CD /* SLWCompanyListViewController.m */; };
@@ -80,7 +82,6 @@
 		487E217B1A35D5EA00D3168F /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21711A35D5EA00D3168F /* UIScrollView+MJExtension.m */; };
 		487E217C1A35D5EA00D3168F /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21731A35D5EA00D3168F /* UIScrollView+MJRefresh.m */; };
 		487E217D1A35D5EA00D3168F /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21751A35D5EA00D3168F /* UIView+MJExtension.m */; };
-		488891131A1C45D900BAEDF8 /* ImagePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 488891121A1C45D900BAEDF8 /* ImagePlayerView.m */; };
 		489EF2BB1A3D528A00BDC580 /* SLWSupplyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 489EF2B91A3D528A00BDC580 /* SLWSupplyListViewController.m */; };
 		489EF2BC1A3D528A00BDC580 /* SLWSupplyListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489EF2BA1A3D528A00BDC580 /* SLWSupplyListViewController.xib */; };
 		489EF2C01A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 489EF2BE1A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.m */; };
@@ -171,6 +172,10 @@
 		48504E7A1A49AE900076E0C5 /* UIScrollView+TwitterCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TwitterCover.h"; sourceTree = "<group>"; };
 		48504E7B1A49AE900076E0C5 /* UIScrollView+TwitterCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TwitterCover.m"; sourceTree = "<group>"; };
 		48547E521A4AF017005EB5B0 /* cellbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellbg.png; sourceTree = "<group>"; };
+		48547E551A4AF42A005EB5B0 /* AOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOImageView.h; sourceTree = "<group>"; };
+		48547E561A4AF42A005EB5B0 /* AOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOImageView.m; sourceTree = "<group>"; };
+		48547E571A4AF42A005EB5B0 /* AOScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOScrollerView.h; sourceTree = "<group>"; };
+		48547E581A4AF42A005EB5B0 /* AOScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOScrollerView.m; sourceTree = "<group>"; };
 		485F97161A42EAAE003972CD /* SLWCompanyListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWCompanyListTableViewCell.h; sourceTree = "<group>"; };
 		485F97171A42EAAE003972CD /* SLWCompanyListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWCompanyListTableViewCell.m; sourceTree = "<group>"; };
 		485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWCompanyListTableViewCell.xib; sourceTree = "<group>"; };
@@ -232,9 +237,6 @@
 		487E21731A35D5EA00D3168F /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		487E21741A35D5EA00D3168F /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		487E21751A35D5EA00D3168F /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
-		488891101A1C45D900BAEDF8 /* ImagePlayerView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImagePlayerView-Prefix.pch"; sourceTree = "<group>"; };
-		488891111A1C45D900BAEDF8 /* ImagePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePlayerView.h; sourceTree = "<group>"; };
-		488891121A1C45D900BAEDF8 /* ImagePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePlayerView.m; sourceTree = "<group>"; };
 		489EF2B81A3D528A00BDC580 /* SLWSupplyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSupplyListViewController.h; sourceTree = "<group>"; };
 		489EF2B91A3D528A00BDC580 /* SLWSupplyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSupplyListViewController.m; sourceTree = "<group>"; };
 		489EF2BA1A3D528A00BDC580 /* SLWSupplyListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSupplyListViewController.xib; sourceTree = "<group>"; };
@@ -418,6 +420,17 @@
 			path = TwitterCover;
 			sourceTree = "<group>";
 		};
+		48547E541A4AF42A005EB5B0 /* AOScrollerView */ = {
+			isa = PBXGroup;
+			children = (
+				48547E551A4AF42A005EB5B0 /* AOImageView.h */,
+				48547E561A4AF42A005EB5B0 /* AOImageView.m */,
+				48547E571A4AF42A005EB5B0 /* AOScrollerView.h */,
+				48547E581A4AF42A005EB5B0 /* AOScrollerView.m */,
+			);
+			path = AOScrollerView;
+			sourceTree = "<group>";
+		};
 		485F97101A42E899003972CD /* company */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,16 +565,6 @@
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
-		4888910F1A1C45D900BAEDF8 /* ImagePlayerView */ = {
-			isa = PBXGroup;
-			children = (
-				488891101A1C45D900BAEDF8 /* ImagePlayerView-Prefix.pch */,
-				488891111A1C45D900BAEDF8 /* ImagePlayerView.h */,
-				488891121A1C45D900BAEDF8 /* ImagePlayerView.m */,
-			);
-			path = ImagePlayerView;
-			sourceTree = "<group>";
-		};
 		489EF2B61A3D523000BDC580 /* supply */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +639,7 @@
 		48A28BFB1A1B797D008B9410 /* widget */ = {
 			isa = PBXGroup;
 			children = (
+				48547E541A4AF42A005EB5B0 /* AOScrollerView */,
 				48504E6D1A49AE900076E0C5 /* HACLPage */,
 				482785731A4845F00005A16C /* Jastor */,
 				485F97261A4301D0003972CD /* navigation */,
@@ -645,7 +649,6 @@
 				48CFF3A11A2C48E100023DB3 /* textfield */,
 				4860E79C1A22FDA900BE0ECA /* JSBadgeView */,
 				4860E7841A22FAB800BE0ECA /* RKTabView */,
-				4888910F1A1C45D900BAEDF8 /* ImagePlayerView */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -884,11 +887,12 @@
 				48739B5C1A4065380026BC0D /* SLWSupplyDetailViewController.m in Sources */,
 				487E21611A35C9BD00D3168F /* SLWNewsListViewController.m in Sources */,
 				485F97191A42EAAE003972CD /* SLWCompanyListTableViewCell.m in Sources */,
+				48547E591A4AF42A005EB5B0 /* AOImageView.m in Sources */,
 				482785721A48431F0005A16C /* UserBean.m in Sources */,
 				4860E7891A22FAB800BE0ECA /* RKTabItem.m in Sources */,
 				487E217C1A35D5EA00D3168F /* UIScrollView+MJRefresh.m in Sources */,
 				48504E7E1A49AE900076E0C5 /* HACLPageClipCell.m in Sources */,
-				488891131A1C45D900BAEDF8 /* ImagePlayerView.m in Sources */,
+				48547E5A1A4AF42A005EB5B0 /* AOScrollerView.m in Sources */,
 				485F971D1A42F1E9003972CD /* SLWCompanyListViewController.m in Sources */,
 				480141671A1B747500311095 /* main.m in Sources */,
 				487E21771A35D5EA00D3168F /* MJRefreshBaseView.m in Sources */,

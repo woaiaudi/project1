@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ImagePlayerView.h"
 #import "HomeImageButton.h"
-@interface SLWHome : UIViewController<ImagePlayerViewDelegate>
-@property (strong, nonatomic) IBOutlet ImagePlayerView *imagePlayerView;
+#import "AOScrollerView.h"
+@interface SLWHome : UIViewController<ValueClickDelegate>
+@property (strong, nonatomic) IBOutlet UIView *bannerView;
 
 @property (strong, nonatomic) IBOutlet HomeImageButton *leftButton;
 @property (strong, nonatomic) IBOutlet HomeImageButton *right1Button;
