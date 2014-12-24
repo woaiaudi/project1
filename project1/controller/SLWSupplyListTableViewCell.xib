@@ -14,8 +14,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="example.png" translatesAutoresizingMaskIntoConstraints="NO" id="qUX-7H-FcW">
-                        <rect key="frame" x="5" y="10" width="70" height="70"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cellbg.png" translatesAutoresizingMaskIntoConstraints="NO" id="KMb-or-5qk">
+                        <rect key="frame" x="5" y="5" width="310" height="80"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="德国巴斯夫 1185A50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JR-sY-miS" userLabel="title">
                         <rect key="frame" x="80" y="10" width="180" height="21"/>
@@ -42,9 +42,13 @@
                         <color key="textColor" red="0.47818023989898994" green="0.47818023989898994" blue="0.47818023989898994" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="example.png" translatesAutoresizingMaskIntoConstraints="NO" id="qUX-7H-FcW">
+                        <rect key="frame" x="10" y="12" width="65" height="65"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="area" destination="EkX-Yy-4xz" id="hoI-NG-zMN"/>
                 <outlet property="fenglei" destination="z9P-7X-L5F" id="zA8-Us-8zn"/>
@@ -56,6 +60,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="cellbg.png" width="614" height="213"/>
         <image name="example.png" width="48" height="48"/>
         <image name="phone32.png" width="31" height="31"/>
     </resources>

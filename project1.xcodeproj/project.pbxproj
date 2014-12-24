@@ -40,6 +40,7 @@
 		48504E801A49AE900076E0C5 /* HACLTableViewPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 48504E761A49AE900076E0C5 /* HACLTableViewPage.m */; };
 		48504E811A49AE900076E0C5 /* HATPageCellBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 48504E781A49AE900076E0C5 /* HATPageCellBean.m */; };
 		48504E821A49AE900076E0C5 /* UIScrollView+TwitterCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 48504E7B1A49AE900076E0C5 /* UIScrollView+TwitterCover.m */; };
+		48547E531A4AF017005EB5B0 /* cellbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 48547E521A4AF017005EB5B0 /* cellbg.png */; };
 		485F97191A42EAAE003972CD /* SLWCompanyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F97171A42EAAE003972CD /* SLWCompanyListTableViewCell.m */; };
 		485F971A1A42EAAE003972CD /* SLWCompanyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */; };
 		485F971D1A42F1E9003972CD /* SLWCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F971C1A42F1E9003972CD /* SLWCompanyListViewController.m */; };
@@ -169,6 +170,7 @@
 		48504E781A49AE900076E0C5 /* HATPageCellBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HATPageCellBean.m; sourceTree = "<group>"; };
 		48504E7A1A49AE900076E0C5 /* UIScrollView+TwitterCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TwitterCover.h"; sourceTree = "<group>"; };
 		48504E7B1A49AE900076E0C5 /* UIScrollView+TwitterCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TwitterCover.m"; sourceTree = "<group>"; };
+		48547E521A4AF017005EB5B0 /* cellbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellbg.png; sourceTree = "<group>"; };
 		485F97161A42EAAE003972CD /* SLWCompanyListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWCompanyListTableViewCell.h; sourceTree = "<group>"; };
 		485F97171A42EAAE003972CD /* SLWCompanyListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWCompanyListTableViewCell.m; sourceTree = "<group>"; };
 		485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWCompanyListTableViewCell.xib; sourceTree = "<group>"; };
@@ -461,6 +463,7 @@
 		4860E78B1A22FCE800BE0ECA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				48547E521A4AF017005EB5B0 /* cellbg.png */,
 				48504E6B1A49A8980076E0C5 /* noimg.png */,
 				48B6D2561A4458A100032B14 /* corwnicon.png */,
 				48B6D2541A4456BF00032B14 /* phone32.png */,
@@ -787,6 +790,7 @@
 				487284D11A4435DE00EC2B3D /* gq.png in Resources */,
 				48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */,
 				48504E6C1A49A8980076E0C5 /* noimg.png in Resources */,
+				48547E531A4AF017005EB5B0 /* cellbg.png in Resources */,
 				48A28C071A1B7E7C008B9410 /* SLWHomeViewController.xib in Resources */,
 				48BCF8891A444A8F00EBB2F0 /* pwdicon.png in Resources */,
 				4860E7941A22FD0A00BE0ECA /* home_tabitem_8.png in Resources */,

@@ -32,6 +32,9 @@
     // 2.集成刷新控件
     [self setupRefresh];
     
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [self.tableView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+    
 }
 
 - (void)didReceiveMemoryWarning {

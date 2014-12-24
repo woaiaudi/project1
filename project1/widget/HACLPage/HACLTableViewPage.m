@@ -14,9 +14,10 @@
 #import <UIImageView+WebCache.h>
 
 
-#define FONT_SIZE 18.0f
+#define FONT_SIZE 16.0f
 #define CELL_CONTENT_WIDTH 320.0f
-#define CELL_CONTENT_MARGIN 10.0f
+#define CELL_CONTENT_MARGIN 5.0f
+#define CELL_DEFAULT_HEIGHT 25.0f
 #define BUTTONTAG 6412
 @interface HACLTableViewPage ()
 
@@ -125,7 +126,7 @@
     CGSize size = rect.size;
     
     
-    CGFloat height = MAX(size.height, 44.0f);
+    CGFloat height = MAX(size.height, CELL_DEFAULT_HEIGHT);
     
     return height + (CELL_CONTENT_MARGIN * 2);
     }
@@ -147,7 +148,7 @@
         }
         else if([cellbean.thumbImg isKindOfClass:[NSString class]])
         {
-            [clipcell.cellImg setImageWithURL:[NSURL URLWithString:(NSString *)cellbean.thumbImg] placeholderImage:[UIImage imageNamed:@"noimg"]];
+            [clipcell.cellImg sd_setImageWithURL:[NSURL URLWithString:(NSString *)cellbean.thumbImg] placeholderImage:[UIImage imageNamed:@"noimg"]];
         }
         else
         {
