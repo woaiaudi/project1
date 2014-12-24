@@ -13,6 +13,7 @@
 @interface SLWSignUpViewController ()
 {
     UserService *userService;
+    NSArray * pwdqArray;
 }
 
 @end
@@ -23,12 +24,14 @@
     [super viewDidLoad];
     userService = [[UserService alloc]init];
     
+    //不能超过11个汉字
+    pwdqArray = [NSArray arrayWithObjects:@"出生城市", @"最喜欢的电影",@"最喜欢的演员", @"最常上的网站", @"最喜欢的车",nil];
     
     [_userNameTextField setRequired:YES];//登录账户 必填
     [_pwd1TextField setRequired:YES];//密码必填
     [_pwd2TextField setRequired:YES];//密码2 判断
-    [_answerTextField setRequired:YES];//问题答案
-    [_realNameTextField setRequired:YES];//真实姓名
+   // [_answerTextField setRequired:YES];//问题答案
+    //[_realNameTextField setRequired:YES];//真实姓名
 
     
     //设置性别选择按钮
@@ -48,17 +51,36 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Helpers
-
-- (void)showSelectedButton:(NSArray *)radioButtons {
-    NSString *buttonName = [(DLRadioButton *)radioButtons[0] selectedButton].titleLabel.text;
-    [[[UIAlertView alloc] initWithTitle: buttonName ? @"Selected Button" : @"No Button Selected" message:buttonName delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-}
 #pragma mark- 注册按钮 事件
 - (IBAction)userSignupCommitAction:(id)sender {
-    [self showSelectedButton:self.sexRadioButton];
-    [userService registerByUsername:@"abc111" password:@"123" pwdq:@"qqq" pwda:@"aaa" realname:@"rrrname" sex:@"男" company:@"公司中文名称" usertype:@"q企业" onsuccess:^(UserBean *pBlockBean) {
-        NSLog(@"%@",pBlockBean);
+    //验证用户名非空
+    if (!_userNameTextField.isValid){
+        [TSMessage showNotificationWithTitle:@"注册失败"
+                                    subtitle:@"用户名不能为空"
+                                        type:TSMessageNotificationTypeError];
+        return;
+    }
+    //验证mima非空
+    if (!_pwd1TextField.isValid){
+        [TSMessage showNotificationWithTitle:@"注册失败"
+                                    subtitle:@"密码不能为空"
+                                        type:TSMessageNotificationTypeError];
+        return;
+    }
+    //验证两次密码
+    if (![_pwd1TextField.text isEqualToString:_pwd2TextField.text]) {
+        [TSMessage showNotificationWithTitle:@"注册失败"
+                                    subtitle:@"两次输入的密码不一致"
+                                        type:TSMessageNotificationTypeError];
+        return;
+    }
+    NSString *pwdqStr = _selectPwdQuestButton.titleLabel.text;
+    NSString *sexStr = [(DLRadioButton *)self.sexRadioButton[0] selectedButton].titleLabel.text;
+    [userService registerByUsername:_userNameTextField.text password:_pwd1TextField.text pwdq:pwdqStr pwda:_answerTextField.text realname:_realNameTextField.text sex:sexStr company:_companyTextField.text  usertype:@"geren" onsuccess:^(UserBean *pBlockBean) {
+        [TSMessage showNotificationWithTitle:@"恭喜"
+                                    subtitle:@"注册成功"
+                                        type:TSMessageNotificationTypeSuccess];
+        [userService saveAccessedUserBean:pBlockBean];
         [UIHelper popToRootViewControllerAnimated:self];
     } onfailure:^(NSError *error) {
         [TSMessage showNotificationWithTitle:@"注册失败"
@@ -70,14 +92,9 @@
 }
 #pragma mark- 密码提示问题
 - (IBAction)clickPwdQuestAction:(id)sender {
-    NSArray * arr = [[NSArray alloc] init];
-    //不能超过11个汉字
-    arr = [NSArray arrayWithObjects:@"好问问很长很长很长很长", @"Hello 1", @"Hello 2", @"Hello 3", @"Hello 4", @"Hello 5", @"Hello 6", @"Hello 7", @"Hello 8", @"Hello 9",nil];
-    NSArray * arrImage = [[NSArray alloc] init];
-    arrImage = [NSArray arrayWithObjects:[UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], nil];
     if(dropDown == nil) {
         CGFloat f = 200;
-        dropDown = [[NIDropDown alloc]showDropDown:sender :&f :arr :nil :@"down"];
+        dropDown = [[NIDropDown alloc]showDropDown:sender :&f :pwdqArray :nil :@"down"];
         dropDown.delegate = self;
     }
     else {
@@ -88,6 +105,5 @@
 - (void) niDropDownDelegateMethod:(NIDropDown *)sender  byClickedButton:(UIButton *)button selectedIndex:(NSIndexPath *)index
 {
     dropDown = nil;
-    NSLog(@"选中了S[%d],R[%d]",index.section,index.row);
 }
 @end

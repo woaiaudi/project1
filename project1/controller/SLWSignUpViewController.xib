@@ -36,12 +36,12 @@
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="登录密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q1w-4w-R8Z" customClass="ValidateTextField">
                     <rect key="frame" x="88" y="109" width="212" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="确认密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WR0-jS-YrG" customClass="ValidateTextField">
                     <rect key="frame" x="88" y="157" width="212" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="问题答案" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6X-Rs-qOq" customClass="ValidateTextField">
                     <rect key="frame" x="88" y="238" width="212" height="30"/>
@@ -82,7 +82,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu5-ex-1Ir">
                     <rect key="frame" x="88" y="200" width="212" height="30"/>
-                    <state key="normal" title="选择密码问题" backgroundImage="arrow_down.png"/>
+                    <state key="normal" title="最喜欢的电影" backgroundImage="arrow_down.png"/>
                     <connections>
                         <action selector="clickPwdQuestAction:" destination="-1" eventType="touchUpInside" id="AR8-h6-2Tx"/>
                     </connections>

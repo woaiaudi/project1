@@ -40,6 +40,8 @@
         [userService loginByName:_usernameTextView.text pwd:_passwordtextView.text onsuccess:^(UserBean *pBlockBean) {
             //登录成功到首页，更新首页数据
             [UIHelper popToRootViewControllerAnimated:self];
+            
+            [userService saveAccessedUserBean:pBlockBean];
         } onfailure:^(NSError *error) {
             [TSMessage showNotificationWithTitle:@"登录失败"
                                         subtitle:[error localizedDescription]

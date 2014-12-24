@@ -8,8 +8,10 @@
 
 #import "UserService.h"
 #import <AFNetworking.h>
+#import "JastorRuntimeHelper.h"
 @implementation UserService
 
+#define SLW_ACCESSED_USER @"slw_accessed_user"
 -(void)loginByName:(NSString *)pName
                pwd:(NSString *)pPwd
          onsuccess:(void (^)(UserBean * pBlockBean))successedBlock
@@ -99,5 +101,45 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failedBlock(error);
     }];
+}
+
+
+-(void)saveAccessedUserBean:(UserBean *)userBean
+{
+    NSDictionary *userDic = [self convertFromObject:userBean];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:userDic forKey:SLW_ACCESSED_USER];
+    [defaults synchronize];//同步到 记录中
+}
+
+-(UserBean *)getAccessedUserBean
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:SLW_ACCESSED_USER]==nil) {
+        //没有用户登录
+        //提示没登陆，选择登陆或者注册
+        return nil;
+    }else
+    {
+        NSDictionary *userDic = (NSDictionary *)[defaults objectForKey:SLW_ACCESSED_USER];
+        UserBean * resultbean = [[UserBean alloc]initWithDictionary:userDic];
+        return resultbean;
+    }
+    
+}
+-(void)deleteAccessedUserBean
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:SLW_ACCESSED_USER];
+    [defaults synchronize];//同步到 记录中
+}
+//自己添加的
+- (NSMutableDictionary *)convertFromObject:(id)object{
+    NSMutableDictionary *returnDic = [[NSMutableDictionary alloc] init];
+    NSArray *array =[JastorRuntimeHelper propertyNames:[object class]];//获取所有的属性名称
+    for (NSString *key in array) {
+        [returnDic setValue:[object valueForKey:key] forKey:key];//从类里面取值然后赋给每个值，取得字典
+    }
+    return  returnDic ;
 }
 @end

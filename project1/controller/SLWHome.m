@@ -15,6 +15,8 @@
 #import "SLWCompanyListViewController.h"
 #import "SLWSearchViewController.h"
 #import "UIHelper.h"
+#import "UserService.h"
+#import <TSMessage.h>
 
 @interface SLWHome ()
 {
@@ -160,6 +162,15 @@
 }
 #pragma mark - 打开登录页面
 -(void)openLoginPage{
+    UserService *us =  [[UserService alloc]init];
+    UserBean *loginUser = [us getAccessedUserBean];
+    if (loginUser!=nil) {
+        //已经登录
+        [TSMessage showNotificationWithTitle:@"提醒"
+                                    subtitle:[NSString stringWithFormat:@"用户【%@】已经登录",loginUser.username]
+                                        type:TSMessageNotificationTypeSuccess];
+    }
+    else
     [UIHelper pushViewController:[SLWLoginViewController class] andTitle:@"用户登录" byFromViewController:self];
 }
 @end

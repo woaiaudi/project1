@@ -28,4 +28,9 @@
                   usertype:(NSString *)pUsertype
                  onsuccess:(void (^)(UserBean * pBlockBean))successedBlock
                  onfailure:(void (^)(NSError *error))failedBlock;
+
+
+-(void)saveAccessedUserBean:(UserBean *)userBean;
+-(UserBean *)getAccessedUserBean;
+-(void)deleteAccessedUserBean;
 @end
