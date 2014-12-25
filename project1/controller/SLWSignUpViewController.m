@@ -80,6 +80,8 @@
         [TSMessage showNotificationWithTitle:@"恭喜"
                                     subtitle:@"注册成功"
                                         type:TSMessageNotificationTypeSuccess];
+        [pBlockBean setUsername:_userNameTextField.text];
+        //注册成功后，没有返回注册成功的用户信息，导致saveAccessedUserBean用户信息不全
         [userService saveAccessedUserBean:pBlockBean];
         [UIHelper popToRootViewControllerAnimated:self];
     } onfailure:^(NSError *error) {
