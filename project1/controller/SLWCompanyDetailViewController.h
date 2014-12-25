@@ -14,5 +14,14 @@
 @property(nonatomic,retain) CompanyBean * companyBean;
 
 @property (strong, nonatomic) IBOutlet UIWebView *companyWebview;
+@property (strong, nonatomic) IBOutlet UILabel *companyLabel;
+@property (strong, nonatomic) IBOutlet UILabel *linkerLabel;
+@property (strong, nonatomic) IBOutlet UILabel *linktelLabel;
+@property (strong, nonatomic) IBOutlet UILabel *emailLabel;
+@property (strong, nonatomic) IBOutlet UILabel *zipLabel;
+@property (strong, nonatomic) IBOutlet UILabel *webaddLabel;
+@property (strong, nonatomic) IBOutlet UILabel *addressLabel;
+@property (strong, nonatomic) IBOutlet UIButton *callButton;
 
+- (IBAction)callAction:(id)sender;
 @end

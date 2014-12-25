@@ -28,6 +28,8 @@
 		4817C6BE1A4C622F0040C916 /* noimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4817C6BD1A4C622F0040C916 /* noimg.png */; };
 		4817C6C21A4C628A0040C916 /* SLWCompanyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4817C6C01A4C628A0040C916 /* SLWCompanyDetailViewController.m */; };
 		4817C6C31A4C628A0040C916 /* SLWCompanyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4817C6C11A4C628A0040C916 /* SLWCompanyDetailViewController.xib */; };
+		4817C6C61A4C6DC00040C916 /* SLWReqListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4817C6C51A4C6DC00040C916 /* SLWReqListTableViewController.m */; };
+		4817C6CA1A4C6E150040C916 /* ACETelPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4817C6C91A4C6E150040C916 /* ACETelPrompt.m */; };
 		482785641A4838260005A16C /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 482785631A4838260005A16C /* UserService.m */; };
 		4827856A1A483C890005A16C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4827856C1A483C890005A16C /* Localizable.strings */; };
 		482785721A48431F0005A16C /* UserBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 482785711A48431F0005A16C /* UserBean.m */; };
@@ -159,6 +161,10 @@
 		4817C6BF1A4C628A0040C916 /* SLWCompanyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWCompanyDetailViewController.h; sourceTree = "<group>"; };
 		4817C6C01A4C628A0040C916 /* SLWCompanyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWCompanyDetailViewController.m; sourceTree = "<group>"; };
 		4817C6C11A4C628A0040C916 /* SLWCompanyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWCompanyDetailViewController.xib; sourceTree = "<group>"; };
+		4817C6C41A4C6DC00040C916 /* SLWReqListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWReqListTableViewController.h; sourceTree = "<group>"; };
+		4817C6C51A4C6DC00040C916 /* SLWReqListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWReqListTableViewController.m; sourceTree = "<group>"; };
+		4817C6C81A4C6E150040C916 /* ACETelPrompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACETelPrompt.h; sourceTree = "<group>"; };
+		4817C6C91A4C6E150040C916 /* ACETelPrompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACETelPrompt.m; sourceTree = "<group>"; };
 		482785621A4838260005A16C /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = SOURCE_ROOT; };
 		482785631A4838260005A16C /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = SOURCE_ROOT; };
 		4827856B1A483C890005A16C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -410,6 +416,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4817C6C71A4C6E150040C916 /* ACETelPrompt */ = {
+			isa = PBXGroup;
+			children = (
+				4817C6C81A4C6E150040C916 /* ACETelPrompt.h */,
+				4817C6C91A4C6E150040C916 /* ACETelPrompt.m */,
+			);
+			path = ACETelPrompt;
+			sourceTree = "<group>";
+		};
 		482785731A4845F00005A16C /* Jastor */ = {
 			isa = PBXGroup;
 			children = (
@@ -643,6 +658,8 @@
 		489EF2B71A3D523A00BDC580 /* requirement */ = {
 			isa = PBXGroup;
 			children = (
+				4817C6C41A4C6DC00040C916 /* SLWReqListTableViewController.h */,
+				4817C6C51A4C6DC00040C916 /* SLWReqListTableViewController.m */,
 			);
 			name = requirement;
 			sourceTree = "<group>";
@@ -711,6 +728,7 @@
 		48A28BFB1A1B797D008B9410 /* widget */ = {
 			isa = PBXGroup;
 			children = (
+				4817C6C71A4C6E150040C916 /* ACETelPrompt */,
 				48547E541A4AF42A005EB5B0 /* AOScrollerView */,
 				48504E6D1A49AE900076E0C5 /* HACLPage */,
 				482785731A4845F00005A16C /* Jastor */,
@@ -958,6 +976,7 @@
 				489EF2C01A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.m in Sources */,
 				48504E801A49AE900076E0C5 /* HACLTableViewPage.m in Sources */,
 				487E217B1A35D5EA00D3168F /* UIScrollView+MJExtension.m in Sources */,
+				4817C6CA1A4C6E150040C916 /* ACETelPrompt.m in Sources */,
 				48CFF3AC1A2C49DA00023DB3 /* SLWSignUpViewController.m in Sources */,
 				4817C6B91A4C5EF30040C916 /* CompanyBean.m in Sources */,
 				487E21781A35D5EA00D3168F /* MJRefreshConst.m in Sources */,
@@ -972,6 +991,7 @@
 				487E21611A35C9BD00D3168F /* SLWNewsListViewController.m in Sources */,
 				486B77D91A4C069C009F61D8 /* BBSService.m in Sources */,
 				48547E601A4B0ADF005EB5B0 /* NewsService.m in Sources */,
+				4817C6C61A4C6DC00040C916 /* SLWReqListTableViewController.m in Sources */,
 				485F97191A42EAAE003972CD /* SLWCompanyListTableViewCell.m in Sources */,
 				48547E591A4AF42A005EB5B0 /* AOImageView.m in Sources */,
 				48547E5D1A4B09D4005EB5B0 /* NewsBean.m in Sources */,
