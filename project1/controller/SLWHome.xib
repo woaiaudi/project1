@@ -22,31 +22,27 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CzV-0m-R7J">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CzV-0m-R7J" userLabel="banner">
                     <rect key="frame" x="0.0" y="64" width="320" height="200"/>
                     <color key="backgroundColor" red="0.76195095690000003" green="1" blue="0.93064691740000005" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="320" id="D1d-F5-qJX"/>
-                        <constraint firstAttribute="height" constant="200" id="gYg-oF-ngt"/>
-                    </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="news.png" translatesAutoresizingMaskIntoConstraints="NO" id="WlW-om-wzG" userLabel="信息咨询" customClass="HomeImageButton">
-                    <rect key="frame" x="19" y="275" width="131" height="190"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gq.png" translatesAutoresizingMaskIntoConstraints="NO" id="xDK-uG-ruy" userLabel="供应管理" customClass="HomeImageButton">
-                    <rect key="frame" x="158" y="275" width="145" height="90"/>
+                    <rect key="frame" x="13" y="323" width="131" height="149"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gq.png" translatesAutoresizingMaskIntoConstraints="NO" id="92d-8b-6tw" userLabel="需求管理" customClass="HomeImageButton">
-                    <rect key="frame" x="158" y="375" width="145" height="90"/>
+                    <rect key="frame" x="178" y="409" width="128" height="63"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="companys.png" translatesAutoresizingMaskIntoConstraints="NO" id="b2a-qb-iHF" userLabel="企业展示" customClass="HomeImageButton">
-                    <rect key="frame" x="19" y="473" width="85" height="80"/>
+                    <rect key="frame" x="13" y="480" width="85" height="80"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gq.png" translatesAutoresizingMaskIntoConstraints="NO" id="mg4-2M-Pqz" userLabel="关于我们" customClass="HomeImageButton">
-                    <rect key="frame" x="210" y="473" width="93" height="80"/>
+                    <rect key="frame" x="219" y="480" width="93" height="80"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="companys.png" translatesAutoresizingMaskIntoConstraints="NO" id="zZb-Ag-Jdu" userLabel="行业论坛" customClass="HomeImageButton">
-                    <rect key="frame" x="112" y="473" width="90" height="80"/>
+                    <rect key="frame" x="112" y="480" width="90" height="80"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gq.png" translatesAutoresizingMaskIntoConstraints="NO" id="xDK-uG-ruy" userLabel="供应管理" customClass="HomeImageButton">
+                    <rect key="frame" x="178" y="323" width="128" height="60"/>
                 </imageView>
             </subviews>
             <point key="canvasLocation" x="484" y="407"/>
