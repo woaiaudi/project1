@@ -13,6 +13,7 @@
 #import "GoodsService.h"
 #import <UIImageView+WebCache.h>
 #import "UIHelper.h"
+#import <TSMessage.h>
 
 @interface SLWSupplyListViewController ()
 {
@@ -86,7 +87,7 @@
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.supplyTableview headerEndRefreshing];
     } onfailure:^(NSError *error) {
-        NSLog(@"%@",[error localizedDescription]);
+        [TSMessage showNotificationWithTitle:[NSString stringWithFormat:@"远程服务器错误：%@",[error localizedDescription]] type:TSMessageNotificationTypeError];
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.supplyTableview headerEndRefreshing];
     }];
@@ -104,7 +105,7 @@
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.supplyTableview footerEndRefreshing];
     } onfailure:^(NSError *error) {
-        NSLog(@"%@",[error localizedDescription]);
+        [TSMessage showNotificationWithTitle:[NSString stringWithFormat:@"远程服务器错误：%@",[error localizedDescription]] type:TSMessageNotificationTypeError];
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.supplyTableview footerEndRefreshing];
     }];

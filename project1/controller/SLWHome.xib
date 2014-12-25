@@ -22,36 +22,74 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CzV-0m-R7J" userLabel="banner">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzV-0m-R7J" userLabel="banner">
                     <rect key="frame" x="0.0" y="64" width="320" height="200"/>
                     <color key="backgroundColor" red="0.76195095690000003" green="1" blue="0.93064691740000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="So1-c1-1FX"/>
+                    </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="news.png" translatesAutoresizingMaskIntoConstraints="NO" id="WlW-om-wzG" userLabel="信息咨询" customClass="HomeImageButton">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="zixun" translatesAutoresizingMaskIntoConstraints="NO" id="WlW-om-wzG" userLabel="信息咨询" customClass="HomeImageButton">
                     <rect key="frame" x="10" y="272" width="148" height="186"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="companys.png" translatesAutoresizingMaskIntoConstraints="NO" id="b2a-qb-iHF" userLabel="企业展示" customClass="HomeImageButton">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="qiye" translatesAutoresizingMaskIntoConstraints="NO" id="b2a-qb-iHF" userLabel="企业展示" customClass="HomeImageButton">
                     <rect key="frame" x="10" y="467" width="94" height="94"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gq.png" translatesAutoresizingMaskIntoConstraints="NO" id="mg4-2M-Pqz" userLabel="关于我们" customClass="HomeImageButton">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="guanyu" translatesAutoresizingMaskIntoConstraints="NO" id="mg4-2M-Pqz" userLabel="关于我们" customClass="HomeImageButton">
                     <rect key="frame" x="218" y="467" width="94" height="94"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="companys.png" translatesAutoresizingMaskIntoConstraints="NO" id="zZb-Ag-Jdu" userLabel="行业论坛" customClass="HomeImageButton">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="luntan" translatesAutoresizingMaskIntoConstraints="NO" id="zZb-Ag-Jdu" userLabel="行业论坛" customClass="HomeImageButton">
                     <rect key="frame" x="113" y="466" width="94" height="94"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gq.png" translatesAutoresizingMaskIntoConstraints="NO" id="xDK-uG-ruy" userLabel="供应管理" customClass="HomeImageButton">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gongying" translatesAutoresizingMaskIntoConstraints="NO" id="xDK-uG-ruy" userLabel="供应管理" customClass="HomeImageButton">
                     <rect key="frame" x="167" y="272" width="145" height="88"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gq.png" translatesAutoresizingMaskIntoConstraints="NO" id="92d-8b-6tw" userLabel="需求管理" customClass="HomeImageButton">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="xuqiu" translatesAutoresizingMaskIntoConstraints="NO" id="92d-8b-6tw" userLabel="需求管理" customClass="HomeImageButton">
                     <rect key="frame" x="167" y="368" width="145" height="88"/>
                 </imageView>
             </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="92d-8b-6tw" firstAttribute="leading" secondItem="WlW-om-wzG" secondAttribute="trailing" constant="8" id="5Qc-NQ-JJ4"/>
+                <constraint firstAttribute="bottom" secondItem="zZb-Ag-Jdu" secondAttribute="bottom" constant="8" id="7tU-q4-LAT"/>
+                <constraint firstAttribute="bottom" secondItem="mg4-2M-Pqz" secondAttribute="bottom" constant="8" id="856-9j-Yjf"/>
+                <constraint firstItem="mg4-2M-Pqz" firstAttribute="height" secondItem="b2a-qb-iHF" secondAttribute="height" id="BuH-OC-fJo"/>
+                <constraint firstItem="b2a-qb-iHF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Ep3-Rm-nq8"/>
+                <constraint firstItem="xDK-uG-ruy" firstAttribute="top" secondItem="CzV-0m-R7J" secondAttribute="bottom" constant="8" id="Q1G-l9-C67"/>
+                <constraint firstItem="92d-8b-6tw" firstAttribute="height" secondItem="xDK-uG-ruy" secondAttribute="height" id="RCR-di-fMV"/>
+                <constraint firstItem="mg4-2M-Pqz" firstAttribute="leading" secondItem="zZb-Ag-Jdu" secondAttribute="trailing" constant="8" id="RU7-k8-ZQo"/>
+                <constraint firstAttribute="trailing" secondItem="mg4-2M-Pqz" secondAttribute="trailing" constant="8" id="UIk-AV-DLZ"/>
+                <constraint firstAttribute="trailing" secondItem="92d-8b-6tw" secondAttribute="trailing" constant="8" id="URu-ws-DjL"/>
+                <constraint firstItem="xDK-uG-ruy" firstAttribute="height" secondItem="mg4-2M-Pqz" secondAttribute="height" id="W9g-xD-Wzg"/>
+                <constraint firstItem="WlW-om-wzG" firstAttribute="top" secondItem="CzV-0m-R7J" secondAttribute="bottom" constant="8" id="ZS2-hS-qED"/>
+                <constraint firstItem="WlW-om-wzG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="bK4-bb-mmx"/>
+                <constraint firstItem="CzV-0m-R7J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cZj-1i-kdf"/>
+                <constraint firstItem="WlW-om-wzG" firstAttribute="width" secondItem="xDK-uG-ruy" secondAttribute="width" id="gPM-hM-b5S"/>
+                <constraint firstItem="92d-8b-6tw" firstAttribute="top" secondItem="xDK-uG-ruy" secondAttribute="bottom" constant="8" id="hCV-fu-PIz"/>
+                <constraint firstItem="zZb-Ag-Jdu" firstAttribute="top" secondItem="92d-8b-6tw" secondAttribute="bottom" constant="10" id="kdE-hB-Igv"/>
+                <constraint firstItem="xDK-uG-ruy" firstAttribute="top" secondItem="CzV-0m-R7J" secondAttribute="bottom" constant="8" id="nzo-b4-XKO"/>
+                <constraint firstAttribute="bottom" secondItem="b2a-qb-iHF" secondAttribute="bottom" constant="8" id="pit-aP-nDM"/>
+                <constraint firstItem="CzV-0m-R7J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="tac-3F-87s"/>
+                <constraint firstItem="zZb-Ag-Jdu" firstAttribute="top" secondItem="WlW-om-wzG" secondAttribute="bottom" constant="8" id="tm0-UO-t4S"/>
+                <constraint firstItem="mg4-2M-Pqz" firstAttribute="width" secondItem="b2a-qb-iHF" secondAttribute="width" id="upd-b3-yBW"/>
+                <constraint firstItem="mg4-2M-Pqz" firstAttribute="height" secondItem="zZb-Ag-Jdu" secondAttribute="height" id="wJr-cv-1Si"/>
+                <constraint firstAttribute="trailing" secondItem="CzV-0m-R7J" secondAttribute="trailing" id="wcm-k1-tvz"/>
+                <constraint firstAttribute="trailing" secondItem="xDK-uG-ruy" secondAttribute="trailing" constant="8" id="xoi-j3-zUC"/>
+                <constraint firstItem="WlW-om-wzG" firstAttribute="width" secondItem="92d-8b-6tw" secondAttribute="width" id="yGk-rP-NOz"/>
+                <constraint firstItem="zZb-Ag-Jdu" firstAttribute="leading" secondItem="b2a-qb-iHF" secondAttribute="trailing" constant="8" id="zFr-qM-uEQ"/>
+                <constraint firstItem="xDK-uG-ruy" firstAttribute="height" secondItem="92d-8b-6tw" secondAttribute="height" id="ze1-hZ-dPI"/>
+                <constraint firstItem="mg4-2M-Pqz" firstAttribute="width" secondItem="zZb-Ag-Jdu" secondAttribute="width" id="zui-gS-O1D"/>
+            </constraints>
             <point key="canvasLocation" x="484" y="407"/>
         </view>
     </objects>
     <resources>
-        <image name="companys.png" width="150" height="110"/>
-        <image name="gq.png" width="150" height="110"/>
-        <image name="news.png" width="170" height="220"/>
+        <image name="gongying" width="150" height="110"/>
+        <image name="guanyu" width="110" height="110"/>
+        <image name="luntan" width="110" height="110"/>
+        <image name="qiye" width="110" height="110"/>
+        <image name="xuqiu" width="150" height="110"/>
+        <image name="zixun" width="170" height="220"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

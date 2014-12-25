@@ -76,9 +76,6 @@
 		486E4CA31A3C74E30065E21D /* SLWHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E4CA11A3C74E30065E21D /* SLWHome.m */; };
 		486E4CA41A3C74E30065E21D /* SLWHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486E4CA21A3C74E30065E21D /* SLWHome.xib */; };
 		486E4CAC1A3C855F0065E21D /* HomeImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E4CAB1A3C855F0065E21D /* HomeImageButton.m */; };
-		487284CF1A4435DE00EC2B3D /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 487284CC1A4435DE00EC2B3D /* news.png */; };
-		487284D01A4435DE00EC2B3D /* companys.png in Resources */ = {isa = PBXBuildFile; fileRef = 487284CD1A4435DE00EC2B3D /* companys.png */; };
-		487284D11A4435DE00EC2B3D /* gq.png in Resources */ = {isa = PBXBuildFile; fileRef = 487284CE1A4435DE00EC2B3D /* gq.png */; };
 		48739B5C1A4065380026BC0D /* SLWSupplyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48739B5A1A4065380026BC0D /* SLWSupplyDetailViewController.m */; };
 		48739B5D1A4065380026BC0D /* SLWSupplyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48739B5B1A4065380026BC0D /* SLWSupplyDetailViewController.xib */; };
 		487E21571A35BFF800D3168F /* SLWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21551A35BFF800D3168F /* SLWLoginViewController.m */; };
@@ -237,9 +234,6 @@
 		486E4CA21A3C74E30065E21D /* SLWHome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWHome.xib; sourceTree = "<group>"; };
 		486E4CAA1A3C855F0065E21D /* HomeImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeImageButton.h; sourceTree = "<group>"; };
 		486E4CAB1A3C855F0065E21D /* HomeImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeImageButton.m; sourceTree = "<group>"; };
-		487284CC1A4435DE00EC2B3D /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
-		487284CD1A4435DE00EC2B3D /* companys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = companys.png; sourceTree = "<group>"; };
-		487284CE1A4435DE00EC2B3D /* gq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gq.png; sourceTree = "<group>"; };
 		48739B591A4065380026BC0D /* SLWSupplyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSupplyDetailViewController.h; sourceTree = "<group>"; };
 		48739B5A1A4065380026BC0D /* SLWSupplyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSupplyDetailViewController.m; sourceTree = "<group>"; };
 		48739B5B1A4065380026BC0D /* SLWSupplyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSupplyDetailViewController.xib; sourceTree = "<group>"; };
@@ -513,12 +507,9 @@
 				48B6D2541A4456BF00032B14 /* phone32.png */,
 				48B6D2521A4455B300032B14 /* example.png */,
 				48BCF88B1A444C7200EBB2F0 /* bg.png */,
-				487284CC1A4435DE00EC2B3D /* news.png */,
 				48BCF8871A444A8F00EBB2F0 /* pwdicon.png */,
 				48BCF8881A444A8F00EBB2F0 /* usericon.png */,
 				48BCF8811A44427100EBB2F0 /* user.png */,
-				487284CD1A4435DE00EC2B3D /* companys.png */,
-				487284CE1A4435DE00EC2B3D /* gq.png */,
 				484846881A25FB910007D64C /* arrow_down.png */,
 				484846891A25FB910007D64C /* gray_line.png */,
 				4860E78C1A22FD0A00BE0ECA /* home_tabitem_8.png */,
@@ -838,7 +829,6 @@
 				4817C6B01A4C40E00040C916 /* message.png in Resources */,
 				4860E7961A22FD0A00BE0ECA /* home_tabitem_6.png in Resources */,
 				4860E79B1A22FD0A00BE0ECA /* home_tabitem_1.png in Resources */,
-				487284D01A4435DE00EC2B3D /* companys.png in Resources */,
 				489EF2BC1A3D528A00BDC580 /* SLWSupplyListViewController.xib in Resources */,
 				48BCF88C1A444C7200EBB2F0 /* bg.png in Resources */,
 				48BCF88A1A444A8F00EBB2F0 /* usericon.png in Resources */,
@@ -851,8 +841,6 @@
 				485F97231A42F61E003972CD /* SLWSearchViewController.xib in Resources */,
 				4860E79A1A22FD0A00BE0ECA /* home_tabitem_2.png in Resources */,
 				489EF2C11A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.xib in Resources */,
-				487284CF1A4435DE00EC2B3D /* news.png in Resources */,
-				487284D11A4435DE00EC2B3D /* gq.png in Resources */,
 				48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */,
 				48504E6C1A49A8980076E0C5 /* noimg.png in Resources */,
 				48547E531A4AF017005EB5B0 /* cellbg.png in Resources */,

@@ -32,9 +32,9 @@
         int imageCount = [imageNameArr count];
         //标题总数
         int titleCount =[titleStrArr count];
-        //初始化scrollView
-        imageSV = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, heightValue)];
-        
+        //初始化scrollView//////////////////  y左边 设置64，就能在自动布局情况下 适配成功？？？？？？
+        imageSV = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, WIDTH, heightValue)];
+
         //设置sview属性
         
         imageSV.directionalLockEnabled = YES;//锁定滑动的方向
@@ -45,6 +45,7 @@
         
         
         CGSize newSize = CGSizeMake(WIDTH * imageCount,  imageSV.frame.size.height);//设置scrollview的大小
+        //CGSize newSize = CGSizeMake(WIDTH * imageCount,  0);//设置scrollview的大小
         [imageSV setContentSize:newSize];
         [self addSubview:imageSV];
         //*********************************

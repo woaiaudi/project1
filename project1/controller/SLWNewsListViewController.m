@@ -13,6 +13,7 @@
 #import <UIImageView+WebCache.h>
 #import "SLWNewsDetailViewController.h"
 #import "UIHelper.h"
+#import <TSMessage.h>
 
 @interface SLWNewsListViewController ()
 {
@@ -83,7 +84,7 @@
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.tableView headerEndRefreshing];
     } onfailure:^(NSError *error) {
-        NSLog(@"远程服务器错误：%@",[error localizedDescription]);
+        [TSMessage showNotificationWithTitle:[NSString stringWithFormat:@"远程服务器错误：%@",[error localizedDescription]] type:TSMessageNotificationTypeError];
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.tableView headerEndRefreshing];
     }];
@@ -101,7 +102,7 @@
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.tableView footerEndRefreshing];
     } onfailure:^(NSError *error) {
-        NSLog(@"%@",[error localizedDescription]);
+        [TSMessage showNotificationWithTitle:[NSString stringWithFormat:@"远程服务器错误：%@",[error localizedDescription]] type:TSMessageNotificationTypeError];
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.tableView footerEndRefreshing];
     }];

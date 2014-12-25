@@ -88,8 +88,8 @@
     AOScrollerView *aSV = [[AOScrollerView alloc]initWithNameArr:imgArr titleArr:strArr height:self.bannerView.bounds.size.height];
     //设置委托
     aSV.vDelegate=self;
-    //添加进view
-    [self.bannerView addSubview:aSV];
+    //添加进view，，，，，用banner 填充自动布局，设置广告图高度，然后广告图直接加载self.view，而不加在bannerview上
+    [self.view addSubview:aSV];
 }
 #pragma mark - 首页图片按钮
 -(void)initHomeImageButtons
