@@ -14,4 +14,8 @@
 + (void)registerNibToTableView:(UITableView *)tableView;
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *logoImageview;
+@property (strong, nonatomic) IBOutlet UILabel *addressLabel;
+
+
 @end

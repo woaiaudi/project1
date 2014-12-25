@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SLWCompanyListTableViewCell.h"
+#import "CompanyService.h"
+#import <TSMessage.h>
 
 @interface SLWCompanyListViewController : UITableViewController
 

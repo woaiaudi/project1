@@ -16,4 +16,8 @@
            offset:(NSInteger)offsetIndex
         onsuccess:(void (^)(NSMutableArray * pBlockList))successedBlock
         onfailure:(void (^)(NSError *error))failedBlock;
+
+-(void)getBBSDetailById:(NSString *)pId
+              onsuccess:(void (^)(NSString * pBlockString))successedBlock
+              onfailure:(void (^)(NSError *error))failedBlock;
 @end

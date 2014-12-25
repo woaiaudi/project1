@@ -8,7 +8,7 @@
 
 #import "SLWAppDelegate.h"
 #import "controller/SLWHome.h"
-
+#import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 
 @implementation SLWAppDelegate
 
@@ -20,6 +20,9 @@
     SLWHome * homepage = [[SLWHome alloc]init];
     UINavigationController * rootNav = [[UINavigationController alloc]initWithRootViewController:homepage];
     self.window.rootViewController = rootNav;
+    //让shareedmanager 自动显示网络获得指示器
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+
     [self.window makeKeyAndVisible];
     return YES;
 }

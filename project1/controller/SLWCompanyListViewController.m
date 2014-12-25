@@ -9,11 +9,15 @@
 #import "SLWCompanyListViewController.h"
 #import "MJRefresh.h"
 #import "UINavigationItem+CustomBackButton.h"
-/**
- *  随机数据
- */
-#define MJRandomData [NSString stringWithFormat:@"河南富耐克超硬材料股份有限公司%d", arc4random_uniform(1000000)]
+#import <UIImageView+WebCache.h>
+#import "SLWCompanyDetailViewController.h"
+
+
+
 @interface SLWCompanyListViewController ()
+{
+    CompanyService *companyService;
+}
 /**
  *  存放列表数据
  */
@@ -26,6 +30,7 @@
     [super viewDidLoad];
     
     _dataList = [NSMutableArray array];
+    companyService = [[CompanyService alloc]init];
     // 1.注册cell
     [SLWCompanyListTableViewCell registerNibToTableView:self.tableView];
     
@@ -69,38 +74,39 @@
 #pragma mark 开始进入刷新状态
 - (void)headerRereshing
 {
-    // 1.网列表数组  在表头添加最新数据
-    //先清空
-    [self.dataList removeAllObjects];
-    for (int i = 0; i<5; i++) {
-        [self.dataList insertObject:MJRandomData atIndex:0];
-    }
-    
-    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //获取最新数据
+    [companyService getCompanyList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
+        //先清空
+        [_dataList removeAllObjects];
+        [_dataList addObjectsFromArray:pBlockList];
         // 刷新表格
         [self.tableView reloadData];
         
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.tableView headerEndRefreshing];
-    });
+    } onfailure:^(NSError *error) {
+        [TSMessage showNotificationWithTitle:[NSString stringWithFormat:@"远程服务器错误：%@",[error localizedDescription]] type:TSMessageNotificationTypeError];
+        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+        [self.tableView headerEndRefreshing];
+    }];
+    
 }
 
 - (void)footerRereshing
 {
-    // 1.网列表数组  在表尾添加最新数据
-    for (int i = 0; i<5; i++) {
-        [self.dataList addObject:MJRandomData];
-    }
-    
-    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //加载更多数据
+    [companyService getCompanyList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
+        [_dataList addObjectsFromArray:pBlockList];
         // 刷新表格
         [self.tableView reloadData];
         
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.tableView footerEndRefreshing];
-    });
+    } onfailure:^(NSError *error) {
+        [TSMessage showNotificationWithTitle:[NSString stringWithFormat:@"远程服务器错误：%@",[error localizedDescription]] type:TSMessageNotificationTypeError];
+        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+        [self.tableView footerEndRefreshing];
+    }];
 }
 #pragma mark - Table view UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -121,13 +127,20 @@
 - (SLWCompanyListTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SLWCompanyListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[SLWCompanyListTableViewCell className] forIndexPath:indexPath];
-    cell.nameLabel.text = self.dataList[indexPath.row];
+    CompanyBean * thisCellBean = (CompanyBean *)[_dataList objectAtIndex:indexPath.row];
+    cell.nameLabel.text = thisCellBean.company;
+    cell.addressLabel.text = thisCellBean.compaddr;
+    [cell.logoImageview sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"HOST", ""),thisCellBean.logo]] placeholderImage:[UIImage imageNamed:@"noimg"]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    CompanyBean *thisCellBean = [_dataList objectAtIndex:indexPath.row];
+    SLWCompanyDetailViewController * detailPage = [[SLWCompanyDetailViewController alloc]init];
+    [detailPage setTitle:thisCellBean.company];
+    [detailPage setCompanyBean:thisCellBean];
+    [self.navigationController pushViewController:detailPage animated:YES];
 }
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section

@@ -11,6 +11,7 @@
 #import "UINavigationItem+CustomBackButton.h"
 #import "BBSService.h"
 #import "SLWBBSListTableViewCell.h"
+#import "SLWBBSDetailViewController.h"
 
 
 @interface SLWBBSTableViewController ()
@@ -142,7 +143,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    GoodsBean *thisBean = (GoodsBean *)[self.supplyList objectAtIndex:indexPath.row];
-//    [UIHelper showDetailBySupply:thisBean andFrom:self];
+    BBSBean *thisCellBean = [bbsDataList objectAtIndex:indexPath.row];
+    SLWBBSDetailViewController * detailPage = [[SLWBBSDetailViewController alloc]init];
+    [detailPage setTitle:thisCellBean.title];
+    [detailPage setBbsId:thisCellBean.id];
+    [self.navigationController pushViewController:detailPage animated:YES];
 }
 @end
