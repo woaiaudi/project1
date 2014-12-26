@@ -76,7 +76,7 @@
 - (void)headerRereshing
 {
     //获取最新数据
-    [goodsService supplyList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
+    [goodsService requirementList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
         //先清空
         [reqList removeAllObjects];
         [reqList addObjectsFromArray:pBlockList];
@@ -96,7 +96,7 @@
 - (void)footerRereshing
 {
     //加载更多数据
-    [goodsService supplyList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
+    [goodsService requirementList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
         [reqList addObjectsFromArray:pBlockList];
         // 刷新表格
         [self.tableView reloadData];
@@ -146,6 +146,6 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     GoodsBean *thisBean = (GoodsBean *)[reqList objectAtIndex:indexPath.row];
-    [UIHelper showDetailBySupply:thisBean andFrom:self];
+    [UIHelper showDetailByRequirement:thisBean andFrom:self];
 }
 @end

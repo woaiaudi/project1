@@ -233,4 +233,8 @@
     _tabBlock(index,tabItem,self);
     NSLog(@"dianji::::%i",index);
 }
+
+
+
+
 @end

@@ -17,4 +17,7 @@
 
 
 +(void)showDetailBySupply:(GoodsBean *)supplyBean andFrom:(UIViewController *)from;
++(void)showDetailByRequirement:(GoodsBean *)reqBean andFrom:(UIViewController *)from;
++(void)callAction:(UIBarButtonItem *)sender;
++ (BOOL)isBlankString:(NSString *)string;
 @end
