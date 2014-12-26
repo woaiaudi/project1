@@ -19,6 +19,7 @@
 #import "UIHelper.h"
 #import "UserService.h"
 #import <TSMessage.h>
+#import "SLWUserDetailViewController.h"
 
 @interface SLWHome ()
 {
@@ -135,20 +136,24 @@
     UserService *us =  [[UserService alloc]init];
     UserBean *loginUser = [us getAccessedUserBean];
     if (loginUser!=nil) {
-        //已经登录
-        [TSMessage showNotificationInViewController:self
-                                              title:@"提醒"
-                                           subtitle:[NSString stringWithFormat:@"用户【%@】已经登录.",loginUser.username]
-                                              image:nil
-                                               type:TSMessageNotificationTypeMessage
-                                           duration:TSMessageNotificationDurationAutomatic
-                                           callback:nil
-                                        buttonTitle:@"注销"
-                                     buttonCallback:^{
-                                         [us deleteAccessedUserBean];
-                                     }
-                                         atPosition:TSMessageNotificationPositionTop
-                               canBeDismissedByUser:YES];
+        SLWUserDetailViewController * udPage = [[SLWUserDetailViewController alloc]init];
+        udPage.title = @"个人信息";
+        [udPage setUserBean:loginUser];
+        [self.navigationController pushViewController:udPage animated:YES];
+//        //已经登录
+//        [TSMessage showNotificationInViewController:self
+//                                              title:@"提醒"
+//                                           subtitle:[NSString stringWithFormat:@"用户【%@】已经登录.",loginUser.username]
+//                                              image:nil
+//                                               type:TSMessageNotificationTypeMessage
+//                                           duration:TSMessageNotificationDurationAutomatic
+//                                           callback:nil
+//                                        buttonTitle:@"注销"
+//                                     buttonCallback:^{
+//                                         [us deleteAccessedUserBean];
+//                                     }
+//                                         atPosition:TSMessageNotificationPositionTop
+//                               canBeDismissedByUser:YES];
 
     }
     else
