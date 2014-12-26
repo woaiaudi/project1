@@ -87,6 +87,7 @@
 		486EB8B21A4D856C003C7825 /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = 486EB8B11A4D856C003C7825 /* call.png */; };
 		486EB8B61A4D959A003C7825 /* SLWUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 486EB8B41A4D959A003C7825 /* SLWUserDetailViewController.m */; };
 		486EB8B71A4D959A003C7825 /* SLWUserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486EB8B51A4D959A003C7825 /* SLWUserDetailViewController.xib */; };
+		486EB8B91A4D9C16003C7825 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 486EB8B81A4D9C16003C7825 /* logout.png */; };
 		48739B5C1A4065380026BC0D /* SLWSupplyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48739B5A1A4065380026BC0D /* SLWSupplyDetailViewController.m */; };
 		48739B5D1A4065380026BC0D /* SLWSupplyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48739B5B1A4065380026BC0D /* SLWSupplyDetailViewController.xib */; };
 		487E21571A35BFF800D3168F /* SLWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487E21551A35BFF800D3168F /* SLWLoginViewController.m */; };
@@ -263,6 +264,7 @@
 		486EB8B31A4D959A003C7825 /* SLWUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWUserDetailViewController.h; sourceTree = "<group>"; };
 		486EB8B41A4D959A003C7825 /* SLWUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWUserDetailViewController.m; sourceTree = "<group>"; };
 		486EB8B51A4D959A003C7825 /* SLWUserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWUserDetailViewController.xib; sourceTree = "<group>"; };
+		486EB8B81A4D9C16003C7825 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		48739B591A4065380026BC0D /* SLWSupplyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSupplyDetailViewController.h; sourceTree = "<group>"; };
 		48739B5A1A4065380026BC0D /* SLWSupplyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSupplyDetailViewController.m; sourceTree = "<group>"; };
 		48739B5B1A4065380026BC0D /* SLWSupplyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSupplyDetailViewController.xib; sourceTree = "<group>"; };
@@ -498,10 +500,10 @@
 				485F97161A42EAAE003972CD /* SLWCompanyListTableViewCell.h */,
 				485F97171A42EAAE003972CD /* SLWCompanyListTableViewCell.m */,
 				485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */,
+				4817C6C01A4C628A0040C916 /* SLWCompanyDetailViewController.m */,
 				485F971B1A42F1E9003972CD /* SLWCompanyListViewController.h */,
 				485F971C1A42F1E9003972CD /* SLWCompanyListViewController.m */,
 				4817C6BF1A4C628A0040C916 /* SLWCompanyDetailViewController.h */,
-				4817C6C01A4C628A0040C916 /* SLWCompanyDetailViewController.m */,
 				4817C6C11A4C628A0040C916 /* SLWCompanyDetailViewController.xib */,
 			);
 			name = company;
@@ -540,6 +542,7 @@
 		4860E78B1A22FCE800BE0ECA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				486EB8B81A4D9C16003C7825 /* logout.png */,
 				486EB8B11A4D856C003C7825 /* call.png */,
 				4817C6BD1A4C622F0040C916 /* noimg.png */,
 				4817C6AE1A4C40E00040C916 /* message.png */,
@@ -897,6 +900,7 @@
 				485F97231A42F61E003972CD /* SLWSearchViewController.xib in Resources */,
 				486EB8B21A4D856C003C7825 /* call.png in Resources */,
 				4860E79A1A22FD0A00BE0ECA /* home_tabitem_2.png in Resources */,
+				486EB8B91A4D9C16003C7825 /* logout.png in Resources */,
 				489EF2C11A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.xib in Resources */,
 				48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */,
 				48547E531A4AF017005EB5B0 /* cellbg.png in Resources */,

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UserBean.h"
-@interface SLWUserDetailViewController : UIViewController
+@interface SLWUserDetailViewController : UIViewController<UIAlertViewDelegate>
 @property(nonatomic,retain) UserBean * userBean;
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;

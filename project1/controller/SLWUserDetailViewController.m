@@ -7,6 +7,8 @@
 //
 
 #import "SLWUserDetailViewController.h"
+#import "UserService.h"
+#import <TSMessage.h>
 
 @interface SLWUserDetailViewController ()
 
@@ -21,21 +23,31 @@
     _companyLabel.text = userBean.company;
     _typeLabel.text = userBean.usertype;
     _sexLabel.text = userBean.sex;
+    
+    
+    UIBarButtonItem *logoutBarButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"logout.png"] style:UIBarButtonItemStyleDone target:self action:@selector(logoutAction)];
+    
+    self.navigationItem.rightBarButtonItem = logoutBarButton;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)logoutAction
+{
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"确认注销当前用户？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"注销", nil];
+    [alertView show];
 }
-*/
-
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        UserService *us =  [[UserService alloc]init];
+        [us deleteAccessedUserBean];
+        [TSMessage showNotificationWithTitle:@"用户退出成功" type:TSMessageNotificationTypeSuccess];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
 @end
