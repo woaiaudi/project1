@@ -17,9 +17,6 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cellbg.png" translatesAutoresizingMaskIntoConstraints="NO" id="IuE-gL-lcy">
                         <rect key="frame" x="5" y="5" width="310" height="80"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="corwnicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="D8O-0E-u2K">
-                        <rect key="frame" x="272" y="0.0" width="48" height="48"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="广州珠海市" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mp-oY-kMy">
                         <rect key="frame" x="88" y="55" width="173" height="28"/>
                         <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
@@ -34,6 +31,9 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="example.png" translatesAutoresizingMaskIntoConstraints="NO" id="5SU-4h-Od0">
                         <rect key="frame" x="14" y="12" width="65" height="65"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="corwnicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="D8O-0E-u2K">
+                        <rect key="frame" x="280" y="7" width="32" height="32"/>
                     </imageView>
                 </subviews>
             </tableViewCellContentView>

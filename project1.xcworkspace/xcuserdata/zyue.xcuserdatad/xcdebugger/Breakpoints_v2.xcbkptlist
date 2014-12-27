@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UIHelper.m"
-            timestampString = "441289752.053671"
+            timestampString = "441365812.906108"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "+showDetailByRequirement:andFrom:"
             landmarkType = "5">
          </BreakpointContent>

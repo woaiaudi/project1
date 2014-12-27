@@ -40,7 +40,7 @@
 - (IBAction)searchTypeButtonAction:(id)sender {
     NSArray * arr = [[NSArray alloc] init];
     //不能超过11个汉字
-    arr = [NSArray arrayWithObjects:@"产品", @"企业", @"资讯",nil];
+    arr = [NSArray arrayWithObjects:@"供应",@"需求", @"企业", @"资讯",nil];
     if(dropDown == nil) {
         CGFloat f = 200;
         dropDown = [[NIDropDown alloc]showDropDown:sender :&f :arr :nil :@"down"];

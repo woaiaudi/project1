@@ -20,4 +20,5 @@
 +(void)showDetailByRequirement:(GoodsBean *)reqBean andFrom:(UIViewController *)from;
 +(void)callAction:(UIBarButtonItem *)sender;
 + (BOOL)isBlankString:(NSString *)string;
++(void)showAboutUsPage:(UIViewController *)from;
 @end
