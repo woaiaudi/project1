@@ -20,6 +20,7 @@
 #import "UserService.h"
 #import <TSMessage.h>
 #import "SLWUserDetailViewController.h"
+#import "SLWAboutUsViewController.h"
 
 @interface SLWHome ()
 {
@@ -68,7 +69,7 @@ self.navigationItem.leftBarButtonItem = searchButton1;//////////////////搜索�
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品需求" controllerClass:[SLWReqListTableViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"企业展示" controllerClass:[SLWCompanyListViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"行业论坛" controllerClass:[SLWBBSTableViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"关于我们" controllerClass:[SLWCompanyListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"关于我们" controllerClass:[SLWAboutUsViewController class]]];
     
 }
 #pragma mark- AOScrollViewDelegate ValueClickDelegate 首页banner 点击事件
@@ -120,9 +121,8 @@ self.navigationItem.leftBarButtonItem = searchButton1;//////////////////搜索�
         [UIHelper pushViewController:pi.controllerClass andTitle:pi.title byFromViewController:controller];
     }];
     [_aboutusButton setOnImageClickListener:^(UIImageView *clickedImage) {
-        [UIHelper showAboutUsPage:controller];
-//        SLWPageIndex *pi =weakPageIndexArray[5];
-//        [UIHelper pushViewController:pi.controllerClass andTitle:pi.title byFromViewController:controller];
+        SLWPageIndex *pi =weakPageIndexArray[5];
+        [UIHelper pushViewController:pi.controllerClass andTitle:pi.title byFromViewController:controller];
     }];
     
     

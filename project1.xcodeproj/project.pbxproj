@@ -106,6 +106,7 @@
 		488A4AF11A4EBC2900F90142 /* ResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 488A4AE81A4EBC2900F90142 /* ResponseHandler.m */; };
 		488A4AF21A4EBC2900F90142 /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 488A4AEA1A4EBC2900F90142 /* UIHelper.m */; };
 		488A4AF31A4EBC2900F90142 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 488A4AEC1A4EBC2900F90142 /* UserService.m */; };
+		488A4AF91A4EBD1C00F90142 /* STAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 488A4AF71A4EBD1C00F90142 /* STAlertView.m */; };
 		489EF2BB1A3D528A00BDC580 /* SLWSupplyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 489EF2B91A3D528A00BDC580 /* SLWSupplyListViewController.m */; };
 		489EF2BC1A3D528A00BDC580 /* SLWSupplyListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489EF2BA1A3D528A00BDC580 /* SLWSupplyListViewController.xib */; };
 		489EF2C01A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 489EF2BE1A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.m */; };
@@ -300,6 +301,8 @@
 		488A4AEA1A4EBC2900F90142 /* UIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHelper.m; sourceTree = "<group>"; };
 		488A4AEB1A4EBC2900F90142 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		488A4AEC1A4EBC2900F90142 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
+		488A4AF61A4EBD1C00F90142 /* STAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAlertView.h; sourceTree = "<group>"; };
+		488A4AF71A4EBD1C00F90142 /* STAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAlertView.m; sourceTree = "<group>"; };
 		489EF2B81A3D528A00BDC580 /* SLWSupplyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSupplyListViewController.h; sourceTree = "<group>"; };
 		489EF2B91A3D528A00BDC580 /* SLWSupplyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSupplyListViewController.m; sourceTree = "<group>"; };
 		489EF2BA1A3D528A00BDC580 /* SLWSupplyListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSupplyListViewController.xib; sourceTree = "<group>"; };
@@ -689,6 +692,15 @@
 			path = service;
 			sourceTree = "<group>";
 		};
+		488A4AF41A4EBD1C00F90142 /* STAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				488A4AF61A4EBD1C00F90142 /* STAlertView.h */,
+				488A4AF71A4EBD1C00F90142 /* STAlertView.m */,
+			);
+			path = STAlertView;
+			sourceTree = "<group>";
+		};
 		489EF2B61A3D523000BDC580 /* supply */ = {
 			isa = PBXGroup;
 			children = (
@@ -758,6 +770,7 @@
 		48A28BFB1A1B797D008B9410 /* widget */ = {
 			isa = PBXGroup;
 			children = (
+				488A4AF41A4EBD1C00F90142 /* STAlertView */,
 				4817C6C71A4C6E150040C916 /* ACETelPrompt */,
 				48547E541A4AF42A005EB5B0 /* AOScrollerView */,
 				48504E6D1A49AE900076E0C5 /* HACLPage */,
@@ -1014,6 +1027,7 @@
 				484846861A25FAB90007D64C /* SLWPage1ViewController.m in Sources */,
 				4860E79F1A22FDA900BE0ECA /* JSBadgeView.m in Sources */,
 				489EF2C01A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.m in Sources */,
+				488A4AF91A4EBD1C00F90142 /* STAlertView.m in Sources */,
 				486EB8B61A4D959A003C7825 /* SLWUserDetailViewController.m in Sources */,
 				488A4AF31A4EBC2900F90142 /* UserService.m in Sources */,
 				48504E801A49AE900076E0C5 /* HACLTableViewPage.m in Sources */,

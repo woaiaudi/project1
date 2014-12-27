@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ACETelPrompt.h"
+#import "STAlertView.h"
 @interface SLWAboutUsViewController : UIViewController
-
+@property (nonatomic, strong) STAlertView *stAlertView;
 @end
