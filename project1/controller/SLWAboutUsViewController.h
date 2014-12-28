@@ -11,4 +11,5 @@
 #import "STAlertView.h"
 @interface SLWAboutUsViewController : UIViewController
 @property (nonatomic, strong) STAlertView *stAlertView;
+- (IBAction)openWebsiteAction:(id)sender;
 @end

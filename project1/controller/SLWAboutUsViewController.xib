@@ -43,6 +43,9 @@
                     <state key="normal" title="http://www.jsqyqx.com/">
                         <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="openWebsiteAction:" destination="-1" eventType="touchUpInside" id="APw-9Z-Ab8"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="联系方式" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-5n-iQd">
                     <rect key="frame" x="8" y="425" width="68" height="21"/>

@@ -8,6 +8,7 @@
 
 #import "SLWAboutUsViewController.h"
 #import "HACLPage.h"
+#import "TOWebViewController.h"
 
 
 @interface SLWAboutUsViewController ()
@@ -67,5 +68,12 @@
     
     [self.stAlertView show];
     
+}
+- (IBAction)openWebsiteAction:(id)sender {
+    NSString *urlStr = ((UIButton *)sender).titleLabel.text;
+    NSURL * actionURL = [NSURL URLWithString:urlStr];
+    TOWebViewController *webViewController = [[TOWebViewController alloc] initWithURL:actionURL];
+    [self.navigationController pushViewController:webViewController animated:YES];
+//    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:webViewController] animated:YES completion:nil];
 }
 @end
