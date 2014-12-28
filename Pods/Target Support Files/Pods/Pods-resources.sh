@@ -43,7 +43,8 @@ install_resource()
       ;;
   esac
 }
-          install_resource "TSMessages/Pod/Assets/NotificationBackgroundError.png"
+          install_resource "AMap3DMap/MAMapKit.framework/Versions/2.4.0.601e6b9.60159/Resources/AMap.bundle"
+                    install_resource "TSMessages/Pod/Assets/NotificationBackgroundError.png"
                     install_resource "TSMessages/Pod/Assets/NotificationBackgroundError@2x.png"
                     install_resource "TSMessages/Pod/Assets/NotificationBackgroundErrorIcon.png"
                     install_resource "TSMessages/Pod/Assets/NotificationBackgroundErrorIcon@2x.png"
