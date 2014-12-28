@@ -47,7 +47,7 @@
     UIBarButtonItem *userButton1 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"user.png"] style:UIBarButtonItemStyleDone target:self action:@selector(openLoginPage)];
     
    self.navigationItem.rightBarButtonItem = userButton1;
-self.navigationItem.leftBarButtonItem = searchButton1;//////////////////搜索功能暂时不使用
+//self.navigationItem.leftBarButtonItem = searchButton1;//////////////////搜索功能暂时不使用
     
     [self initAllPageIndexArray];
     [self addAOScrollerView:nil];

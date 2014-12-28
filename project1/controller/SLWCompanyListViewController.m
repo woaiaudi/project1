@@ -131,6 +131,8 @@
     cell.nameLabel.text = thisCellBean.company;
     cell.addressLabel.text = thisCellBean.compaddr;
     [cell.logoImageview sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"HOST", ""),thisCellBean.logo]] placeholderImage:[UIImage imageNamed:@"noimg"]];
+    
+    [cell.vipImageview setHidden:([thisCellBean.group_id isEqualToString:@"2"]?NO:YES)];
     return cell;
 }
 
