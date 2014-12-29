@@ -82,6 +82,9 @@
 		486DDF021A517A8600586C6D /* gray_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 486DDF011A517A8600586C6D /* gray_line.png */; };
 		486DDF041A517A8C00586C6D /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 486DDF031A517A8C00586C6D /* bg.png */; };
 		486DDF061A517C6800586C6D /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 486DDF051A517C6800586C6D /* right_arrow.png */; };
+		486DDF081A5195F400586C6D /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 486DDF071A5195F400586C6D /* line.png */; };
+		486DDF0C1A51977300586C6D /* SLWRequriementDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 486DDF0A1A51977300586C6D /* SLWRequriementDetailViewController.m */; };
+		486DDF0D1A51977300586C6D /* SLWRequriementDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486DDF0B1A51977300586C6D /* SLWRequriementDetailViewController.xib */; };
 		486E4C981A3C54E80065E21D /* SLWNewsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E4C961A3C54E80065E21D /* SLWNewsListTableViewCell.m */; };
 		486E4C991A3C54E80065E21D /* SLWNewsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486E4C971A3C54E80065E21D /* SLWNewsListTableViewCell.xib */; };
 		486E4CA31A3C74E30065E21D /* SLWHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E4CA11A3C74E30065E21D /* SLWHome.m */; };
@@ -272,6 +275,10 @@
 		486DDF011A517A8600586C6D /* gray_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_line.png; sourceTree = "<group>"; };
 		486DDF031A517A8C00586C6D /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		486DDF051A517C6800586C6D /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
+		486DDF071A5195F400586C6D /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
+		486DDF091A51977300586C6D /* SLWRequriementDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWRequriementDetailViewController.h; sourceTree = "<group>"; };
+		486DDF0A1A51977300586C6D /* SLWRequriementDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWRequriementDetailViewController.m; sourceTree = "<group>"; };
+		486DDF0B1A51977300586C6D /* SLWRequriementDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWRequriementDetailViewController.xib; sourceTree = "<group>"; };
 		486E4C951A3C54E80065E21D /* SLWNewsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWNewsListTableViewCell.h; sourceTree = "<group>"; };
 		486E4C961A3C54E80065E21D /* SLWNewsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWNewsListTableViewCell.m; sourceTree = "<group>"; };
 		486E4C971A3C54E80065E21D /* SLWNewsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWNewsListTableViewCell.xib; sourceTree = "<group>"; };
@@ -420,9 +427,9 @@
 		480141601A1B747500311095 /* project1 */ = {
 			isa = PBXGroup;
 			children = (
-				488A4ADE1A4EBBFF00F90142 /* service */,
 				4860E78B1A22FCE800BE0ECA /* images */,
 				48A28BF81A1B797D008B9410 /* controller */,
+				488A4ADE1A4EBBFF00F90142 /* service */,
 				48A28BF91A1B797D008B9410 /* model */,
 				48A28BFB1A1B797D008B9410 /* widget */,
 				480141691A1B747500311095 /* SLWAppDelegate.h */,
@@ -595,6 +602,7 @@
 		4860E78B1A22FCE800BE0ECA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				486DDF071A5195F400586C6D /* line.png */,
 				486DDF031A517A8C00586C6D /* bg.png */,
 				486DDF011A517A8600586C6D /* gray_line.png */,
 				486DDEFF1A51784900586C6D /* editicon.png */,
@@ -768,6 +776,9 @@
 			children = (
 				4817C6C41A4C6DC00040C916 /* SLWReqListTableViewController.h */,
 				4817C6C51A4C6DC00040C916 /* SLWReqListTableViewController.m */,
+				486DDF091A51977300586C6D /* SLWRequriementDetailViewController.h */,
+				486DDF0A1A51977300586C6D /* SLWRequriementDetailViewController.m */,
+				486DDF0B1A51977300586C6D /* SLWRequriementDetailViewController.xib */,
 			);
 			name = requirement;
 			sourceTree = "<group>";
@@ -984,6 +995,7 @@
 				486DDEFE1A5174D000586C6D /* user_touxiang.png in Resources */,
 				486EB8B91A4D9C16003C7825 /* logout.png in Resources */,
 				489EF2C11A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.xib in Resources */,
+				486DDF0D1A51977300586C6D /* SLWRequriementDetailViewController.xib in Resources */,
 				486DDF041A517A8C00586C6D /* bg.png in Resources */,
 				48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */,
 				48547E531A4AF017005EB5B0 /* cellbg.png in Resources */,
@@ -1006,6 +1018,7 @@
 				48504E7D1A49AE900076E0C5 /* ClipBigImage.xib in Resources */,
 				48BCF8821A44427100EBB2F0 /* user.png in Resources */,
 				487E21761A35D5EA00D3168F /* MJRefresh.bundle in Resources */,
+				486DDF081A5195F400586C6D /* line.png in Resources */,
 				48739B5D1A4065380026BC0D /* SLWSupplyDetailViewController.xib in Resources */,
 				485F971A1A42EAAE003972CD /* SLWCompanyListTableViewCell.xib in Resources */,
 				4817C6B61A4C5D2D0040C916 /* SLWBBSDetailViewController.xib in Resources */,
@@ -1113,6 +1126,7 @@
 				488A4AEE1A4EBC2900F90142 /* CompanyService.m in Sources */,
 				480141671A1B747500311095 /* main.m in Sources */,
 				487E21771A35D5EA00D3168F /* MJRefreshBaseView.m in Sources */,
+				486DDF0C1A51977300586C6D /* SLWRequriementDetailViewController.m in Sources */,
 				488A4AED1A4EBC2900F90142 /* BBSService.m in Sources */,
 				485F97221A42F61E003972CD /* SLWSearchViewController.m in Sources */,
 				486B77D61A4C03EA009F61D8 /* SLWBBSTableViewController.m in Sources */,

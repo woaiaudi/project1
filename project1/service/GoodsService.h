@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "GoodsBean.h"
 @interface GoodsService : NSObject
 -(void)supplyList:(NSString *)xxxx
             begin:(NSInteger)beginIndex
@@ -19,4 +19,7 @@
                 offset:(NSInteger)offsetIndex
              onsuccess:(void (^)(NSMutableArray * pBlockList))successedBlock
              onfailure:(void (^)(NSError *error))failedBlock;
+-(void)getGoodsDetailById:(NSString *)pId
+                onsuccess:(void (^)(NSString * pBlockString))successedBlock
+                onfailure:(void (^)(NSError *error))failedBlock;
 @end

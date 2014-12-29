@@ -14,6 +14,7 @@
 #import <UIImageView+WebCache.h>
 #import "UIHelper.h"
 #import <TSMessage.h>
+#import "SLWSupplyDetailViewController.h"
 
 @interface SLWSupplyListViewController ()
 {
@@ -150,8 +151,14 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     GoodsBean *thisBean = (GoodsBean *)[self.supplyList objectAtIndex:indexPath.row];
-    [UIHelper showDetailBySupply:thisBean andFrom:self];
+    SLWSupplyDetailViewController *detailPage = [[SLWSupplyDetailViewController alloc]init];
+    detailPage.title = @"供应详情";
+    [detailPage setGoodsBean:thisBean];
+    [self.navigationController pushViewController:detailPage animated:YES];
 }
+
+
+#pragma mark - 筛选按钮点击事件
 - (IBAction)yongtuAction:(id)sender {
     if(dropDownYongtu == nil) {
         CGFloat f = 200;

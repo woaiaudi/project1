@@ -80,4 +80,32 @@
     }];
     
 }
+
+-(void)getGoodsDetailById:(NSString *)pId
+               onsuccess:(void (^)(NSString * pBlockString))successedBlock
+               onfailure:(void (^)(NSError *error))failedBlock
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    //manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+    NSString * urlStr =[NSString stringWithFormat:@"%@?type=goodsdetails&id=%@",NSLocalizedString(@"BASEURL", ""),pId];
+    //请求 单纯二进制数据
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    [manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //需要转码成utf-8
+        NSData *dataxx = responseObject;
+        NSString *dataoo =  [[NSString alloc]initWithData:dataxx encoding:NSUTF8StringEncoding];
+        successedBlock(dataoo);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failedBlock(error);
+    }];
+}
+
+
+
+
+
+
+
 @end
