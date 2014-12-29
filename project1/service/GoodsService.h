@@ -22,4 +22,9 @@
 -(void)getGoodsDetailById:(NSString *)pId
                 onsuccess:(void (^)(NSString * pBlockString))successedBlock
                 onfailure:(void (^)(NSError *error))failedBlock;
+
+
+-(void)getCompanyByID:(NSString *)pId
+            onsuccess:(void (^)(NSDictionary * pBlockDic))successedBlock
+            onfailure:(void (^)(NSError *error))failedBlock;
 @end

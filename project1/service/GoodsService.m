@@ -102,7 +102,30 @@
     }];
 }
 
-
+-(void)getCompanyByID:(NSString *)pId
+            onsuccess:(void (^)(NSDictionary * pBlockDic))successedBlock
+            onfailure:(void (^)(NSError *error))failedBlock{
+    NSString * urlStr =[NSString stringWithFormat:@"%@?type=companybyid&id=%@",NSLocalizedString(@"BASEURL", ""),pId];
+    //带中文参数的 GET请求 要转码
+    //urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+    [manager POST:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]])
+        {
+            successedBlock(responseObject);
+        }
+        else
+        {
+            NSError *aError = [NSError errorWithDomain:MyErrorDomain code:XDefultFailed userInfo:[NSDictionary dictionaryWithObject:DefultFailedMessage forKey:NSLocalizedDescriptionKey]];
+            failedBlock(aError);
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failedBlock(error);
+    }];
+    
+}
 
 
 

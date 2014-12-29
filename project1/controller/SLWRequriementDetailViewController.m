@@ -7,6 +7,8 @@
 //
 
 #import "SLWRequriementDetailViewController.h"
+#import "ACETelPrompt.h"
+#import "TOWebViewController.h"
 
 @interface SLWRequriementDetailViewController ()
 {
@@ -47,10 +49,31 @@
 }
 
 -(void)initCompanyInfo{
-    
+    [goodsService getCompanyByID:goodsBean.addid onsuccess:^(NSDictionary *pBlockDic) {
+        _compnyNameLabel.text = [pBlockDic objectForKey:@"_company"];
+        _linkerNameLabel.text= [pBlockDic objectForKey:@"_linker"];
+        _linkerTelLabel.text =[pBlockDic objectForKey:@"_linktel"];
+        _companyAddressLabel.text =[pBlockDic objectForKey:@"_compaddr"];
+        
+        [_companyURLLabel setTitle:[pBlockDic objectForKey:@"_webaddr"] forState:UIControlStateNormal];
+        [_companyURLLabel setTitle:[pBlockDic objectForKey:@"_webaddr"] forState:UIControlStateHighlighted];
+        
+    } onfailure:^(NSError *error) {
+        [TSMessage showNotificationWithTitle:@"获取公司信息失败"
+                                    subtitle:[error localizedDescription]
+                                        type:TSMessageNotificationTypeError];
+    }];
 }
 
 - (IBAction)URLAction:(id)sender {
+    NSString * urlStr = [_companyURLLabel titleForState:UIControlStateHighlighted];
+    NSLog(@"url:%@",urlStr);
+    if (urlStr!= nil&&urlStr.length>5) {
+        NSURL * actionURL = [NSURL URLWithString:urlStr];
+        TOWebViewController *webViewController = [[TOWebViewController alloc] initWithURL:actionURL];
+        [self.navigationController pushViewController:webViewController animated:YES];
+        
+    }
 }
 -(void)initDetailInfo{
     [goodsService getGoodsDetailById:goodsBean.id onsuccess:^(NSString *pBlockString) {
