@@ -18,6 +18,9 @@
 @interface SLWSupplyListViewController ()
 {
     GoodsService * goodsService;
+    NIDropDown *dropDownYongtu;
+     NIDropDown *dropDownDiqu;
+     NIDropDown *dropDownGuige;
 }
 /**
  *  存放列表数据
@@ -148,5 +151,44 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     GoodsBean *thisBean = (GoodsBean *)[self.supplyList objectAtIndex:indexPath.row];
     [UIHelper showDetailBySupply:thisBean andFrom:self];
+}
+- (IBAction)yongtuAction:(id)sender {
+    if(dropDownYongtu == nil) {
+        CGFloat f = 200;
+        dropDownYongtu = [[NIDropDown alloc]showDropDown:sender :&f :[NSArray arrayWithObjects:@"A",@"B",@"C", nil] :nil :@"down"];
+        dropDownYongtu.delegate = self;
+    }
+    else {
+        [dropDownYongtu hideDropDown:sender];
+        dropDownYongtu = nil;
+    }
+}
+
+- (IBAction)diquAction:(id)sender {
+    if(dropDownDiqu == nil) {
+        CGFloat f = 200;
+        dropDownDiqu = [[NIDropDown alloc]showDropDown:sender :&f :[NSArray arrayWithObjects:@"A1",@"B1",@"C1", nil] :nil :@"down"];
+        dropDownDiqu.delegate = self;
+    }
+    else {
+        [dropDownDiqu hideDropDown:sender];
+        dropDownDiqu = nil;
+    }
+}
+
+- (IBAction)guigeAction:(id)sender {
+    if(dropDownGuige == nil) {
+        CGFloat f = 200;
+        dropDownGuige = [[NIDropDown alloc]showDropDown:sender :&f :[NSArray arrayWithObjects:@"A2",@"B2",@"C2", nil] :nil :@"down"];
+        dropDownGuige.delegate = self;
+    }
+    else {
+        [dropDownGuige hideDropDown:sender];
+        dropDownGuige = nil;
+    }
+}
+#pragma mark - 下拉菜单点击事件
+- (void) niDropDownDelegateMethod:(NIDropDown *)sender  byClickedButton:(UIButton *)button selectedIndex:(NSIndexPath *)index
+{
 }
 @end

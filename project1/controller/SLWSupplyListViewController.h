@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface SLWSupplyListViewController : UIViewController
+#import "NIDropDown.h"
+@interface SLWSupplyListViewController : UIViewController<NIDropDownDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *supplyTableview;
+
+@property (strong, nonatomic) IBOutlet UIButton *yongtuButton;
+@property (strong, nonatomic) IBOutlet UIButton *diquButton;
+@property (strong, nonatomic) IBOutlet UIButton *guigeButton;
+
+- (IBAction)yongtuAction:(id)sender;
+- (IBAction)diquAction:(id)sender;
+- (IBAction)guigeAction:(id)sender;
 
 @end
