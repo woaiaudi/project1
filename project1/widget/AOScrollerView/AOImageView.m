@@ -32,7 +32,7 @@
         // Initialization code
         //设置图片视图
         UIButton *imageView = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, WIDTH, height)];
-        //imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.imageView.contentMode = UIViewContentModeScaleToFill;
         //给定网络图片路径
         [imageView sd_setImageWithURL:[NSURL URLWithString:imageName] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"banner_placeholder"]];
 //        [imageView setImageFromUrl:YES withUrl:imageName];

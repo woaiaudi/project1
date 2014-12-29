@@ -19,4 +19,9 @@
 -(void)getNewsDetailById:(NSString *)pId
                onsuccess:(void (^)(NSString * pBlockString))successedBlock
                onfailure:(void (^)(NSError *error))failedBlock;
+
+
+-(void)getTopNewsList:(NSString *)xxxx
+            onsuccess:(void (^)(NSMutableArray * pBlockList))successedBlock
+            onfailure:(void (^)(NSError *error))failedBlock;
 @end

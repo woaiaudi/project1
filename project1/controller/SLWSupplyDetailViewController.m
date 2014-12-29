@@ -12,6 +12,7 @@
 #import <UIImageView+WebCache.h>
 #import "ACETelPrompt.h"
 #import "TOWebViewController.h"
+#import "UIHelper.h"
 
 @interface SLWSupplyDetailViewController ()
 {
@@ -27,12 +28,32 @@
     
     goodsService = [[GoodsService alloc]init];
     
+    //打电话
+    UIBarButtonItem *callBarButton =[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"call.png"] style:UIBarButtonItemStyleDone target:self action:@selector(callAction:)];
+    callBarButton.title = [UIHelper isBlankString:goodsBean.mobile]?goodsBean.tel:goodsBean.mobile;
+    
+    
+    self.navigationItem.rightBarButtonItem = callBarButton;
+    
+    
+    
     [self initGoodsInfo];
     
     [self initCompanyInfo];
     
     [self initDetailInfo];
     
+}
+
+-(void)callAction:(UIBarButtonItem *)sender{
+    NSLog(@"call >>> %@",sender.title);
+    [ACETelPrompt callPhoneNumber:sender.title
+                             call:^(NSTimeInterval duration) {
+                                 NSLog(@"User made a call of %.1f seconds", duration);
+                                 
+                             } cancel:^{
+                                 NSLog(@"User cancelled the call");
+                             }];
 }
 
 - (void)didReceiveMemoryWarning {
