@@ -9,11 +9,13 @@
 #import "SLWCompanyNearViewController.h"
 #import "CloudPOIAnnotation.h"
 #import "SLWCompanyDetail2ViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface SLWCompanyNearViewController ()
 @property (nonatomic, strong) MAMapView *mapView;
 
 @property (nonatomic, strong) AMapCloudAPI *cloudAPI;
+
 @end
 
 @implementation SLWCompanyNearViewController
@@ -39,15 +41,30 @@
         NSLog(@"%@",[NSString stringWithFormat:@"\nSDKVersion:%@\nFILE:%s\nLINE:%d\nMETHOD:%s", [MAMapServices sharedServices].SDKVersion, __FILE__, __LINE__, __func__]);
         NSLog(@"请首先配置APIKey.h中的tableID, 查询tableID参考见 http://yuntu.amap.com");
     }
-    
-    
-    [self cloudPlaceAroundSearch];
-}
+    //用户当前定位的位置
+    self.mapView.showsUserLocation = YES;    //YES 为打开定位，NO为关闭定位
+    [_mapView setUserTrackingMode: MAUserTrackingModeNone animated:YES]; //地图不跟着位置移动
 
+    
+    
+    //[self cloudPlaceAroundSearchByLat:32.039177 andLong:118.792892];
+    
+}
+#pragma mark -locationManager 系统定位回调
+-(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation
+{
+    //取出当前位置的坐标
+    if (updatingLocation) {
+        NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
+        [self cloudPlaceAroundSearchByLat:userLocation.coordinate.latitude andLong:userLocation.coordinate.longitude];
+    }
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - 返回事件
 - (void)returnAction
@@ -60,15 +77,15 @@
     self.cloudAPI.delegate = nil;
     
 }
-#pragma mark - 执行搜索
-- (void)cloudPlaceAroundSearch
+#pragma mark - 执行搜索:(CLLocationCoordinate2D)userLocalPoint
+- (void)cloudPlaceAroundSearchByLat:(double)latitude andLong:(double)longitude
 {
     AMapCloudPlaceAroundSearchRequest *placeAround = [[AMapCloudPlaceAroundSearchRequest alloc] init];
     [placeAround setTableID:(NSString *)tableID];
     
     double radius = 4000;
     //搜索中心
-    AMapCloudPoint *centerPoint = [AMapCloudPoint locationWithLatitude:32.039177 longitude:118.792892];
+    AMapCloudPoint *centerPoint = [AMapCloudPoint locationWithLatitude:latitude longitude:longitude];
     
     //设置中心点和半径
     [placeAround setRadius:radius];

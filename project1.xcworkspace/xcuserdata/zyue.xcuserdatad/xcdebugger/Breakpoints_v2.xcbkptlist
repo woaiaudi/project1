@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "project1/controller/SLWCompanyNearViewController.m"
-            timestampString = "441649891.673724"
+            timestampString = "441652002.60354"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "-cloudRequest:error:"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,12 +90,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "project1/controller/SLWCompanyNearViewController.m"
-            timestampString = "441649891.673724"
+            timestampString = "441652002.60354"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-onCloudPlaceAroundSearchDone:response:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "project1/controller/SLWCompanyNearViewController.m"
+            timestampString = "441651868.060749"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

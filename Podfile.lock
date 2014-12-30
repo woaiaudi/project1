@@ -33,7 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.4.1)
-  - AMap3DMap
+  - AMap3DMap (~> 2.4.0)
   - AMapCloudMap (~> 1.1.0)
   - AMapSearch
   - DLRadioButton
