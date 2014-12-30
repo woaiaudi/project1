@@ -136,6 +136,8 @@
 		48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3A61A2C495A00023DB3 /* ValidateTextField.m */; };
 		48CFF3AC1A2C49DA00023DB3 /* SLWSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3AA1A2C49DA00023DB3 /* SLWSignUpViewController.m */; };
 		48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48CFF3AB1A2C49DA00023DB3 /* SLWSignUpViewController.xib */; };
+		48F4BCA71A52791100753F18 /* SLWReqDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F4BCA51A52791100753F18 /* SLWReqDetailViewController.m */; };
+		48F4BCA81A52791100753F18 /* SLWReqDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48F4BCA61A52791100753F18 /* SLWReqDetailViewController.xib */; };
 		DDED8E0E2C5E2D1C2A5136BC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E10E87BB6E2A5FE99B42435 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -362,6 +364,9 @@
 		48CFF3A91A2C49DA00023DB3 /* SLWSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSignUpViewController.h; sourceTree = "<group>"; };
 		48CFF3AA1A2C49DA00023DB3 /* SLWSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSignUpViewController.m; sourceTree = "<group>"; };
 		48CFF3AB1A2C49DA00023DB3 /* SLWSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSignUpViewController.xib; sourceTree = "<group>"; };
+		48F4BCA41A52791100753F18 /* SLWReqDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWReqDetailViewController.h; sourceTree = "<group>"; };
+		48F4BCA51A52791100753F18 /* SLWReqDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWReqDetailViewController.m; sourceTree = "<group>"; };
+		48F4BCA61A52791100753F18 /* SLWReqDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWReqDetailViewController.xib; sourceTree = "<group>"; };
 		760B556F7A80855C084BA583 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B3BD128F892ECF0A539A565D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -779,6 +784,9 @@
 				486DDF091A51977300586C6D /* SLWRequriementDetailViewController.h */,
 				486DDF0A1A51977300586C6D /* SLWRequriementDetailViewController.m */,
 				486DDF0B1A51977300586C6D /* SLWRequriementDetailViewController.xib */,
+				48F4BCA41A52791100753F18 /* SLWReqDetailViewController.h */,
+				48F4BCA51A52791100753F18 /* SLWReqDetailViewController.m */,
+				48F4BCA61A52791100753F18 /* SLWReqDetailViewController.xib */,
 			);
 			name = requirement;
 			sourceTree = "<group>";
@@ -989,6 +997,7 @@
 				4860E7971A22FD0A00BE0ECA /* home_tabitem_5.png in Resources */,
 				4827856A1A483C890005A16C /* Localizable.strings in Resources */,
 				4860E7991A22FD0A00BE0ECA /* home_tabitem_3.png in Resources */,
+				48F4BCA81A52791100753F18 /* SLWReqDetailViewController.xib in Resources */,
 				485F97231A42F61E003972CD /* SLWSearchViewController.xib in Resources */,
 				486EB8B21A4D856C003C7825 /* call.png in Resources */,
 				4860E79A1A22FD0A00BE0ECA /* home_tabitem_2.png in Resources */,
@@ -1094,6 +1103,7 @@
 				489EF2C01A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.m in Sources */,
 				488A4AF91A4EBD1C00F90142 /* STAlertView.m in Sources */,
 				486EB8B61A4D959A003C7825 /* SLWUserDetailViewController.m in Sources */,
+				48F4BCA71A52791100753F18 /* SLWReqDetailViewController.m in Sources */,
 				488A4AF31A4EBC2900F90142 /* UserService.m in Sources */,
 				48504E801A49AE900076E0C5 /* HACLTableViewPage.m in Sources */,
 				487E217B1A35D5EA00D3168F /* UIScrollView+MJExtension.m in Sources */,

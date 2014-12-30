@@ -14,7 +14,7 @@
 #import <UIImageView+WebCache.h>
 #import "UIHelper.h"
 #import <TSMessage.h>
-#import "SLWRequriementDetailViewController.h"
+#import "SLWReqDetailViewController.h"
 
 
 
@@ -150,7 +150,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     GoodsBean *thisBean = (GoodsBean *)[reqList objectAtIndex:indexPath.row];
-    SLWRequriementDetailViewController *detailPage = [[SLWRequriementDetailViewController alloc]init];
+    SLWReqDetailViewController *detailPage = [[SLWReqDetailViewController alloc]init];
     detailPage.title = @"需求详情";
     [detailPage setGoodsBean:thisBean];
     [self.navigationController pushViewController:detailPage animated:YES];
