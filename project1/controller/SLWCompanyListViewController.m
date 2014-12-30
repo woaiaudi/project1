@@ -11,6 +11,8 @@
 #import "UINavigationItem+CustomBackButton.h"
 #import <UIImageView+WebCache.h>
 #import "SLWCompanyDetail2ViewController.h"
+#import "UIHelper.h"
+#import "SLWCompanyNearViewController.h"
 
 
 
@@ -40,8 +42,15 @@
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.tableView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     
+    
+    //附近企业
+    UIBarButtonItem *nearBarButton =[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"map_near.png"] style:UIBarButtonItemStyleDone target:self action:@selector(nearAction)];
+    self.navigationItem.rightBarButtonItem = nearBarButton;
+    
 }
-
+-(void)nearAction{
+    [UIHelper pushViewController:[SLWCompanyNearViewController class] andTitle:@"附近企业" byFromViewController:self];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

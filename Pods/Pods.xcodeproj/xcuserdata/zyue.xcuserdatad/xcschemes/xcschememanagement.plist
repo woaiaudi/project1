@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-AMapCloudMap.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AMapSearch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2783E78D9D90AC6FABAABC35</key>
+		<key>3D9CBC7BBDD292013FEC119B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>38F2DD06C35ECDCB55696831</key>
+		<key>46BC4395EA20A1DA44BF3E79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>99531CF3F1C9DD68068E54FD</key>
+		<key>56018ECFEDC6BBB3951AFE85</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CAF92316FD06FFA99B4B598E</key>
+		<key>9C8D3DA13798A7D08327CFD7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D3C9204E105A71A461342A4A</key>
+		<key>BF33E9BF0EB234EC58045AF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DFF0BB6B19DF5BC1A03408A6</key>
+		<key>D111D0EBE8C3B854DF44E5C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7503EFF11041187D4F65AF0</key>
+		<key>DF40EE52B78D862BD62E6CB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7890C92850963101CF6499D</key>
+		<key>E2CA0C2DA6E6B5541269F276</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFD5695460F40BC632C7EE1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

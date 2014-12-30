@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - AMap3DMap (2.4.0)
+  - AMapCloudMap (1.1.0)
   - AMapSearch (2.4.0)
   - DLRadioButton (1.0.3)
   - HexColors (2.2.1)
@@ -33,6 +34,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.4.1)
   - AMap3DMap
+  - AMapCloudMap (~> 1.1.0)
   - AMapSearch
   - DLRadioButton
   - SDWebImage (~> 3.7.1)
@@ -41,6 +43,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   AMap3DMap: b349b239e4ec00cbb283ad9a50a7a8428390f1d7
+  AMapCloudMap: 57dee1d559a93ee4f122c762cec7beb38086802c
   AMapSearch: da094172e29cf3c86fe35c8eadd42f225e95af6b
   DLRadioButton: 22c85b7d6eaca5fc5f7ad8366bf5fd5c2f7025df
   HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153

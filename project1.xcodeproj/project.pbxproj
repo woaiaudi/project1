@@ -25,8 +25,6 @@
 		4817C6B61A4C5D2D0040C916 /* SLWBBSDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4817C6B41A4C5D2D0040C916 /* SLWBBSDetailViewController.xib */; };
 		4817C6B91A4C5EF30040C916 /* CompanyBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 4817C6B81A4C5EF30040C916 /* CompanyBean.m */; };
 		4817C6BE1A4C622F0040C916 /* noimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4817C6BD1A4C622F0040C916 /* noimg.png */; };
-		4817C6C21A4C628A0040C916 /* SLWCompanyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4817C6C01A4C628A0040C916 /* SLWCompanyDetailViewController.m */; };
-		4817C6C31A4C628A0040C916 /* SLWCompanyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4817C6C11A4C628A0040C916 /* SLWCompanyDetailViewController.xib */; };
 		4817C6C61A4C6DC00040C916 /* SLWReqListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4817C6C51A4C6DC00040C916 /* SLWReqListTableViewController.m */; };
 		4817C6CA1A4C6E150040C916 /* ACETelPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4817C6C91A4C6E150040C916 /* ACETelPrompt.m */; };
 		4827856A1A483C890005A16C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4827856C1A483C890005A16C /* Localizable.strings */; };
@@ -137,6 +135,11 @@
 		48BCF8891A444A8F00EBB2F0 /* pwdicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8871A444A8F00EBB2F0 /* pwdicon.png */; };
 		48BCF88A1A444A8F00EBB2F0 /* usericon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8881A444A8F00EBB2F0 /* usericon.png */; };
 		48BDE6261A2DAB0500342CF4 /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BDE6251A2DAB0500342CF4 /* NIDropDown.m */; };
+		48C211C31A52F0DE006844BC /* CloudPOIAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C211C21A52F0DE006844BC /* CloudPOIAnnotation.m */; };
+		48C211C71A52F23B006844BC /* SLWCompanyNearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C211C51A52F23B006844BC /* SLWCompanyNearViewController.m */; };
+		48C211C81A52F23B006844BC /* SLWCompanyNearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48C211C61A52F23B006844BC /* SLWCompanyNearViewController.xib */; };
+		48C211CC1A530A84006844BC /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C211CB1A530A84006844BC /* left_arrow.png */; };
+		48C211CE1A530BDD006844BC /* map_near.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C211CD1A530BDD006844BC /* map_near.png */; };
 		48CFF3A41A2C48E100023DB3 /* MHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3A31A2C48E100023DB3 /* MHTextField.m */; };
 		48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3A61A2C495A00023DB3 /* ValidateTextField.m */; };
 		48CFF3AC1A2C49DA00023DB3 /* SLWSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3AA1A2C49DA00023DB3 /* SLWSignUpViewController.m */; };
@@ -182,9 +185,6 @@
 		4817C6B71A4C5EF30040C916 /* CompanyBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyBean.h; sourceTree = "<group>"; };
 		4817C6B81A4C5EF30040C916 /* CompanyBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyBean.m; sourceTree = "<group>"; };
 		4817C6BD1A4C622F0040C916 /* noimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimg.png; sourceTree = "<group>"; };
-		4817C6BF1A4C628A0040C916 /* SLWCompanyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWCompanyDetailViewController.h; sourceTree = "<group>"; };
-		4817C6C01A4C628A0040C916 /* SLWCompanyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWCompanyDetailViewController.m; sourceTree = "<group>"; };
-		4817C6C11A4C628A0040C916 /* SLWCompanyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWCompanyDetailViewController.xib; sourceTree = "<group>"; };
 		4817C6C41A4C6DC00040C916 /* SLWReqListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWReqListTableViewController.h; sourceTree = "<group>"; };
 		4817C6C51A4C6DC00040C916 /* SLWReqListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWReqListTableViewController.m; sourceTree = "<group>"; };
 		4817C6C81A4C6E150040C916 /* ACETelPrompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACETelPrompt.h; sourceTree = "<group>"; };
@@ -369,6 +369,14 @@
 		48BCF8881A444A8F00EBB2F0 /* usericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usericon.png; sourceTree = "<group>"; };
 		48BDE6241A2DAB0500342CF4 /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDropDown.h; sourceTree = "<group>"; };
 		48BDE6251A2DAB0500342CF4 /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDropDown.m; sourceTree = "<group>"; };
+		48C211BF1A52F0DE006844BC /* APIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		48C211C11A52F0DE006844BC /* CloudPOIAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudPOIAnnotation.h; sourceTree = "<group>"; };
+		48C211C21A52F0DE006844BC /* CloudPOIAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudPOIAnnotation.m; sourceTree = "<group>"; };
+		48C211C41A52F23B006844BC /* SLWCompanyNearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWCompanyNearViewController.h; sourceTree = "<group>"; };
+		48C211C51A52F23B006844BC /* SLWCompanyNearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWCompanyNearViewController.m; sourceTree = "<group>"; };
+		48C211C61A52F23B006844BC /* SLWCompanyNearViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWCompanyNearViewController.xib; sourceTree = "<group>"; };
+		48C211CB1A530A84006844BC /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
+		48C211CD1A530BDD006844BC /* map_near.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_near.png; sourceTree = "<group>"; };
 		48CFF3A21A2C48E100023DB3 /* MHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTextField.h; sourceTree = "<group>"; };
 		48CFF3A31A2C48E100023DB3 /* MHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTextField.m; sourceTree = "<group>"; };
 		48CFF3A51A2C495A00023DB3 /* ValidateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateTextField.h; sourceTree = "<group>"; };
@@ -444,6 +452,7 @@
 		480141601A1B747500311095 /* project1 */ = {
 			isa = PBXGroup;
 			children = (
+				48C211BD1A52F0DE006844BC /* amapkit */,
 				4860E78B1A22FCE800BE0ECA /* images */,
 				48A28BF81A1B797D008B9410 /* controller */,
 				488A4ADE1A4EBBFF00F90142 /* service */,
@@ -579,12 +588,12 @@
 				485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */,
 				485F971B1A42F1E9003972CD /* SLWCompanyListViewController.h */,
 				485F971C1A42F1E9003972CD /* SLWCompanyListViewController.m */,
-				4817C6C01A4C628A0040C916 /* SLWCompanyDetailViewController.m */,
-				4817C6BF1A4C628A0040C916 /* SLWCompanyDetailViewController.h */,
-				4817C6C11A4C628A0040C916 /* SLWCompanyDetailViewController.xib */,
 				48B6D4BE1A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.h */,
 				48B6D4BF1A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.m */,
 				48B6D4C01A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.xib */,
+				48C211C41A52F23B006844BC /* SLWCompanyNearViewController.h */,
+				48C211C51A52F23B006844BC /* SLWCompanyNearViewController.m */,
+				48C211C61A52F23B006844BC /* SLWCompanyNearViewController.xib */,
 			);
 			name = company;
 			sourceTree = "<group>";
@@ -622,6 +631,8 @@
 		4860E78B1A22FCE800BE0ECA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				48C211CB1A530A84006844BC /* left_arrow.png */,
+				48C211CD1A530BDD006844BC /* map_near.png */,
 				48B6D4C51A52D8EA0025D5CD /* vip_mark.png */,
 				486DDF071A5195F400586C6D /* line.png */,
 				486DDF031A517A8C00586C6D /* bg.png */,
@@ -880,6 +891,32 @@
 			path = NIDropDown;
 			sourceTree = "<group>";
 		};
+		48C211BD1A52F0DE006844BC /* amapkit */ = {
+			isa = PBXGroup;
+			children = (
+				48C211BE1A52F0DE006844BC /* Configuration */,
+				48C211C01A52F0DE006844BC /* model */,
+			);
+			path = amapkit;
+			sourceTree = "<group>";
+		};
+		48C211BE1A52F0DE006844BC /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				48C211BF1A52F0DE006844BC /* APIKey.h */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		48C211C01A52F0DE006844BC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				48C211C11A52F0DE006844BC /* CloudPOIAnnotation.h */,
+				48C211C21A52F0DE006844BC /* CloudPOIAnnotation.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		48CFF3A11A2C48E100023DB3 /* textfield */ = {
 			isa = PBXGroup;
 			children = (
@@ -1039,14 +1076,16 @@
 				487E21581A35BFF800D3168F /* SLWLoginViewController.xib in Resources */,
 				48504E7F1A49AE900076E0C5 /* HACLPageClipCell.xib in Resources */,
 				4801416D1A1B747500311095 /* Images.xcassets in Resources */,
+				48C211CE1A530BDD006844BC /* map_near.png in Resources */,
 				48B6D4C21A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.xib in Resources */,
 				4860E7981A22FD0A00BE0ECA /* home_tabitem_4.png in Resources */,
 				4817C6BE1A4C622F0040C916 /* noimg.png in Resources */,
 				486E4CA41A3C74E30065E21D /* SLWHome.xib in Resources */,
 				48B6D2531A4455B300032B14 /* example.png in Resources */,
-				4817C6C31A4C628A0040C916 /* SLWCompanyDetailViewController.xib in Resources */,
 				48B6D2571A4458A100032B14 /* corwnicon.png in Resources */,
+				48C211CC1A530A84006844BC /* left_arrow.png in Resources */,
 				48504E7D1A49AE900076E0C5 /* ClipBigImage.xib in Resources */,
+				48C211C81A52F23B006844BC /* SLWCompanyNearViewController.xib in Resources */,
 				48BCF8821A44427100EBB2F0 /* user.png in Resources */,
 				487E21761A35D5EA00D3168F /* MJRefresh.bundle in Resources */,
 				486DDF081A5195F400586C6D /* line.png in Resources */,
@@ -1114,7 +1153,6 @@
 				48B6D4BC1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.m in Sources */,
 				483D13821A48560000EE85FC /* HttpErrorBean.m in Sources */,
 				482785781A4845F00005A16C /* Jastor.m in Sources */,
-				4817C6C21A4C628A0040C916 /* SLWCompanyDetailViewController.m in Sources */,
 				486E4C981A3C54E80065E21D /* SLWNewsListTableViewCell.m in Sources */,
 				48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */,
 				4856FCE71A4FF135006B1415 /* UIImage+TOWebViewControllerIcons.m in Sources */,
@@ -1123,9 +1161,11 @@
 				488A4AF01A4EBC2900F90142 /* NewsService.m in Sources */,
 				484846861A25FAB90007D64C /* SLWPage1ViewController.m in Sources */,
 				4860E79F1A22FDA900BE0ECA /* JSBadgeView.m in Sources */,
+				48C211C71A52F23B006844BC /* SLWCompanyNearViewController.m in Sources */,
 				489EF2C01A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.m in Sources */,
 				488A4AF91A4EBD1C00F90142 /* STAlertView.m in Sources */,
 				486EB8B61A4D959A003C7825 /* SLWUserDetailViewController.m in Sources */,
+				48C211C31A52F0DE006844BC /* CloudPOIAnnotation.m in Sources */,
 				48F4BCA71A52791100753F18 /* SLWReqDetailViewController.m in Sources */,
 				488A4AF31A4EBC2900F90142 /* UserService.m in Sources */,
 				48B6D4C11A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.m in Sources */,

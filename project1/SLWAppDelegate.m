@@ -9,15 +9,29 @@
 #import "SLWAppDelegate.h"
 #import "controller/SLWHome.h"
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
+#import "APIKey.h"
+#import <MAMapKit/MAMapKit.h>
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @implementation SLWAppDelegate
+- (void)configureMapAPIKey
+{
+    if ([APIKey length] == 0)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"apiKey为空，请检查key是否正确设置" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        
+        [alert show];
+    }
+    
+    [MAMapServices sharedServices].apiKey = (NSString *)APIKey;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    
+    [self configureMapAPIKey];
     
     
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackTranslucent];
