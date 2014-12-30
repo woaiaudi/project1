@@ -40,7 +40,7 @@
             <point key="canvasLocation" x="252" y="213"/>
         </view>
         <view contentMode="scaleToFill" id="ahk-fn-9p4">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="981"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="999"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beR-sn-EEm">
@@ -277,7 +277,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Qb-zh-mqV">
-                    <rect key="frame" x="10" y="694" width="300" height="287"/>
+                    <rect key="frame" x="10" y="694" width="300" height="260"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="详细说明" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOE-HO-43G">
@@ -289,7 +289,7 @@
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="629" y="419.5"/>
+            <point key="canvasLocation" x="629" y="406"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

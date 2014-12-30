@@ -32,7 +32,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="example.png" translatesAutoresizingMaskIntoConstraints="NO" id="5SU-4h-Od0">
                         <rect key="frame" x="14" y="12" width="65" height="65"/>
                     </imageView>
-                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="corwnicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="D8O-0E-u2K">
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vip_mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="D8O-0E-u2K">
                         <rect key="frame" x="280" y="7" width="32" height="32"/>
                     </imageView>
                 </subviews>
@@ -49,8 +49,8 @@
     </objects>
     <resources>
         <image name="cellbg.png" width="614" height="213"/>
-        <image name="corwnicon.png" width="48" height="48"/>
         <image name="example.png" width="48" height="48"/>
+        <image name="vip_mark.png" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

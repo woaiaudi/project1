@@ -130,6 +130,9 @@
 		48B6D2571A4458A100032B14 /* corwnicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D2561A4458A100032B14 /* corwnicon.png */; };
 		48B6D4BC1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B6D4BA1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.m */; };
 		48B6D4BD1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D4BB1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.xib */; };
+		48B6D4C11A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B6D4BF1A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.m */; };
+		48B6D4C21A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D4C01A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.xib */; };
+		48B6D4C61A52D8EA0025D5CD /* vip_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D4C51A52D8EA0025D5CD /* vip_mark.png */; };
 		48BCF8821A44427100EBB2F0 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8811A44427100EBB2F0 /* user.png */; };
 		48BCF8891A444A8F00EBB2F0 /* pwdicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8871A444A8F00EBB2F0 /* pwdicon.png */; };
 		48BCF88A1A444A8F00EBB2F0 /* usericon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8881A444A8F00EBB2F0 /* usericon.png */; };
@@ -357,6 +360,10 @@
 		48B6D4B91A52C70D0025D5CD /* SLWSupplyDetail2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSupplyDetail2ViewController.h; sourceTree = "<group>"; };
 		48B6D4BA1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSupplyDetail2ViewController.m; sourceTree = "<group>"; };
 		48B6D4BB1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSupplyDetail2ViewController.xib; sourceTree = "<group>"; };
+		48B6D4BE1A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWCompanyDetail2ViewController.h; sourceTree = "<group>"; };
+		48B6D4BF1A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWCompanyDetail2ViewController.m; sourceTree = "<group>"; };
+		48B6D4C01A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWCompanyDetail2ViewController.xib; sourceTree = "<group>"; };
+		48B6D4C51A52D8EA0025D5CD /* vip_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vip_mark.png; sourceTree = "<group>"; };
 		48BCF8811A44427100EBB2F0 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		48BCF8871A444A8F00EBB2F0 /* pwdicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwdicon.png; sourceTree = "<group>"; };
 		48BCF8881A444A8F00EBB2F0 /* usericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usericon.png; sourceTree = "<group>"; };
@@ -570,11 +577,14 @@
 				485F97161A42EAAE003972CD /* SLWCompanyListTableViewCell.h */,
 				485F97171A42EAAE003972CD /* SLWCompanyListTableViewCell.m */,
 				485F97181A42EAAE003972CD /* SLWCompanyListTableViewCell.xib */,
-				4817C6C01A4C628A0040C916 /* SLWCompanyDetailViewController.m */,
 				485F971B1A42F1E9003972CD /* SLWCompanyListViewController.h */,
 				485F971C1A42F1E9003972CD /* SLWCompanyListViewController.m */,
+				4817C6C01A4C628A0040C916 /* SLWCompanyDetailViewController.m */,
 				4817C6BF1A4C628A0040C916 /* SLWCompanyDetailViewController.h */,
 				4817C6C11A4C628A0040C916 /* SLWCompanyDetailViewController.xib */,
+				48B6D4BE1A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.h */,
+				48B6D4BF1A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.m */,
+				48B6D4C01A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.xib */,
 			);
 			name = company;
 			sourceTree = "<group>";
@@ -612,6 +622,7 @@
 		4860E78B1A22FCE800BE0ECA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				48B6D4C51A52D8EA0025D5CD /* vip_mark.png */,
 				486DDF071A5195F400586C6D /* line.png */,
 				486DDF031A517A8C00586C6D /* bg.png */,
 				486DDF011A517A8600586C6D /* gray_line.png */,
@@ -1012,6 +1023,7 @@
 				486DDEFE1A5174D000586C6D /* user_touxiang.png in Resources */,
 				486EB8B91A4D9C16003C7825 /* logout.png in Resources */,
 				489EF2C11A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.xib in Resources */,
+				48B6D4C61A52D8EA0025D5CD /* vip_mark.png in Resources */,
 				486DDF0D1A51977300586C6D /* SLWRequriementDetailViewController.xib in Resources */,
 				486DDF041A517A8C00586C6D /* bg.png in Resources */,
 				48B6D4BD1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.xib in Resources */,
@@ -1027,6 +1039,7 @@
 				487E21581A35BFF800D3168F /* SLWLoginViewController.xib in Resources */,
 				48504E7F1A49AE900076E0C5 /* HACLPageClipCell.xib in Resources */,
 				4801416D1A1B747500311095 /* Images.xcassets in Resources */,
+				48B6D4C21A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.xib in Resources */,
 				4860E7981A22FD0A00BE0ECA /* home_tabitem_4.png in Resources */,
 				4817C6BE1A4C622F0040C916 /* noimg.png in Resources */,
 				486E4CA41A3C74E30065E21D /* SLWHome.xib in Resources */,
@@ -1115,6 +1128,7 @@
 				486EB8B61A4D959A003C7825 /* SLWUserDetailViewController.m in Sources */,
 				48F4BCA71A52791100753F18 /* SLWReqDetailViewController.m in Sources */,
 				488A4AF31A4EBC2900F90142 /* UserService.m in Sources */,
+				48B6D4C11A52CFEA0025D5CD /* SLWCompanyDetail2ViewController.m in Sources */,
 				48504E801A49AE900076E0C5 /* HACLTableViewPage.m in Sources */,
 				487E217B1A35D5EA00D3168F /* UIScrollView+MJExtension.m in Sources */,
 				488A4AEF1A4EBC2900F90142 /* GoodsService.m in Sources */,

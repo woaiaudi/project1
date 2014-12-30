@@ -10,7 +10,7 @@
 #import "MJRefresh.h"
 #import "UINavigationItem+CustomBackButton.h"
 #import <UIImageView+WebCache.h>
-#import "SLWCompanyDetailViewController.h"
+#import "SLWCompanyDetail2ViewController.h"
 
 
 
@@ -139,7 +139,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CompanyBean *thisCellBean = [_dataList objectAtIndex:indexPath.row];
-    SLWCompanyDetailViewController * detailPage = [[SLWCompanyDetailViewController alloc]init];
+    SLWCompanyDetail2ViewController * detailPage = [[SLWCompanyDetail2ViewController alloc]init];
     [detailPage setTitle:thisCellBean.company];
     [detailPage setCompanyBean:thisCellBean];
     [self.navigationController pushViewController:detailPage animated:YES];
