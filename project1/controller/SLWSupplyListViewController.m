@@ -14,7 +14,7 @@
 #import <UIImageView+WebCache.h>
 #import "UIHelper.h"
 #import <TSMessage.h>
-#import "SLWSupplyDetailViewController.h"
+#import "SLWSupplyDetail2ViewController.h"
 
 @interface SLWSupplyListViewController ()
 {
@@ -151,7 +151,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     GoodsBean *thisBean = (GoodsBean *)[self.supplyList objectAtIndex:indexPath.row];
-    SLWSupplyDetailViewController *detailPage = [[SLWSupplyDetailViewController alloc]init];
+    SLWSupplyDetail2ViewController *detailPage = [[SLWSupplyDetail2ViewController alloc]init];
     detailPage.title = @"供应详情";
     [detailPage setGoodsBean:thisBean];
     [self.navigationController pushViewController:detailPage animated:YES];

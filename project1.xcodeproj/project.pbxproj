@@ -128,6 +128,8 @@
 		48B6D2531A4455B300032B14 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D2521A4455B300032B14 /* example.png */; };
 		48B6D2551A4456BF00032B14 /* phone32.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D2541A4456BF00032B14 /* phone32.png */; };
 		48B6D2571A4458A100032B14 /* corwnicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D2561A4458A100032B14 /* corwnicon.png */; };
+		48B6D4BC1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B6D4BA1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.m */; };
+		48B6D4BD1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D4BB1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.xib */; };
 		48BCF8821A44427100EBB2F0 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8811A44427100EBB2F0 /* user.png */; };
 		48BCF8891A444A8F00EBB2F0 /* pwdicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8871A444A8F00EBB2F0 /* pwdicon.png */; };
 		48BCF88A1A444A8F00EBB2F0 /* usericon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48BCF8881A444A8F00EBB2F0 /* usericon.png */; };
@@ -352,6 +354,9 @@
 		48B6D2521A4455B300032B14 /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
 		48B6D2541A4456BF00032B14 /* phone32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone32.png; sourceTree = "<group>"; };
 		48B6D2561A4458A100032B14 /* corwnicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corwnicon.png; sourceTree = "<group>"; };
+		48B6D4B91A52C70D0025D5CD /* SLWSupplyDetail2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSupplyDetail2ViewController.h; sourceTree = "<group>"; };
+		48B6D4BA1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSupplyDetail2ViewController.m; sourceTree = "<group>"; };
+		48B6D4BB1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSupplyDetail2ViewController.xib; sourceTree = "<group>"; };
 		48BCF8811A44427100EBB2F0 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		48BCF8871A444A8F00EBB2F0 /* pwdicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwdicon.png; sourceTree = "<group>"; };
 		48BCF8881A444A8F00EBB2F0 /* usericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usericon.png; sourceTree = "<group>"; };
@@ -772,6 +777,9 @@
 				48739B591A4065380026BC0D /* SLWSupplyDetailViewController.h */,
 				48739B5A1A4065380026BC0D /* SLWSupplyDetailViewController.m */,
 				48739B5B1A4065380026BC0D /* SLWSupplyDetailViewController.xib */,
+				48B6D4B91A52C70D0025D5CD /* SLWSupplyDetail2ViewController.h */,
+				48B6D4BA1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.m */,
+				48B6D4BB1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.xib */,
 			);
 			name = supply;
 			sourceTree = "<group>";
@@ -1006,6 +1014,7 @@
 				489EF2C11A3D6EEB00BDC580 /* SLWSupplyListTableViewCell.xib in Resources */,
 				486DDF0D1A51977300586C6D /* SLWRequriementDetailViewController.xib in Resources */,
 				486DDF041A517A8C00586C6D /* bg.png in Resources */,
+				48B6D4BD1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.xib in Resources */,
 				48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */,
 				48547E531A4AF017005EB5B0 /* cellbg.png in Resources */,
 				48547E7C1A4B153D005EB5B0 /* SLWNewsDetailViewController.xib in Resources */,
@@ -1089,6 +1098,7 @@
 			files = (
 				486E4CAC1A3C855F0065E21D /* HomeImageButton.m in Sources */,
 				487E217A1A35D5EA00D3168F /* MJRefreshHeaderView.m in Sources */,
+				48B6D4BC1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.m in Sources */,
 				483D13821A48560000EE85FC /* HttpErrorBean.m in Sources */,
 				482785781A4845F00005A16C /* Jastor.m in Sources */,
 				4817C6C21A4C628A0040C916 /* SLWCompanyDetailViewController.m in Sources */,
