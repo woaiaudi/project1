@@ -10,7 +10,7 @@
 #import "SLWPageIndex.h"
 #import "SLWSignUpViewController.h"
 #import "SLWLoginViewController.h"
-#import "SLWNewsListViewController.h"
+#import "SLWNewsCategoryTableViewController.h"
 #import "SLWSupplyListViewController.h"
 #import "SLWCompanyListViewController.h"
 #import "SLWSearchViewController.h"
@@ -70,7 +70,7 @@
 {
     pageIndexArray = [NSMutableArray array];
     
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"信息咨询" controllerClass:[SLWNewsListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"信息咨询" controllerClass:[SLWNewsCategoryTableViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品供应" controllerClass:[SLWSupplyListViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品需求" controllerClass:[SLWReqListTableViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"企业展示" controllerClass:[SLWCompanyListViewController class]]];

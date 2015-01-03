@@ -144,6 +144,8 @@
 		48CFF3A71A2C495A00023DB3 /* ValidateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3A61A2C495A00023DB3 /* ValidateTextField.m */; };
 		48CFF3AC1A2C49DA00023DB3 /* SLWSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF3AA1A2C49DA00023DB3 /* SLWSignUpViewController.m */; };
 		48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48CFF3AB1A2C49DA00023DB3 /* SLWSignUpViewController.xib */; };
+		48F432581A582BD200AD5860 /* SLWNewsCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F432571A582BD200AD5860 /* SLWNewsCategoryTableViewController.m */; };
+		48F4325B1A582DAE00AD5860 /* NewsCategoryBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F4325A1A582DAE00AD5860 /* NewsCategoryBean.m */; };
 		48F4BCA71A52791100753F18 /* SLWReqDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F4BCA51A52791100753F18 /* SLWReqDetailViewController.m */; };
 		48F4BCA81A52791100753F18 /* SLWReqDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48F4BCA61A52791100753F18 /* SLWReqDetailViewController.xib */; };
 		DDED8E0E2C5E2D1C2A5136BC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E10E87BB6E2A5FE99B42435 /* libPods.a */; };
@@ -384,6 +386,10 @@
 		48CFF3A91A2C49DA00023DB3 /* SLWSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWSignUpViewController.h; sourceTree = "<group>"; };
 		48CFF3AA1A2C49DA00023DB3 /* SLWSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWSignUpViewController.m; sourceTree = "<group>"; };
 		48CFF3AB1A2C49DA00023DB3 /* SLWSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWSignUpViewController.xib; sourceTree = "<group>"; };
+		48F432561A582BD200AD5860 /* SLWNewsCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWNewsCategoryTableViewController.h; sourceTree = "<group>"; };
+		48F432571A582BD200AD5860 /* SLWNewsCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWNewsCategoryTableViewController.m; sourceTree = "<group>"; };
+		48F432591A582DAE00AD5860 /* NewsCategoryBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCategoryBean.h; sourceTree = "<group>"; };
+		48F4325A1A582DAE00AD5860 /* NewsCategoryBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCategoryBean.m; sourceTree = "<group>"; };
 		48F4BCA41A52791100753F18 /* SLWReqDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWReqDetailViewController.h; sourceTree = "<group>"; };
 		48F4BCA51A52791100753F18 /* SLWReqDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWReqDetailViewController.m; sourceTree = "<group>"; };
 		48F4BCA61A52791100753F18 /* SLWReqDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLWReqDetailViewController.xib; sourceTree = "<group>"; };
@@ -720,6 +726,8 @@
 				48547E781A4B153D005EB5B0 /* SLWNewsDetailViewController.h */,
 				48547E791A4B153D005EB5B0 /* SLWNewsDetailViewController.m */,
 				48547E7A1A4B153D005EB5B0 /* SLWNewsDetailViewController.xib */,
+				48F432561A582BD200AD5860 /* SLWNewsCategoryTableViewController.h */,
+				48F432571A582BD200AD5860 /* SLWNewsCategoryTableViewController.m */,
 			);
 			name = news;
 			sourceTree = "<group>";
@@ -858,6 +866,8 @@
 				486B77DB1A4C0881009F61D8 /* BBSBean.m */,
 				4817C6B71A4C5EF30040C916 /* CompanyBean.h */,
 				4817C6B81A4C5EF30040C916 /* CompanyBean.m */,
+				48F432591A582DAE00AD5860 /* NewsCategoryBean.h */,
+				48F4325A1A582DAE00AD5860 /* NewsCategoryBean.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1003,6 +1013,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = esuliao;
 				TargetAttributes = {
+					480141561A1B747500311095 = {
+						DevelopmentTeam = 2FS8A68PTS;
+					};
 					480141711A1B747500311095 = {
 						TestTargetID = 480141561A1B747500311095;
 					};
@@ -1150,6 +1163,7 @@
 			files = (
 				486E4CAC1A3C855F0065E21D /* HomeImageButton.m in Sources */,
 				487E217A1A35D5EA00D3168F /* MJRefreshHeaderView.m in Sources */,
+				48F432581A582BD200AD5860 /* SLWNewsCategoryTableViewController.m in Sources */,
 				48B6D4BC1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.m in Sources */,
 				483D13821A48560000EE85FC /* HttpErrorBean.m in Sources */,
 				482785781A4845F00005A16C /* Jastor.m in Sources */,
@@ -1197,6 +1211,7 @@
 				48547E5A1A4AF42A005EB5B0 /* AOScrollerView.m in Sources */,
 				485F971D1A42F1E9003972CD /* SLWCompanyListViewController.m in Sources */,
 				488A4ADA1A4EAE3C00F90142 /* SLWAboutUsViewController.m in Sources */,
+				48F4325B1A582DAE00AD5860 /* NewsCategoryBean.m in Sources */,
 				488A4AEE1A4EBC2900F90142 /* CompanyService.m in Sources */,
 				480141671A1B747500311095 /* main.m in Sources */,
 				487E21771A35D5EA00D3168F /* MJRefreshBaseView.m in Sources */,
@@ -1363,6 +1378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "project1/project1-Prefix.pch";
 				INFOPLIST_FILE = "project1/project1-Info.plist";
@@ -1378,6 +1394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "project1/project1-Prefix.pch";
 				INFOPLIST_FILE = "project1/project1-Info.plist";
@@ -1404,6 +1421,7 @@
 				);
 				INFOPLIST_FILE = "project1Tests/project1Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1413,6 +1431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/project1.app/project1";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: JunLin Jiang (2FS8A68PTS)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1422,6 +1441,7 @@
 				GCC_PREFIX_HEADER = "project1/project1-Prefix.pch";
 				INFOPLIST_FILE = "project1Tests/project1Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

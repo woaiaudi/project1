@@ -22,7 +22,7 @@
     
         //打电话
         UIBarButtonItem *callBarButton =[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"call.png"] style:UIBarButtonItemStyleDone target:self action:@selector(callAction:)];
-        callBarButton.title = @"025-66078709";
+        //callBarButton.title = @"025-66078709";
     
     
         UIBarButtonItem *messageBarButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"message.png"] style:UIBarButtonItemStyleDone target:self action:@selector(messageAction:)];
@@ -40,7 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)callAction:(UIBarButtonItem *)sender{
-    [ACETelPrompt callPhoneNumber:sender.title
+    [ACETelPrompt callPhoneNumber:@"025-66078709"
                              call:^(NSTimeInterval duration) {
                                  NSLog(@"User made a call of %.1f seconds", duration);
                                  
