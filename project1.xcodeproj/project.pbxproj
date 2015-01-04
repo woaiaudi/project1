@@ -136,6 +136,9 @@
 		48AD6AC01A59755200A2350A /* TSLocateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48AD6AB41A59755200A2350A /* TSLocateView.xib */; };
 		48AD6AC11A59755200A2350A /* TSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AD6AB61A59755200A2350A /* TSLocation.m */; };
 		48AD6AC31A5978F400A2350A /* bg_bottom_menu_middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 48AD6AC21A5978F400A2350A /* bg_bottom_menu_middle.png */; };
+		48AD6AC71A5981A800A2350A /* huo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48AD6AC41A5981A800A2350A /* huo.gif */; };
+		48AD6AC81A5981A800A2350A /* jinghua.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48AD6AC51A5981A800A2350A /* jinghua.gif */; };
+		48AD6AC91A5981A800A2350A /* tuijian.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48AD6AC61A5981A800A2350A /* tuijian.gif */; };
 		48B6D2531A4455B300032B14 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D2521A4455B300032B14 /* example.png */; };
 		48B6D2551A4456BF00032B14 /* phone32.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D2541A4456BF00032B14 /* phone32.png */; };
 		48B6D2571A4458A100032B14 /* corwnicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6D2561A4458A100032B14 /* corwnicon.png */; };
@@ -384,6 +387,9 @@
 		48AD6AB51A59755200A2350A /* TSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLocation.h; sourceTree = "<group>"; };
 		48AD6AB61A59755200A2350A /* TSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLocation.m; sourceTree = "<group>"; };
 		48AD6AC21A5978F400A2350A /* bg_bottom_menu_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_bottom_menu_middle.png; sourceTree = "<group>"; };
+		48AD6AC41A5981A800A2350A /* huo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = huo.gif; sourceTree = "<group>"; };
+		48AD6AC51A5981A800A2350A /* jinghua.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = jinghua.gif; sourceTree = "<group>"; };
+		48AD6AC61A5981A800A2350A /* tuijian.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tuijian.gif; sourceTree = "<group>"; };
 		48B6D2521A4455B300032B14 /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
 		48B6D2541A4456BF00032B14 /* phone32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone32.png; sourceTree = "<group>"; };
 		48B6D2561A4458A100032B14 /* corwnicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corwnicon.png; sourceTree = "<group>"; };
@@ -665,6 +671,9 @@
 		4860E78B1A22FCE800BE0ECA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				48AD6AC41A5981A800A2350A /* huo.gif */,
+				48AD6AC51A5981A800A2350A /* jinghua.gif */,
+				48AD6AC61A5981A800A2350A /* tuijian.gif */,
 				48C211CB1A530A84006844BC /* left_arrow.png */,
 				48C211CD1A530BDD006844BC /* map_near.png */,
 				48B6D4C51A52D8EA0025D5CD /* vip_mark.png */,
@@ -1111,6 +1120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				486DDF061A517C6800586C6D /* right_arrow.png in Resources */,
+				48AD6AC71A5981A800A2350A /* huo.gif in Resources */,
 				486DDF001A51784900586C6D /* editicon.png in Resources */,
 				48AD6AB81A59755200A2350A /* btn_020.disable@2x.png in Resources */,
 				48AD6AA71A59583800A2350A /* SLWReqListViewController.xib in Resources */,
@@ -1127,6 +1137,7 @@
 				480141651A1B747500311095 /* InfoPlist.strings in Resources */,
 				4860E7971A22FD0A00BE0ECA /* home_tabitem_5.png in Resources */,
 				4827856A1A483C890005A16C /* Localizable.strings in Resources */,
+				48AD6AC91A5981A800A2350A /* tuijian.gif in Resources */,
 				4860E7991A22FD0A00BE0ECA /* home_tabitem_3.png in Resources */,
 				48F4BCA81A52791100753F18 /* SLWReqDetailViewController.xib in Resources */,
 				485F97231A42F61E003972CD /* SLWSearchViewController.xib in Resources */,
@@ -1138,6 +1149,7 @@
 				48B6D4C61A52D8EA0025D5CD /* vip_mark.png in Resources */,
 				486DDF0D1A51977300586C6D /* SLWRequriementDetailViewController.xib in Resources */,
 				486DDF041A517A8C00586C6D /* bg.png in Resources */,
+				48AD6AC81A5981A800A2350A /* jinghua.gif in Resources */,
 				48B6D4BD1A52C70D0025D5CD /* SLWSupplyDetail2ViewController.xib in Resources */,
 				48CFF3AD1A2C49DA00023DB3 /* SLWSignUpViewController.xib in Resources */,
 				48547E531A4AF017005EB5B0 /* cellbg.png in Resources */,

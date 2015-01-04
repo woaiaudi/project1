@@ -47,6 +47,9 @@
                         <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="huo.gif" translatesAutoresizingMaskIntoConstraints="NO" id="slm-ic-Bgv" userLabel="精华">
+                        <rect key="frame" x="290" y="12" width="22" height="14"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -61,7 +64,8 @@
     </objects>
     <resources>
         <image name="cellbg.png" width="614" height="213"/>
-        <image name="message.png" width="36" height="31"/>
+        <image name="huo.gif" width="22" height="14"/>
+        <image name="message.png" width="24" height="21"/>
         <image name="view.png" width="38" height="23"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
