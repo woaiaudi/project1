@@ -11,6 +11,7 @@
 @interface SLWSearchViewController ()
 {
     NIDropDown * dropDown;
+    TSLocateView *locateView;
 }
 
 @end
@@ -57,5 +58,27 @@
     
     dropDown = nil;
     NSLog(@"点击了按钮【%d】后，选中了S[%d],R[%d]",button.tag,index.section,index.row);
+}
+
+#pragma mark-地区选择
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    TSLocateView *locateView = (TSLocateView *)actionSheet;
+    TSLocation *location = locateView.locate;
+    NSLog(@"city:%@ lat:%f lon:%f", location.city, location.latitude, location.longitude);
+    //You can uses location to your application.
+    if(buttonIndex == 0) {
+        NSLog(@"Cancel");
+        [_cityButton setTitle:location.city forState:UIControlStateNormal];
+    }else {
+        NSLog(@"Select");
+    }
+}
+- (IBAction)cityAction:(id)sender {
+    if (!locateView) {
+        locateView = [[TSLocateView alloc] initWithTitle:@"选择城市" delegate:self];
+    }
+    [locateView showInView:self.view];
+    
 }
 @end

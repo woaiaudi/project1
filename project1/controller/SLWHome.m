@@ -15,7 +15,7 @@
 #import "SLWCompanyListViewController.h"
 #import "SLWSearchViewController.h"
 #import "SLWBBSTableViewController.h"
-#import "SLWReqListTableViewController.h"
+#import "SLWReqListViewController.h"
 #import "UIHelper.h"
 #import "UserService.h"
 #import <TSMessage.h>
@@ -53,7 +53,7 @@
     UIBarButtonItem *userButton1 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"user.png"] style:UIBarButtonItemStyleDone target:self action:@selector(openLoginPage)];
     
    self.navigationItem.rightBarButtonItem = userButton1;
-//self.navigationItem.leftBarButtonItem = searchButton1;//////////////////搜索功能暂时不使用
+   self.navigationItem.leftBarButtonItem = searchButton1;
     
     [self initAllPageIndexArray];
     [self addAOScrollerView:nil];
@@ -72,7 +72,7 @@
     
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"信息咨询" controllerClass:[SLWNewsCategoryTableViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品供应" controllerClass:[SLWSupplyListViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品需求" controllerClass:[SLWReqListTableViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品需求" controllerClass:[SLWReqListViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"企业展示" controllerClass:[SLWCompanyListViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"行业论坛" controllerClass:[SLWBBSTableViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"关于我们" controllerClass:[SLWAboutUsViewController class]]];
