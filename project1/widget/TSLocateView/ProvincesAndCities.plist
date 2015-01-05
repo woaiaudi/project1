@@ -4,6 +4,21 @@
 <array>
 	<dict>
 		<key>State</key>
+		<string>全国</string>
+		<key>Cities</key>
+		<array>
+			<dict>
+				<key>city</key>
+				<string>全国</string>
+				<key>lat</key>
+				<string>33.92</string>
+				<key>lon</key>
+				<string>116.46</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>State</key>
 		<string>直辖市</string>
 		<key>Cities</key>
 		<array>
