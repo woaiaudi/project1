@@ -78,6 +78,9 @@
                         <color key="titleColor" red="0.21960785984992981" green="0.25098040699958801" blue="0.89803928136825562" alpha="1" colorSpace="deviceRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="shareAction:" destination="-1" eventType="touchUpInside" id="wtN-44-xVm"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

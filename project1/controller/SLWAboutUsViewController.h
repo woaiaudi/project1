@@ -12,4 +12,5 @@
 @interface SLWAboutUsViewController : UIViewController
 @property (nonatomic, strong) STAlertView *stAlertView;
 - (IBAction)openWebsiteAction:(id)sender;
+- (IBAction)shareAction:(id)sender;
 @end
