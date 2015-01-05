@@ -71,6 +71,14 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGH-MB-ba8">
+                    <rect key="frame" x="244" y="197" width="76" height="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="分享" backgroundImage="bg_young_rt.png">
+                        <color key="titleColor" red="0.21960785984992981" green="0.25098040699958801" blue="0.89803928136825562" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="-170" y="107"/>
@@ -78,6 +86,7 @@
     </objects>
     <resources>
         <image name="absbanner.jpg" width="320" height="134"/>
+        <image name="bg_young_rt.png" width="130" height="44"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
