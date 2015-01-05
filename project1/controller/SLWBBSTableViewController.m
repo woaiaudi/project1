@@ -16,14 +16,20 @@
 
 @interface SLWBBSTableViewController ()
 {
-    NSMutableArray * bbsDataList;
     BBSService * bbsService;
 }
+@property(nonatomic,strong)NSMutableArray * bbsDataList;
 
 @end
 
 @implementation SLWBBSTableViewController
-
+-(NSMutableArray *)bbsDataList
+{
+    if (!_bbsDataList) {
+        _bbsDataList = [NSMutableArray array];
+    }
+    return _bbsDataList;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     //清除选中效果
@@ -31,7 +37,6 @@
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.tableView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     
-    bbsDataList = [NSMutableArray array];
     bbsService = [[BBSService alloc]init];
     
     
@@ -80,8 +85,8 @@
    
     [bbsService getBBSList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
         //先清空
-        [bbsDataList removeAllObjects];
-        [bbsDataList addObjectsFromArray:pBlockList];
+        [self.bbsDataList removeAllObjects];
+        [self.bbsDataList addObjectsFromArray:pBlockList];
         // 刷新表格
         [self.tableView reloadData];
         
@@ -99,7 +104,7 @@
 {
     //加载更多数据
     [bbsService getBBSList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
-        [bbsDataList addObjectsFromArray:pBlockList];
+        [self.bbsDataList addObjectsFromArray:pBlockList];
         // 刷新表格
         [self.tableView reloadData];
         
@@ -125,14 +130,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return bbsDataList.count;
+    return self.bbsDataList.count;
 }
 
 - (SLWBBSListTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SLWBBSListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[SLWBBSListTableViewCell className] forIndexPath:indexPath];
     
-    BBSBean *thisBean = (BBSBean *)[bbsDataList objectAtIndex:indexPath.row];
+    BBSBean *thisBean = (BBSBean *)[self.bbsDataList objectAtIndex:indexPath.row];
     cell.titleLabel.text = thisBean.title;
     cell.viewLabel.text = thisBean.views;
     cell.messageLabel.text = thisBean.replies;
@@ -143,7 +148,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BBSBean *thisCellBean = [bbsDataList objectAtIndex:indexPath.row];
+    BBSBean *thisCellBean = [self.bbsDataList objectAtIndex:indexPath.row];
     SLWBBSDetailViewController * detailPage = [[SLWBBSDetailViewController alloc]init];
     [detailPage setTitle:thisCellBean.title];
     [detailPage setBbsId:thisCellBean.id];
