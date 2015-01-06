@@ -11,4 +11,5 @@
 @interface SLWBBSDetailViewController : UIViewController
 @property(nonatomic,copy)NSString *bbsId;
 @property (strong, nonatomic) IBOutlet UIWebView *bbsWebview;
+@property (strong, nonatomic) IBOutlet UITableView *commentTableview;
 @end

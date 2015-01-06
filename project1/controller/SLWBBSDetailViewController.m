@@ -35,5 +35,45 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - Table view UITableViewDelegate
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return [SLWBBSListTableViewCell heightForRow];
+//}
+#pragma mark - Table view data source
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"最新回复";
+}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    return 5;
+//}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *TableSampleIdentifier = @"TableSampleIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+                             TableSampleIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]
+                initWithStyle:UITableViewCellStyleSubtitle
+                reuseIdentifier:TableSampleIdentifier];
+    }
+    
+    cell.textLabel.text = @"sdsdlk:sdakjah";
+    cell.detailTextLabel.text = @"2014-12-25";
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+   
+}
 
 @end
