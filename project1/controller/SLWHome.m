@@ -10,16 +10,20 @@
 #import "SLWPageIndex.h"
 #import "SLWSignUpViewController.h"
 #import "SLWLoginViewController.h"
-#import "SLWNewsListViewController.h"
+#import "SLWNewsCategoryTableViewController.h"
 #import "SLWSupplyListViewController.h"
 #import "SLWCompanyListViewController.h"
 #import "SLWSearchViewController.h"
-#import "SLWBBSTableViewController.h"
-#import "SLWReqListTableViewController.h"
+#import "SLWBBSListViewController.h"
+#import "SLWReqListViewController.h"
 #import "UIHelper.h"
 #import "UserService.h"
 #import <TSMessage.h>
 #import "SLWUserDetailViewController.h"
+#import "SLWAboutUsViewController.h"
+#import "NewsService.h"
+#import "SLWNewsDetailViewController.h"
+
 
 @interface SLWHome ()
 {
@@ -28,6 +32,9 @@
     
     
     NSArray *imageURLs;
+    
+    
+    NSArray *bannerBeanArray;
 }
 @end
 
@@ -46,7 +53,7 @@
     UIBarButtonItem *userButton1 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"user.png"] style:UIBarButtonItemStyleDone target:self action:@selector(openLoginPage)];
     
    self.navigationItem.rightBarButtonItem = userButton1;
-//self.navigationItem.leftBarButtonItem = searchButton1;//////////////////搜索功能暂时不使用
+   self.navigationItem.leftBarButtonItem = searchButton1;
     
     [self initAllPageIndexArray];
     [self addAOScrollerView:nil];
@@ -63,35 +70,54 @@
 {
     pageIndexArray = [NSMutableArray array];
     
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"信息咨询" controllerClass:[SLWNewsListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"信息咨询" controllerClass:[SLWNewsCategoryTableViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品供应" controllerClass:[SLWSupplyListViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品需求" controllerClass:[SLWReqListTableViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品需求" controllerClass:[SLWReqListViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"企业展示" controllerClass:[SLWCompanyListViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"行业论坛" controllerClass:[SLWBBSTableViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"关于我们" controllerClass:[SLWCompanyListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"行业论坛" controllerClass:[SLWBBSListViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"关于我们" controllerClass:[SLWAboutUsViewController class]]];
     
 }
 #pragma mark- AOScrollViewDelegate ValueClickDelegate 首页banner 点击事件
 -(void)buttonClick:(int)vid{
+    
+    NewsBean *clickedBean = [bannerBeanArray objectAtIndex:vid];
+    NSLog(@"dianjile   :%@",clickedBean.title);
+    SLWNewsDetailViewController * detailPage = [[SLWNewsDetailViewController alloc]init];
+    [detailPage setTitle:clickedBean.title];
+    [detailPage setNewsId:clickedBean.id];
+    [self.navigationController pushViewController:detailPage animated:YES];
    
 }
 #pragma mark - 将焦点图显示在页面上
 -(void)addAOScrollerView:(NSArray *)array
 {
-    //设置图片url数组
-    NSMutableArray *imgArr = [[NSMutableArray alloc] init];
-    //设置标题数组
-    NSMutableArray *strArr =[[NSMutableArray alloc] init];
-    [imgArr addObject:@"http://gcsl.gotoip4.com/upload/201412/10/201412102202117160.jpg"];
-    [strArr addObject:@"产品新闻标题111111"];
-    [imgArr addObject:@"http://gcsl.gotoip4.com/upload/201412/10/201412102244016426.jpg"];
-    [strArr addObject:@"产品新闻标题222222"];
-    // 初始化自定义ScrollView类对象
-    AOScrollerView *aSV = [[AOScrollerView alloc]initWithNameArr:imgArr titleArr:strArr height:self.bannerView.bounds.size.height];
-    //设置委托
-    aSV.vDelegate=self;
-    //添加进view，，，，，用banner 填充自动布局，设置广告图高度，然后广告图直接加载self.view，而不加在bannerview上
-    [self.view addSubview:aSV];
+    bannerBeanArray = [NSArray array];
+    
+    NewsService *newsService = [[NewsService alloc]init];
+    [newsService getTopNewsList:nil onsuccess:^(NSMutableArray *pBlockList) {
+        bannerBeanArray = pBlockList;
+        //设置图片url数组
+        NSMutableArray *imgArr = [[NSMutableArray alloc] init];
+        //设置标题数组
+        NSMutableArray *strArr =[[NSMutableArray alloc] init];
+        for (NewsBean *newsBean in bannerBeanArray) {
+            [imgArr addObject:[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"HOST", ""),newsBean.img_url]];
+            [strArr addObject:newsBean.title];
+        }
+        // 初始化自定义ScrollView类对象
+        AOScrollerView *aSV = [[AOScrollerView alloc]initWithNameArr:imgArr titleArr:strArr height:self.bannerView.bounds.size.height];
+        //设置委托
+        aSV.vDelegate=self;
+        //添加进view，，，，，用banner 填充自动布局，设置广告图高度，然后广告图直接加载self.view，而不加在bannerview上
+        [self.view addSubview:aSV];
+    } onfailure:^(NSError *error) {
+        [TSMessage showNotificationWithTitle:@"获取重点资讯失败" type:TSMessageNotificationTypeWarning];
+    }];
+    
+    
+    
+   
 }
 #pragma mark - 首页图片按钮
 -(void)initHomeImageButtons

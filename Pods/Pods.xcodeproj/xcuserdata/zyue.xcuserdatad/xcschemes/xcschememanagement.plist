@@ -9,6 +9,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-AMap3DMap.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-AMapCloudMap.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-AMapSearch.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-DLRadioButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2AE6BF99707C28DBBA4030AE</key>
+		<key>031D0522D0D8E072477B1F1F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6041F0262244C6CFD86162AA</key>
+		<key>4E851E03354D7A4A5E50E4FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84DC258CF0CC57DA5A4BDA6D</key>
+		<key>60734EB9F139111175497709</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABFAD57A49A7295CBCE83462</key>
+		<key>6DB9926EB008235BCD3C687D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5E9A7BA996DF837A6148544</key>
+		<key>922CCDBAB50A0DD048EC4A74</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6C974B4433D45806DE520B4</key>
+		<key>B0AC5DC27F63A26E3B4145E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECE6F0FC7F136585DD3FC2CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3FE239055B94123D724F082</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDC9B741CDAAB7D2DCF45DCE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

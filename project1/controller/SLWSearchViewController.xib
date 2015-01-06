@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLWSearchViewController">
             <connections>
+                <outlet property="cityButton" destination="Qcs-ye-Qu5" id="3GG-yM-Ti1"/>
                 <outlet property="searchTypeButton" destination="XJ8-SE-zHi" id="EkE-3m-alA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -16,15 +17,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="产品/企业/资讯" translatesAutoresizingMaskIntoConstraints="NO" id="9xV-dj-Pgy">
-                    <rect key="frame" x="78" y="64" width="242" height="44"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ8-SE-zHi">
-                    <rect key="frame" x="0.0" y="64" width="78" height="44"/>
+                    <rect key="frame" x="0.0" y="64" width="81" height="44"/>
                     <color key="backgroundColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="产品">
-                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="全部">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -32,14 +29,32 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-Qq-94X">
-                    <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                    <rect key="frame" x="0.0" y="133" width="320" height="435"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="产品/企业/资讯" translatesAutoresizingMaskIntoConstraints="NO" id="9xV-dj-Pgy">
+                    <rect key="frame" x="81" y="64" width="239" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcs-ye-Qu5">
+                    <rect key="frame" x="0.0" y="108" width="320" height="27"/>
+                    <color key="backgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="城市" backgroundImage="bg_bottom_menu_middle.png">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cityAction:" destination="-1" eventType="touchUpInside" id="tme-Sy-6bY"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="511" y="407"/>
+            <point key="canvasLocation" x="-263" y="125"/>
         </view>
     </objects>
+    <resources>
+        <image name="bg_bottom_menu_middle.png" width="198" height="88"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

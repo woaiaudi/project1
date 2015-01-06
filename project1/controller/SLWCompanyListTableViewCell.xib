@@ -17,9 +17,6 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cellbg.png" translatesAutoresizingMaskIntoConstraints="NO" id="IuE-gL-lcy">
                         <rect key="frame" x="5" y="5" width="310" height="80"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="corwnicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="D8O-0E-u2K">
-                        <rect key="frame" x="272" y="0.0" width="48" height="48"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="广州珠海市" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mp-oY-kMy">
                         <rect key="frame" x="88" y="55" width="173" height="28"/>
                         <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
@@ -35,6 +32,9 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="example.png" translatesAutoresizingMaskIntoConstraints="NO" id="5SU-4h-Od0">
                         <rect key="frame" x="14" y="12" width="65" height="65"/>
                     </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vip_mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="D8O-0E-u2K">
+                        <rect key="frame" x="280" y="7" width="32" height="32"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -42,14 +42,15 @@
                 <outlet property="addressLabel" destination="4Mp-oY-kMy" id="jby-FF-geQ"/>
                 <outlet property="logoImageview" destination="5SU-4h-Od0" id="r8W-6K-rGw"/>
                 <outlet property="nameLabel" destination="VFN-kO-InN" id="m7A-62-m3K"/>
+                <outlet property="vipImageview" destination="D8O-0E-u2K" id="Dg7-Sz-vIs"/>
             </connections>
             <point key="canvasLocation" x="511" y="413"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="cellbg.png" width="614" height="213"/>
-        <image name="corwnicon.png" width="48" height="48"/>
         <image name="example.png" width="48" height="48"/>
+        <image name="vip_mark.png" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

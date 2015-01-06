@@ -12,18 +12,24 @@
 #import "BBSService.h"
 #import "SLWBBSListTableViewCell.h"
 #import "SLWBBSDetailViewController.h"
+#import "SphereMenu.h"
 
-
-@interface SLWBBSTableViewController ()
+@interface SLWBBSTableViewController ()<SphereMenuDelegate>
 {
-    NSMutableArray * bbsDataList;
     BBSService * bbsService;
 }
+@property(nonatomic,strong)NSMutableArray * bbsDataList;
 
 @end
 
 @implementation SLWBBSTableViewController
-
+-(NSMutableArray *)bbsDataList
+{
+    if (!_bbsDataList) {
+        _bbsDataList = [NSMutableArray array];
+    }
+    return _bbsDataList;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     //清除选中效果
@@ -31,7 +37,6 @@
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.tableView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     
-    bbsDataList = [NSMutableArray array];
     bbsService = [[BBSService alloc]init];
     
     
@@ -41,8 +46,24 @@
     // 2.集成刷新控件
     [self setupRefresh];
     
+    
+    UIImage *startImage = [UIImage imageNamed:@"view.png"];
+    UIImage *image1 = [UIImage imageNamed:@"huo.gif"];
+    UIImage *image2 = [UIImage imageNamed:@"jinghua.gif"];
+    UIImage *image3 = [UIImage imageNamed:@"tuijian.gif"];
+    NSArray *images = @[image1, image2, image3];
+    
+    
+    SphereMenu *sphereMenu = [[SphereMenu alloc] initWithStartPoint:CGPointMake(self.tableView.frame.size.width-100, self.tableView.frame.size.height-100)
+                                                         startImage:startImage
+                                                      submenuImages:images];
+    sphereMenu.delegate = self;
+    [self.view addSubview:sphereMenu];
 }
-
+- (void)sphereDidSelected:(int)index
+{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -80,8 +101,8 @@
    
     [bbsService getBBSList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
         //先清空
-        [bbsDataList removeAllObjects];
-        [bbsDataList addObjectsFromArray:pBlockList];
+        [self.bbsDataList removeAllObjects];
+        [self.bbsDataList addObjectsFromArray:pBlockList];
         // 刷新表格
         [self.tableView reloadData];
         
@@ -99,7 +120,7 @@
 {
     //加载更多数据
     [bbsService getBBSList:nil begin:0 offset:0 onsuccess:^(NSMutableArray *pBlockList) {
-        [bbsDataList addObjectsFromArray:pBlockList];
+        [self.bbsDataList addObjectsFromArray:pBlockList];
         // 刷新表格
         [self.tableView reloadData];
         
@@ -125,14 +146,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return bbsDataList.count;
+    return self.bbsDataList.count;
 }
 
 - (SLWBBSListTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SLWBBSListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[SLWBBSListTableViewCell className] forIndexPath:indexPath];
     
-    BBSBean *thisBean = (BBSBean *)[bbsDataList objectAtIndex:indexPath.row];
+    BBSBean *thisBean = (BBSBean *)[self.bbsDataList objectAtIndex:indexPath.row];
     cell.titleLabel.text = thisBean.title;
     cell.viewLabel.text = thisBean.views;
     cell.messageLabel.text = thisBean.replies;
@@ -143,7 +164,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BBSBean *thisCellBean = [bbsDataList objectAtIndex:indexPath.row];
+    BBSBean *thisCellBean = [self.bbsDataList objectAtIndex:indexPath.row];
     SLWBBSDetailViewController * detailPage = [[SLWBBSDetailViewController alloc]init];
     [detailPage setTitle:thisCellBean.title];
     [detailPage setBbsId:thisCellBean.id];

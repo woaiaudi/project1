@@ -32,9 +32,11 @@
         // Initialization code
         //设置图片视图
         UIButton *imageView = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, WIDTH, height)];
-        //imageView.contentMode = UIViewContentModeScaleAspectFit;
-        //给定网络图片路径
-        [imageView sd_setImageWithURL:[NSURL URLWithString:imageName] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"banner_placeholder"]];
+        
+        //给定网络图片路径   给按钮设置image属性，到时图片不能被拉伸，设置背景图片就可以了
+        [imageView sd_setBackgroundImageWithURL:[NSURL URLWithString:imageName] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"banner_placeholder"]];
+        
+//        [imageView sd_setImageWithURL:[NSURL URLWithString:imageName] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"banner_placeholder"]];
 //        [imageView setImageFromUrl:YES withUrl:imageName];
         //设置点击方法
         [imageView addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];

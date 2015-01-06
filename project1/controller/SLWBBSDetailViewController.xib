@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLWBBSDetailViewController">
             <connections>
                 <outlet property="bbsWebview" destination="bPR-pt-AoG" id="kBd-uG-NOh"/>
+                <outlet property="commentTableview" destination="qAG-1q-SSj" id="z28-Ov-wUA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,22 +17,25 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPR-pt-AoG">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPR-pt-AoG">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="7fz-b9-bv5"/>
                     </connections>
                 </webView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qAG-1q-SSj">
+                    <rect key="frame" x="0.0" y="250" width="320" height="318"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" red="0.57277856691919193" green="0.46455322691090617" blue="0.44072262329966905" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="2xS-UD-lIp"/>
+                        <outlet property="delegate" destination="-1" id="S75-n0-5Q3"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="bPR-pt-AoG" secondAttribute="trailing" id="QrP-98-ycc"/>
-                <constraint firstItem="bPR-pt-AoG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XZ6-cn-aag"/>
-                <constraint firstItem="bPR-pt-AoG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="bi6-mW-gkv"/>
-                <constraint firstAttribute="bottom" secondItem="bPR-pt-AoG" secondAttribute="bottom" id="o86-tB-PHN"/>
-            </constraints>
-            <point key="canvasLocation" x="380" y="342"/>
+            <point key="canvasLocation" x="-158" y="109"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

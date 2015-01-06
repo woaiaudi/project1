@@ -10,7 +10,9 @@
 #import "MJRefresh.h"
 #import "UINavigationItem+CustomBackButton.h"
 #import <UIImageView+WebCache.h>
-#import "SLWCompanyDetailViewController.h"
+#import "SLWCompanyDetail2ViewController.h"
+#import "UIHelper.h"
+#import "SLWCompanyNearViewController.h"
 
 
 
@@ -40,8 +42,15 @@
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.tableView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     
+    
+    //附近企业
+    UIBarButtonItem *nearBarButton =[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"map_near.png"] style:UIBarButtonItemStyleDone target:self action:@selector(nearAction)];
+    self.navigationItem.rightBarButtonItem = nearBarButton;
+    
 }
-
+-(void)nearAction{
+    [UIHelper pushViewController:[SLWCompanyNearViewController class] andTitle:@"附近企业" byFromViewController:self];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -131,13 +140,15 @@
     cell.nameLabel.text = thisCellBean.company;
     cell.addressLabel.text = thisCellBean.compaddr;
     [cell.logoImageview sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"HOST", ""),thisCellBean.logo]] placeholderImage:[UIImage imageNamed:@"noimg"]];
+    
+    [cell.vipImageview setHidden:([thisCellBean.group_id isEqualToString:@"2"]?NO:YES)];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CompanyBean *thisCellBean = [_dataList objectAtIndex:indexPath.row];
-    SLWCompanyDetailViewController * detailPage = [[SLWCompanyDetailViewController alloc]init];
+    SLWCompanyDetail2ViewController * detailPage = [[SLWCompanyDetail2ViewController alloc]init];
     [detailPage setTitle:thisCellBean.company];
     [detailPage setCompanyBean:thisCellBean];
     [self.navigationController pushViewController:detailPage animated:YES];
