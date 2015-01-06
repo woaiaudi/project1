@@ -41,7 +41,7 @@
 - (IBAction)searchTypeButtonAction:(id)sender {
     NSArray * arr = [[NSArray alloc] init];
     //不能超过11个汉字
-    arr = [NSArray arrayWithObjects:@"供应",@"需求", @"企业", @"资讯",nil];
+    arr = [NSArray arrayWithObjects:@"全部",@"企业", @"原料",@"再生料",@"助剂",@"制品",@"模具",nil];
     if(dropDown == nil) {
         CGFloat f = 200;
         dropDown = [[NIDropDown alloc]showDropDown:sender :&f :arr :nil :@"down"];
@@ -69,9 +69,9 @@
     //You can uses location to your application.
     if(buttonIndex == 0) {
         NSLog(@"Cancel");
-        [_cityButton setTitle:location.city forState:UIControlStateNormal];
     }else {
         NSLog(@"Select");
+        [_cityButton setTitle:location.city forState:UIControlStateNormal];
     }
 }
 - (IBAction)cityAction:(id)sender {

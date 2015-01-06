@@ -14,7 +14,7 @@
 #import "SLWSupplyListViewController.h"
 #import "SLWCompanyListViewController.h"
 #import "SLWSearchViewController.h"
-#import "SLWBBSTableViewController.h"
+#import "SLWBBSListViewController.h"
 #import "SLWReqListViewController.h"
 #import "UIHelper.h"
 #import "UserService.h"
@@ -74,7 +74,7 @@
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品供应" controllerClass:[SLWSupplyListViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"产品需求" controllerClass:[SLWReqListViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"企业展示" controllerClass:[SLWCompanyListViewController class]]];
-    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"行业论坛" controllerClass:[SLWBBSTableViewController class]]];
+    [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"行业论坛" controllerClass:[SLWBBSListViewController class]]];
     [pageIndexArray addObject:[SLWPageIndex pageIndexWithTitle:@"关于我们" controllerClass:[SLWAboutUsViewController class]]];
     
 }
